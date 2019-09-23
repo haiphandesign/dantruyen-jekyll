@@ -1,0 +1,32 @@
+---
+title: Gameroom
+layout: default
+---
+
+{% include game/header.html %}
+
+<div id="game-main">
+
+    <div id="game-page-home" class="game-tab is-active">
+        {% include game/waiting-room.html %}
+    </div>
+
+    <div id="game-page-main" class="game-tab">
+        {% include game/content.html %}
+    </div>
+
+    <div id="game-page-characters" class="game-tab">
+        {% include game/characters.html %}
+    </div>
+
+    <div id="game-page-cards" class="game-tab">
+        {% include game/cards.html %}
+    </div>
+
+    <div id="game-page-settings" class="game-tab">
+        {% include game/settings.html %}
+    </div>
+
+</div>
+
+<!-- <div style="height: 200vh;"></div> -->

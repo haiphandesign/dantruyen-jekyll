@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gameroom&nbsp;&nbsp;&nbsp;—&nbsp;&nbsp;&nbsp;Dẫn Truyện
+    </title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+    <div id="navbar" class="navbar is-sticky is-bordered">
+    <div class="container is-wide">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <div class="navbar-logo">
+                    <h3 class="has-text-blue">Dẫn Truyện</h3>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="navbar-menu navbar-main">
+            
+            <a class="navbar-item" href="/browse/"><span>Browse</span></a>
+            
+            <a class="navbar-item" href="/documentation/"><span>Documentation</span></a>
+            
+            <div class="navbar-menu-close" onclick="navbarMenuClose(this)">
+                <div class="delete"></div>
+            </div>
+        </div>
+
+        <div class="navbar-toggle" onclick="navbarToggle(this)"></div>
+
+        <div class="navbar-menu navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-white">Đăng nhập</a>
+                    <a class="button is-info">Đăng ký</a>
+                </div>
+            </div>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+    <div id="main">
+        <section id="game-header" class="game-header">
+
+    <div class="game-cover">
+        <figure class="image is-full is-cover has-placeholder-big is-loading">
+            <img src="">
+        </figure>
+    </div>
+
+    <div class="game-info">
+        <div class="container">
+            <div class="box">
+                <div class="level game-meta">
+                    <div class="level-left">
+                        <div class="level-item game-meta-image">
+                            <figure class="image is-size-7 is-cover is-bordered is-radius has-placeholder is-loading">
+                                <img src="">
+                            </figure>
+                        </div>
+                        <div class="level-item game-meta-basic">
+                            <div class="has-text-weight-bold is-size-4 is-loading">Tên phòng chơi</div>
+                            <div class="has-text-darkgray is-loading">Dẫn truyện bởi <strong>Người dẫn</strong>
+                                (@host)</div>
+                        </div>
+                    </div>
+                    <div class="level-right">
+                        <div class="level-item">
+                            <div class="game-meta-counter acts">
+                                <div class="has-text-weight-bold is-size-3"><span class="acts-count">0</span>
+                                </div>
+                                <div class="has-text-smallcaps has-text-darkgray">Màn chơi</div>
+                            </div>
+                        </div>
+                        <div class="level-item">
+                            <div class="game-meta-counter players">
+                                <div class="has-text-weight-bold is-size-3">
+                                    <span class="players-count">0</span><span class="players-limit">10</span>
+                                </div>
+                                <div class="has-text-smallcaps has-text-darkgray">Người chơi</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons game-join-buttons">
+                    <button id="game-join-button" class="button is-small is-title-small"></button>
+                </div>
+                <div class="tabs game-navigation" id="game-navigation">
+                    <ul>
+                        <li class="is-active"><a>Phòng chờ</a></li>
+                        <li><a>Nội dung</a></li>
+                        <li><a>Nhân vật</a></li>
+                        <li><a>Thẻ bài</a></li>
+                        <li class="is-push-right"><a>Thiết lập</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<div id="game-main">
+
+    <div id="game-page-home" class="game-tab is-active">
+        <div class="container">
+
+    <div class="columns">
+
+        <div class="column is-8">
+
+            <div class="box-wrapper is-spaced">
+
+                <div class="box">
+    <div class="box-title is-bordered">
+        <h4>Miêu tả</h4><p class="has-text-darkgray">Miêu tả ngắn gọn về phòng chơi</p></div><div class="box-content content">
+        <p>At dolor duo accusam rebum sadipscing diam tempor dolor eos et, diam erat ipsum labore sit
+    erat eirmod amet. Rebum consetetur et invidunt sit sit diam sit, amet sit et vero no
+    aliquyam consetetur ut, sea dolor ut dolor ea. Et dolor ipsum diam kasd erat sadipscing at
+    amet.</p>
+<div class="tags">
+    <span class="tag is-hashtag">comedy</span>
+    <span class="tag is-hashtag">sliced of life</span>
+    <span class="tag is-hashtag">school life</span>
+    <span class="tag is-hashtag">romance</span>
+    <span class="tag is-hashtag">ecchi</span>
+</div>
+    </div>
+
+</div>
+
+                <div class="game-home-meta" id="game-home-meta">
+    <div class="game-meta-item">
+        <div class="title">Kiểu dẫn</div>
+        <div class="content">
+            <p><i class="fal fa-user"></i> Một người</p>
+        </div>
+    </div>
+    <div class="game-meta-item">
+        <div class="title">Phong cách</div>
+        <div class="content">
+            <p><i class="fal fa-user"></i> Một người</p>
+        </div>
+    </div>
+    <div class="game-meta-item">
+        <div class="title">Độ dài</div>
+        <div class="content">
+            <p><i class="fal fa-user"></i> Một người</p>
+        </div>
+    </div>
+    <div class="game-meta-item">
+        <div class="title">Tốc độ</div>
+        <div class="content">
+            <p><i class="far fa-turtle"></i> Chậm</p>
+        </div>
+    </div>
+    <div class="game-meta-item">
+        <div class="title">Giới hạn từ</div>
+        <div class="content">
+            <p><i class="fal fa-user"></i> Một người</p>
+        </div>
+    </div>
+    <div class="game-meta-item">
+        <div class="title">Độ khó</div>
+        <div class="content">
+            <p><i class="fal fa-user"></i> Một người</p>
+        </div>
+    </div>
+    <div class="game-meta-item">
+        <div class="title">Hiển thị</div>
+        <div class="content">
+            <p><i class="far fa-user"></i> Một người</p>
+        </div>
+    </div>
+    <div class="game-meta-item">
+        <div class="title">Quyền sở hữu</div>
+        <div class="content">
+            <p><i class="fab fa-creative-commons"></i> <i class="fab fa-creative-commons-by"></i></p>
+        </div>
+    </div>
+</div>
+
+                <div class="box">
+    <div class="box-title is-bordered">
+        <h4>Bối cảnh</h4></div><div class="box-content content">
+        <p>Dolor magna no sit rebum, et amet et voluptua stet. Sit aliquyam tempor
+    ipsum rebum est invidunt. Clita sit diam dolore kasd dolor tempor sit sanctus. Dolore lorem duo at stet aliquyam sit
+    aliquyam at, sadipscing eos et vero est ut, labore erat erat dolore nonumy, dolore sit accusam lorem duo clita et
+    dolor sea dolore, diam amet dolores eirmod clita at. Voluptua aliquyam sanctus.</p>
+<p>Tempor ea accusam takimata est eirmod, eos est
+    sit diam dolor justo eirmod diam, duo gubergren sadipscing consetetur dolore. No voluptua kasd dolores eirmod magna
+    erat no, et lorem elitr accusam at no duo et kasd. Elitr duo justo dolor erat dolore ipsum accusam lorem dolores,
+    magna sea sed consetetur rebum sit amet, sit labore invidunt sadipscing elitr consetetur, vero duo ipsum et et. Amet
+    ipsum et dolore stet vero invidunt et, ipsum amet et dolores et eos erat rebum et. Et ut sit stet et sed vero,
+    gubergren vero takimata amet dolores.</p>
+    </div>
+
+</div>
+
+            </div>
+
+        </div>
+
+        <div class="column">
+
+            <div class="sidebar is-sticky">
+
+                <div class="sidebar-widget" id="game-widget-user-character">
+                    .
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+    </div>
+
+    <div id="game-page-main" class="game-tab">
+        <div class="container">
+
+    <div class="columns">
+
+        <div class="column is-8">
+
+            <div class="box-wrapper is-spaced">
+
+
+            </div>
+
+        </div>
+
+        <div class="column">
+
+            <div class="sidebar is-sticky">
+
+                <div class="sidebar-widget" id="game-widget-user-character">
+                    .
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+    </div>
+
+    <div id="game-page-characters" class="game-tab">
+        
+    </div>
+
+    <div id="game-page-cards" class="game-tab">
+        
+    </div>
+
+    <div id="game-page-settings" class="game-tab">
+        
+    </div>
+
+</div>
+
+<!-- <div style="height: 200vh;"></div> -->
+    </div>
+
+    <section id="footer" class="footer">
+    <div class="container is-wide">
+        <div class="level is-reversed">
+            <div class="level-left">
+                <div class="level-item">
+                    <nav class="footer-links">
+                        <ul>
+                            <li><a href="#">Về chúng tôi</a></li>
+                            <li><a href="#">Hỗ trợ</a></li>
+                            <li><a href="#">Cửa hàng</a></li>
+                            <li><a href="#">Tuyển dụng</a></li>
+                            <li><a href="#">Điều khoản & Sử dụng</a></li>
+                            <li><a href="#">Ủng hộ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="level-right">
+                <div class="level-item">
+                    <div class="footer-copyright">© 2019 Dẫn Truyện. <span class="footer-version">3.0</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/app.js"></script>
+
+</body>
+
+</html>

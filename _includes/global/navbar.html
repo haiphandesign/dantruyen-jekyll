@@ -1,0 +1,39 @@
+<div id="navbar" class="navbar is-sticky is-bordered">
+    <div class="container is-wide">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <div class="navbar-logo">
+                    <h3 class="has-text-blue">Dẫn Truyện</h3>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="navbar-menu navbar-main">
+            {% for item in site.data.settings.menu_settings.menu_items %}
+            <a class="navbar-item" href="{{ item.url }}"><span>{{ item.title }}</span></a>
+            {% endfor %}
+            <div class="navbar-menu-close" onclick="navbarMenuClose(this)">
+                <div class="delete"></div>
+            </div>
+        </div>
+
+        <div class="navbar-toggle" onclick="navbarToggle(this)"></div>
+
+        <div class="navbar-menu navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-white">Đăng nhập</a>
+                    <a class="button is-info">Đăng ký</a>
+                </div>
+            </div>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+    </div>
+</div>

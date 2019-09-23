@@ -1,0 +1,48 @@
+.delete {
+    -webkit-appearance: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+    color: inherit;
+
+    &:after {
+        content: '\f00d';
+        @include fontawesome(light);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 1.5em;
+        height: 1.5em;
+
+        @include radius;
+
+        background-color: transparent;
+        color: inherit;
+
+        opacity: .5;
+
+        transition-duration: .2s;
+        cursor: pointer;
+    }
+
+    &:hover::after {
+        opacity: 1;
+    }
+
+    &.is-bordered {
+        &:after {
+            background-color: var(--black-25);
+            color: white;
+
+            opacity: 1;
+        }
+
+        &:hover::after {
+            background-color: var(--black-50);
+        }
+    }
+}

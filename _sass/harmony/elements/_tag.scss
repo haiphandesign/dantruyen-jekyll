@@ -1,0 +1,42 @@
+.tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: .25em .75em;
+
+    background-color: var(--gray);
+
+    @include radius;
+
+    font-size: var(--font-size-8);
+
+    user-select: none;
+
+    &.is-info {
+        background-color: var(--blue);
+        color: var(--white);
+    }
+
+    &.is-success {
+        background-color: var(--green);
+        color: var(--white);
+    }
+
+    &.is-warning {
+        background-color: var(--yellow);
+        color: var(--white);
+    }
+
+    &.is-danger {
+        background-color: var(--red);
+        color: var(--white);
+    }
+
+    &.is-hashtag {
+        &:before {
+            content: '#';
+            margin-right: .25em;
+        }
+    }
+}

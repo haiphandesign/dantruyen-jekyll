@@ -1,0 +1,33 @@
+.list {
+    li {
+        @include border(left);
+        border-left-width: 3px;
+        border-left-color: transparent !important;
+
+        font-size: var(--font-size-6);
+
+        user-select: none;
+
+        &:hover {
+            background-color: var(--lightgray);
+            border-left-color: var(--gray) !important;
+        }
+
+        &.is-active {
+            border-left-color: var(--blue) !important;
+        }
+
+        a {
+            display: block;
+            width: 100%;
+            padding: .75em 1em;
+        }
+    }
+
+    &.is-divided {
+        li+li {
+            @include border(top);
+            border-color: var(--border-color-light);
+        }
+    }
+}

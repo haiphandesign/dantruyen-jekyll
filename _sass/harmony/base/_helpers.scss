@@ -1,0 +1,716 @@
+@mixin is-auto-grid {
+    display: grid;
+    grid-auto-columns: minmax(min-content, max-content);
+    grid-auto-flow: column;
+    grid-gap: 1rem;
+
+    align-items: center;
+}
+
+.is-auto-grid {
+    @include is-auto-grid;
+}
+
+.is-paddingless {
+    padding: 0 !important;
+}
+
+.is-marginless {
+    margin: 0 !important;
+}
+
+
+
+
+
+// ELEMENT PUSH
+
+.is-push-right {
+    margin-left: auto;
+}
+
+.is-push-left {
+    margin-right: auto;
+}
+
+
+
+.is-nowrap {
+    white-space: nowrap;
+}
+
+
+
+
+
+
+// RESPONSIVE HELPERS: SHOW
+
+.is-block {
+    display: block !important;
+
+    &-xs {
+        @include breakpoint(xs) {
+            display: block !important;
+        }
+    }
+
+    &-sm {
+        @include breakpoint(sm) {
+            display: block !important;
+        }
+
+        &-only {
+            @media (min-width: $viewport-sm) and (max-width: calc(#{$viewport-md} - 1px)) {
+                display: block !important;
+            }
+        }
+    }
+
+    &-md {
+        @include breakpoint(md) {
+            display: block !important;
+        }
+
+        &-only {
+            @media (min-width: $viewport-md) and (max-width: calc(#{$viewport-lg} - 1px)) {
+                display: block !important;
+            }
+        }
+    }
+
+    &-lg {
+        @include breakpoint(lg) {
+            display: block !important;
+        }
+
+        &-only {
+            @media (min-width: $viewport-lg) and (max-width: calc(#{$viewport-xl} - 1px)) {
+                display: block !important;
+            }
+        }
+    }
+
+    &-xl {
+        @include breakpoint(xl) {
+            display: block !important;
+        }
+    }
+}
+
+.is-flex {
+    display: flex !important;
+
+    &-xs {
+        @include breakpoint(xs) {
+            display: flex !important;
+        }
+    }
+
+    &-sm {
+        @include breakpoint(sm) {
+            display: flex !important;
+        }
+
+        &-only {
+            @media (min-width: $viewport-sm) and (max-width: calc(#{$viewport-md} - 1px)) {
+                display: flex !important;
+            }
+        }
+    }
+
+    &-md {
+        @include breakpoint(md) {
+            display: flex !important;
+        }
+
+        &-only {
+            @media (min-width: $viewport-md) and (max-width: calc(#{$viewport-lg} - 1px)) {
+                display: flex !important;
+            }
+        }
+    }
+
+    &-lg {
+        @include breakpoint(lg) {
+            display: flex !important;
+        }
+
+        &-only {
+            @media (min-width: $viewport-lg) and (max-width: calc(#{$viewport-xl} - 1px)) {
+                display: flex !important;
+            }
+        }
+    }
+
+    &-xl {
+        @include breakpoint(xl) {
+            display: flex !important;
+        }
+    }
+}
+
+.is-grid {
+    display: grid !important;
+
+    &-xs {
+        @include breakpoint(xs) {
+            display: grid !important;
+        }
+    }
+
+    &-sm {
+        @include breakpoint(sm) {
+            display: grid !important;
+        }
+
+        &-only {
+            @media (min-width: $viewport-sm) and (max-width: calc(#{$viewport-md} - 1px)) {
+                display: grid !important;
+            }
+        }
+    }
+
+    &-md {
+        @include breakpoint(md) {
+            display: grid !important;
+        }
+
+        &-only {
+            @media (min-width: $viewport-md) and (max-width: calc(#{$viewport-lg} - 1px)) {
+                display: grid !important;
+            }
+        }
+    }
+
+    &-lg {
+        @include breakpoint(lg) {
+            display: grid !important;
+        }
+
+        &-only {
+            @media (min-width: $viewport-lg) and (max-width: calc(#{$viewport-xl} - 1px)) {
+                display: grid !important;
+            }
+        }
+    }
+
+    &-xl {
+        @include breakpoint(xl) {
+            display: grid !important;
+        }
+    }
+}
+
+.is-inline {
+    display: inline !important;
+
+    &-xs {
+        @include breakpoint(xs) {
+            display: inline !important;
+        }
+    }
+
+    &-sm {
+        @include breakpoint(sm) {
+            display: inline !important;
+        }
+
+        &-only {
+            @media (min-width: $viewport-sm) and (max-width: calc(#{$viewport-md} - 1px)) {
+                display: inline !important;
+            }
+        }
+    }
+
+    &-md {
+        @include breakpoint(md) {
+            display: inline !important;
+        }
+
+        &-only {
+            @media (min-width: $viewport-md) and (max-width: calc(#{$viewport-lg} - 1px)) {
+                display: inline !important;
+            }
+        }
+    }
+
+    &-lg {
+        @include breakpoint(lg) {
+            display: inline !important;
+        }
+
+        &-only {
+            @media (min-width: $viewport-lg) and (max-width: calc(#{$viewport-xl} - 1px)) {
+                display: inline !important;
+            }
+        }
+    }
+
+    &-xl {
+        @include breakpoint(xl) {
+            display: inline !important;
+        }
+    }
+}
+
+.is-inline-block {
+    display: inline-block !important;
+
+    &-xs {
+        @include breakpoint(xs) {
+            display: inline-block !important;
+        }
+    }
+
+    &-sm {
+        @include breakpoint(sm) {
+            display: inline-block !important;
+        }
+
+        &-only {
+            @media (min-width: $viewport-sm) and (max-width: calc(#{$viewport-md} - 1px)) {
+                display: inline-block !important;
+            }
+        }
+    }
+
+    &-md {
+        @include breakpoint(md) {
+            display: inline-block !important;
+        }
+
+        &-only {
+            @media (min-width: $viewport-md) and (max-width: calc(#{$viewport-lg} - 1px)) {
+                display: inline-block !important;
+            }
+        }
+    }
+
+    &-lg {
+        @include breakpoint(lg) {
+            display: inline-block !important;
+        }
+
+        &-only {
+            @media (min-width: $viewport-lg) and (max-width: calc(#{$viewport-xl} - 1px)) {
+                display: inline-block !important;
+            }
+        }
+    }
+
+    &-xl {
+        @include breakpoint(xl) {
+            display: inline-block !important;
+        }
+    }
+}
+
+.is-inline-flex {
+    display: inline-flex !important;
+
+    &-xs {
+        @include breakpoint(xs) {
+            display: inline-flex !important;
+        }
+    }
+
+    &-sm {
+        @include breakpoint(sm) {
+            display: inline-flex !important;
+        }
+
+        &-only {
+            @media (min-width: $viewport-sm) and (max-width: calc(#{$viewport-md} - 1px)) {
+                display: inline-flex !important;
+            }
+        }
+    }
+
+    &-md {
+        @include breakpoint(md) {
+            display: inline-flex !important;
+        }
+
+        &-only {
+            @media (min-width: $viewport-md) and (max-width: calc(#{$viewport-lg} - 1px)) {
+                display: inline-flex !important;
+            }
+        }
+    }
+
+    &-lg {
+        @include breakpoint(lg) {
+            display: inline-flex !important;
+        }
+
+        &-only {
+            @media (min-width: $viewport-lg) and (max-width: calc(#{$viewport-xl} - 1px)) {
+                display: inline-flex !important;
+            }
+        }
+    }
+
+    &-xl {
+        @include breakpoint(xl) {
+            display: inline-flex !important;
+        }
+    }
+}
+
+
+// RESPONSIVE HELPERS: HIDE
+
+.is-hidden {
+    display: none !important;
+
+    &-xs {
+        @include breakpoint(xs) {
+            display: none !important;
+        }
+    }
+
+    &-sm {
+        @include breakpoint(sm) {
+            display: none !important;
+        }
+
+        &-only {
+            @media (min-width: $viewport-sm) and (max-width: calc(#{$viewport-md} - 1px)) {
+                display: none !important;
+            }
+        }
+    }
+
+    &-md {
+        @include breakpoint(md) {
+            display: none !important;
+        }
+
+        &-only {
+            @media (min-width: $viewport-md) and (max-width: calc(#{$viewport-lg} - 1px)) {
+                display: none !important;
+            }
+        }
+    }
+
+    &-lg {
+        @include breakpoint(lg) {
+            display: none !important;
+        }
+
+        &-only {
+            @media (min-width: $viewport-lg) and (max-width: calc(#{$viewport-xl} - 1px)) {
+                display: none !important;
+            }
+        }
+    }
+
+    &-xl {
+        @include breakpoint(xl) {
+            display: none !important;
+        }
+    }
+}
+
+
+// DISPLAY HELPERS: GRID
+
+.is-grid {
+    &.is-spaced-small {
+        grid-auto-rows: minmax(min-content, max-content);
+        grid-gap: 1rem;
+    }
+
+    &.is-spaced-medium {
+        grid-auto-rows: minmax(min-content, max-content);
+        grid-gap: 3rem;
+    }
+
+    &.is-spaced-large {
+        grid-auto-rows: minmax(min-content, max-content);
+        grid-gap: 5rem;
+    }
+}
+
+// DISPLAY HELPERS: FLEX
+
+.is-flex,
+.is-grid {
+    &.is-align-center {
+        align-items: center;
+    }
+
+    &.is-align-start {
+        align-items: flex-start;
+    }
+
+    &.is-align-end {
+        align-items: flex-end;
+    }
+}
+
+.is-flex,
+.is-grid {
+    &.is-justify-center {
+        justify-content: center;
+    }
+}
+
+
+// DISPLAY HELPERS: ULTILITIES
+
+.is-click-through {
+    pointer-events: none;
+}
+
+.is-nonselectable {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+
+// COLOR HELPERS: TEXT COLOR
+
+.has-text-white {
+    color: var(--white);
+}
+
+.has-text-black {
+    color: var(--black);
+}
+
+.has-text-lightblack {
+    color: var(--lightblack);
+}
+
+.has-text-darkblack {
+    color: var(--darkblack);
+}
+
+.has-text-gray {
+    color: var(--gray);
+}
+
+.has-text-lightgray {
+    color: var(--lightgray);
+}
+
+.has-text-darkgray {
+    color: var(--darkgray);
+}
+
+.has-text-blue {
+    color: var(--blue);
+}
+
+.has-text-lightblue {
+    color: var(--lightblue);
+}
+
+.has-text-darkblue {
+    color: var(--darkblue);
+}
+
+.has-text-green {
+    color: var(--green);
+}
+
+.has-text-lightgreen {
+    color: var(--lightgreen);
+}
+
+.has-text-darkgreen {
+    color: var(--darkgreen);
+}
+
+.has-text-yellow {
+    color: var(--yellow);
+}
+
+.has-text-lightyellow {
+    color: var(--lightyellow);
+}
+
+.has-text-darkyellow {
+    color: var(--darkyellow);
+}
+
+.has-text-red {
+    color: var(--red);
+}
+
+.has-text-lightred {
+    color: var(--lightred);
+}
+
+.has-text-darkred {
+    color: var(--darkred);
+}
+
+
+// COLOR HELPERS: BACKGROUND COLOR
+
+.has-background-white {
+    background-color: var(--white);
+}
+
+.has-background-black {
+    background-color: var(--black);
+}
+
+.has-background-lightblack {
+    background-color: var(--lightblack);
+}
+
+.has-background-darkblack {
+    background-color: var(--darkblack);
+}
+
+.has-background-gray {
+    background-color: var(--gray);
+}
+
+.has-background-lightgray {
+    background-color: var(--lightgray);
+}
+
+.has-background-darkgray {
+    background-color: var(--darkgray);
+}
+
+.has-background-blue {
+    background-color: var(--blue);
+}
+
+.has-background-lightblue {
+    background-color: var(--lightblue);
+}
+
+.has-background-darkblue {
+    background-color: var(--darkblue);
+}
+
+.has-background-green {
+    background-color: var(--green);
+}
+
+.has-background-lightgreen {
+    background-color: var(--lightgreen);
+}
+
+.has-background-darkgreen {
+    background-color: var(--darkgreen);
+}
+
+.has-background-yellow {
+    background-color: var(--yellow);
+}
+
+.has-background-lightyellow {
+    background-color: var(--lightyellow);
+}
+
+.has-background-darkyellow {
+    background-color: var(--darkyellow);
+}
+
+.has-background-red {
+    background-color: var(--red);
+}
+
+.has-background-lightred {
+    background-color: var(--lightred);
+}
+
+.has-background-darkred {
+    background-color: var(--darkred);
+}
+
+
+// TYPOGRAPHY HELPERS: TEXT WEIGHT
+
+.has-text-weight-light {
+    font-weight: var(--font-weight-light);
+}
+
+.has-text-weight-normal {
+    font-weight: var(--font-weight-normal);
+}
+
+.has-text-weight-medium {
+    font-weight: var(--font-weight-medium);
+}
+
+.has-text-weight-semibold {
+    font-weight: var(--font-weight-semibold);
+}
+
+.has-text-weight-bold {
+    font-weight: var(--font-weight-bold);
+}
+
+
+
+
+.has-text-underline {
+    text-decoration: underline;
+}
+
+.has-text-underline-on-hover:hover {
+    text-decoration: underline;
+}
+
+.has-text-uppercase {
+    text-transform: uppercase;
+}
+
+.has-text-lowercase {
+    text-transform: lowercase;
+}
+
+
+.has-text-underline-2 {
+    padding-bottom: .1em;
+    border-bottom: .15em solid currentColor;
+}
+
+
+.has-text-italic {
+    font-style: italic;
+}
+
+
+.is-sans-serif {
+    font-family: var(--font-family-sans-serif);
+}
+
+.is-serif {
+    font-family: var(--font-family-serif);
+}
+
+.is-monospace {
+    font-family: var(--font-family-monospace);
+}
+
+
+
+.has-link {
+    &:hover {
+        color: var(--primaryColor);
+    }
+}
+
+
+.is-loading {
+    &:not(.button) {
+        display: inline-flex;
+        color: transparent !important;
+        @include shimmer;
+        transform: scaleY(.8);
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-user-drag: none;
+    }
+}

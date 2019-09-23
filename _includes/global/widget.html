@@ -1,0 +1,16 @@
+<div class="box">
+    {% assign whitespace = " " %}
+    {%- if include.title -%}
+    <div class="box-title {%- if include.borderedtitle -%}{{ whitespace }}is-bordered{%- endif -%}">
+        <h4>{{ include.title }}</h4>
+        {%- if include.subtitle -%}
+        <p class="has-text-darkgray">{{ include.subtitle }}</p>
+        {%- endif -%}
+    </div>
+    {%- endif -%}
+
+    <div class="box-content {%- if include.textwrapper -%}{{ whitespace }}content{%- endif -%}">
+        {% include widget/{{ include.source }}.html  %}
+    </div>
+
+</div>

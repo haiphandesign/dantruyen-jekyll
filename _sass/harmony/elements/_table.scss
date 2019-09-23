@@ -1,0 +1,167 @@
+.table {
+    text-align: left;
+
+    th,
+    td {
+        @include border(bottom);
+        border-color: var(--border-color-light);
+
+        padding: 1rem;
+        vertical-align: top;
+    }
+
+    thead {
+        @include smallcaps;
+
+        th,
+        td {
+            border-width: 0 0 1px 0;
+        }
+    }
+
+    tfoot {
+        @include smallcaps;
+
+        th,
+        td {
+            border-width: 1.5px 0 0 0;
+        }
+    }
+
+    tbody {
+        tr {
+            &:last-child {
+                td {
+                    border-width: 0;
+                }
+            }
+        }
+    }
+
+    &.is-fullwidth {
+        width: 100%;
+    }
+
+    &.is-vertical-align-middle {
+
+        th,
+        td {
+            vertical-align: middle;
+        }
+    }
+
+    &.is-vertical-align-top {
+
+        th,
+        td {
+            vertical-align: top;
+        }
+    }
+
+    &.is-vertical-align-bottom {
+
+        th,
+        td {
+            vertical-align: bottom;
+        }
+    }
+
+    &.has-text-centered {
+
+        th,
+        td {
+            text-align: center;
+        }
+    }
+
+    &.has-dark-head {
+
+        thead,
+        tfoot {
+            background-color: var(--lightgray);
+        }
+    }
+
+    &.is-bordered {
+        thead {
+            font-weight: 600;
+
+            th,
+            td {
+                border-width: 1px 1px 2px 1px;
+            }
+        }
+
+        tbody {
+
+            th,
+            td {
+                border-width: 1px;
+            }
+
+            tr {
+                &:last-child {
+
+                    td,
+                    td {
+                        border-width: 1px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.is-striped {
+        tbody {
+            tr {
+                &:nth-child(2n) {
+
+                    th,
+                    td {
+                        background-color: var(--lightgray-50);
+                    }
+                }
+            }
+        }
+    }
+
+    &.is-narrow {
+
+        th,
+        td {
+            @include border(bottom);
+
+            padding: 0.25rem .5rem;
+            vertical-align: top;
+        }
+    }
+
+    &.is-hoverable {
+        tbody {
+            tr {
+                &:hover {
+
+                    th,
+                    td {
+                        background-color: var(--lightgray-50);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.table-responsive {
+    width: 100%;
+    max-width: calc(100vw - 2rem);
+
+    overflow-x: auto;
+
+    .table {
+
+        td,
+        th {
+            white-space: nowrap;
+        }
+    }
+}

@@ -1,0 +1,218 @@
+.tabs {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    width: 100%;
+
+    overflow: auto;
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        width: 100%;
+
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+
+        @include border(bottom);
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-bottom: -1px;
+
+        @include border(bottom);
+
+        white-space: nowrap;
+
+        user-select: none;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+
+        &:hover {
+            border-color: var(--darkgray);
+        }
+
+        &.is-active {
+            border-color: var(--lightblue);
+        }
+
+        &.is-disabled {
+            pointer-events: none;
+            opacity: .25;
+            cursor: default;
+        }
+
+        &.is-push-right {
+            margin-left: auto;
+        }
+    }
+
+    .icon {
+        &:first-child {
+            &:last-child {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                width: 1.5em;
+                height: 1.5em;
+
+                margin-left: -0.5em;
+                margin-right: -0.5em;
+            }
+
+            &:not(:last-child) {
+                margin-right: 1em;
+                margin-left: -0.25em;
+            }
+        }
+
+        &:last-child {
+            &:not(:first-child) {
+                margin-left: 1em;
+                margin-right: -0.25em;
+            }
+        }
+    }
+
+    a {
+        display: flex;
+        padding: .75em .5em;
+    }
+
+    &.is-centered {
+        ul {
+            justify-content: center;
+        }
+    }
+
+    &.is-right {
+        ul {
+            justify-content: flex-end;
+        }
+    }
+
+    &.is-left {
+        ul {
+            justify-content: flex-start;
+        }
+    }
+
+    &.is-small {
+        font-size: 0.75rem;
+    }
+
+    &.is-normal {
+        font-size: 1rem;
+    }
+
+    &.is-medium {
+        font-size: 1.25rem;
+    }
+
+    &.is-large {
+        font-size: 1.5rem;
+    }
+
+    &.is-fullwidth {
+        li {
+            width: 100%;
+        }
+    }
+
+    &.is-toggle {
+        ul {
+            border-bottom-width: 0;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 0;
+            margin-right: -1px;
+
+            background-color: var(--white);
+
+            border-width: 1px;
+
+            &:first-child {
+                @include radius;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+
+                @include radius;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+
+            &:hover {
+                background-color: var(--lightgray);
+                border-color: var(--gray);
+            }
+
+            &.is-active {
+                box-shadow: inset 0 0 0 1px transparent;
+
+                background-color: var(--lightblue);
+                color: var(--white);
+            }
+
+            a {
+                padding: .75em 1.5em;
+            }
+        }
+    }
+
+    &.is-boxed {
+        ul {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        li {
+            margin-bottom: -1px;
+
+            @include radius;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+
+            &:hover {
+                background-color: var(--gray-50);
+                border-color: var(--gray);
+            }
+
+            &.is-active {
+                background-color: var(--white);
+
+                border-color: var(--gray);
+                border-width: 1px;
+                border-bottom-color: var(--white);
+
+                &:hover {
+                    background-color: var(--white);
+                }
+            }
+
+            a {
+                padding: .75em 1.5em;
+            }
+        }
+    }
+}

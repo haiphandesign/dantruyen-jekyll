@@ -1,0 +1,98 @@
+.fieldgroup {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    ;
+}
+
+.field {
+    &:not(:last-child) {
+        margin-bottom: .75rem;
+    }
+
+    &.is-grouped {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &.is-push-bottom {
+        margin-top: auto;
+    }
+
+    &.is-horizontal {
+        display: flex;
+    }
+
+    &.has-addons {
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
+.label {
+    color: #363636;
+    display: block;
+    font-weight: 600;
+
+    user-select: none;
+
+    &:not(:last-child) {
+        margin-bottom: .5em;
+    }
+}
+
+.control {
+    box-sizing: border-box;
+    clear: both;
+    font-size: 1rem;
+    position: relative;
+    text-align: left;
+}
+
+.word-count {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    display: block;
+    font-size: .75rem;
+    margin-top: .25rem;
+
+    color: var(--darkgray);
+
+    &:before {
+        content: 'Còn lại: '
+    }
+
+    &:after {
+        content: ' từ'
+    }
+}
+
+.help {
+    display: block;
+    font-size: .75rem;
+    margin-top: .25rem;
+
+    color: var(--darkgray);
+}
+
+input,
+textarea,
+select,
+option {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+}
+
+
+
+
+// HORIZONTAL FIELD
+
+.field.is-horizontal {
+    >.field-body {
+        margin-left: 1.5rem;
+    }
+}

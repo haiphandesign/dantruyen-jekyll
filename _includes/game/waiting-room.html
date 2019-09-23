@@ -1,0 +1,33 @@
+<div class="container">
+
+    <div class="columns">
+
+        <div class="column is-8">
+
+            <div class="box-wrapper is-spaced">
+
+                {% include global/widget.html title="Miêu tả" borderedtitle="yes" subtitle="Miêu tả ngắn gọn về phòng chơi" textwrapper="yes" source="game-description" %}
+
+                {% include widget/game-meta.html %}
+
+                {% include global/widget.html title="Bối cảnh" borderedtitle="yes" textwrapper="yes" source="game-scenario" %}
+
+            </div>
+
+        </div>
+
+        <div class="column">
+
+            <div class="sidebar is-sticky">
+
+                <div class="sidebar-widget" id="game-widget-user-character">
+                    .
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

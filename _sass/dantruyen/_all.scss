@@ -1,0 +1,13 @@
+// CONFIG
+
+:root {
+    --font-size: 14px;
+    --font-size-7: .8rem;
+    --border-radius: 0;
+}
+
+// IMPORT
+
+@import 'footer';
+@import 'gameHeader';
+@import 'gameMain';

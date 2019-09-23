@@ -1,0 +1,25 @@
+.jumbotron {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+
+    padding: 3rem 1rem;
+
+    background-color: var(--gray);
+    color: var(--black);
+
+    @include border;
+    @include shadow;
+
+    @include breakpoint(md) {
+        padding: 6rem 1rem;
+    }
+}
+
+.container {
+    .jumbotron {
+        @include radius;
+    }
+}

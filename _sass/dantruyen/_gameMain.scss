@@ -1,0 +1,73 @@
+#game-main {
+    margin-top: 1rem;
+}
+
+.game-tab {
+    display: none;
+
+    &.is-active {
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+// GAME META
+
+.game-home-meta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+
+    @include breakpoint(sm) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.game-meta-item {
+    position: relative;
+
+    @include box;
+
+    &:after {
+        content: '';
+
+        display: block;
+        padding-bottom: 100%;
+    }
+
+    .title {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 3rem;
+
+        @include border(bottom);
+    }
+
+    .content {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: calc(100% - 3rem);
+
+        padding-bottom: .25rem;
+    }
+}

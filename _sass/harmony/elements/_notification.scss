@@ -1,0 +1,109 @@
+.notification {
+    @include content;
+
+    padding: 1rem;
+    padding-right: 1.5rem;
+
+    width: 100%;
+
+    background-color: var(--black);
+    color: var(--white);
+
+    @include radius;
+    @include shadow;
+
+    .delete {
+        position: absolute;
+        top: .5rem;
+        right: .5rem;
+    }
+
+    &.is-info {
+        background-color: var(--blue);
+
+        &.has-loading:after {
+            background-image: linear-gradient(to left, var(--lightblue) 50%, var(--darkblue) 50%);
+        }
+    }
+
+    &.is-success {
+        background-color: var(--green);
+
+        &.has-loading:after {
+            background-image: linear-gradient(to left, var(--lightgreen) 50%, var(--darkgreen) 50%);
+        }
+    }
+
+    &.is-warning {
+        background-color: var(--yellow);
+        color: var(--black);
+
+        &.has-loading:after {
+            background-image: linear-gradient(to left, var(--lightyellow) 50%, var(--darkyellow) 50%);
+        }
+    }
+
+    &.is-danger {
+        background-color: var(--red);
+
+        &.has-loading:after {
+            background-image: linear-gradient(to left, var(--lightred) 50%, var(--darkred) 50%);
+        }
+    }
+
+    &.has-loading {
+        padding-bottom: 1.25rem;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            display: block;
+            width: 100%;
+            height: .25rem;
+
+            @include radius;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+
+            background-image: linear-gradient(to left, var(--lightblack) 50%, var(--darkblack) 50%);
+            background-size: 200% 100%;
+            background-position-x: left 0;
+
+            animation: notificationLoading 3s linear infinite;
+        }
+    }
+}
+
+@keyframes notificationLoading {
+    from {
+        background-position-x: left 0;
+    }
+
+    to {
+        background-position-x: left 100%;
+    }
+}
+
+.notifications {
+    display: grid;
+    grid-auto-rows: minmax(min-content, max-content);
+    grid-gap: 1rem;
+
+    &.is-float {
+        position: fixed;
+        top: 2rem;
+        right: 1rem;
+        z-index: 1000;
+
+        width: calc(100vw - 2rem);
+
+        @include breakpoint(sm) {
+            top: unset;
+            bottom: 1rem;
+            max-width: 20rem;
+        }
+    }
+}

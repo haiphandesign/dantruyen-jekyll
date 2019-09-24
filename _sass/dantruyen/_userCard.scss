@@ -1,0 +1,11 @@
+.user-card {
+    display: flex;
+
+    &.is-horizontal {
+        align-items: center;
+
+        .user-card-image {
+            margin-right: 1rem;
+        }
+    }
+}

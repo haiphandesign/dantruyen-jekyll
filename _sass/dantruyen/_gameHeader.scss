@@ -78,7 +78,7 @@
     margin-top: -4rem;
 
     @include breakpoint(sm) {
-        margin-top: calc(-5.75rem - 5px);
+        margin-top: -4.5rem;
     }
 }
 
@@ -247,7 +247,7 @@
         }
 
         a {
-            padding: 1em .5em;
+            padding: .75rem;
         }
     }
 }

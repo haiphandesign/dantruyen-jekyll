@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% if page.url == "/" %}
-        {{ site.data.settings.basic_settings.site_title }}&nbsp;&nbsp;&nbsp;—&nbsp;&nbsp;&nbsp;Multidisciplinary
-        Designer
-        {% else %}{{ page.title }}&nbsp;&nbsp;&nbsp;—&nbsp;&nbsp;&nbsp;{{ site.data.settings.basic_settings.site_title }}{% endif %}
+        {{ site.data.settings.basic_settings.site_title }}
+        {% else %}{{ site.data.settings.basic_settings.site_title }}&nbsp;&nbsp;/&nbsp;&nbsp;{{ page.title }}{% endif %}
     </title>
 
     <!-- Stylesheets -->

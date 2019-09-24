@@ -12,7 +12,34 @@
 
 
 
+// CAST STACKS
 
+.cast-stacks {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+.cast-stack {
+    display: grid;
+    grid-gap: .75rem;
+
+    &:before {
+        content: 'Thành viên';
+        @include smallcaps;
+    }
+
+    &.is-narrator {
+        &:before {
+            content: 'Người dẫn';
+        }
+    }
+
+    &.is-player {
+        &:before {
+            content: 'Người chơi';
+        }
+    }
+}
 
 
 
@@ -38,7 +65,7 @@
         content: '';
 
         display: block;
-        padding-bottom: 100%;
+        padding-bottom: 75%;
     }
 
     .title {
@@ -52,6 +79,8 @@
         justify-content: center;
 
         height: 3rem;
+
+        @include smallcaps;
 
         @include border(bottom);
     }

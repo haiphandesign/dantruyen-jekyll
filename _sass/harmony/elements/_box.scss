@@ -68,7 +68,7 @@
 
     &.is-bordered {
         @include border(bottom);
-        border-color: var(--border-color);
+        border-color: var(--border-color-light);
     }
 
     >.is-float-right {

@@ -58,6 +58,10 @@
         max-width: 20rem;
 
         padding-top: .5rem;
+
+        font-size: var(--font-size);
+        color: var(--black);
+        cursor: initial;
     }
 
     .dropdown-content {

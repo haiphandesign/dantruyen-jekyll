@@ -4,8 +4,73 @@
 
         <div class="column is-8">
 
-            <div class="box-wrapper is-spaced">
+            <div class="post-wrapper is-spaced">
 
+                <div class="post">
+                    <div class="post-head">
+                        <div class="post-title">
+                            <div class="columns is-flex is-align-center">
+                                <div class="column is-narrow">
+                                    <figure class="image is-size-4 is-bordered is-radius has-placeholder">
+                                        <img src="">
+                                    </figure>
+                                </div>
+                                <div class="column">
+                                    <h6>characterName</h6>
+                                    <p class="has-text-darkgray is-size-7">@username</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-body">
+                        <div class="post-content">
+                            <p>Aliquyam eirmod nonumy eos dolor et, et ea diam diam amet erat amet, gubergren dolor
+                                magna sit ea ipsum et. Sit sit dolor clita sanctus erat eos gubergren, invidunt sit amet
+                                et dolore ipsum, at diam consetetur ipsum vero sea. Nonumy et kasd rebum eirmod.
+                                Consetetur dolores invidunt clita sit lorem sed. Ipsum elitr ipsum tempor voluptua. Vero
+                                sadipscing aliquyam elitr amet sadipscing lorem eos labore nonumy. Consetetur stet
+                                sanctus lorem amet, magna labore stet tempor sit sed et, kasd est sea sit voluptua
+                                sanctus sanctus eirmod rebum. Invidunt dolore amet sit elitr kasd duo. Gubergren et
+                                clita diam consetetur.</p>
+                            <p>Est erat lorem lorem duo elitr sed duo tempor diam. Invidunt nonumy eos dolor et clita
+                                eos. Eirmod amet gubergren duo lorem sed, aliquyam sanctus at dolores aliquyam et sed
+                                accusam. At lorem amet amet eos, lorem eos dolor magna ea diam et, takimata diam tempor
+                                sanctus sit, est duo.</p>
+                            <p>Dolore at et dolore nonumy labore dolores. Sit dolores et lorem at labore nonumy, dolor
+                                vero justo sit lorem, diam ipsum tempor dolor ipsum dolore nonumy ipsum ut sadipscing,
+                                diam at labore at aliquyam. Justo diam amet takimata sea. Elitr nonumy labore eos
+                                gubergren no elitr sit voluptua, ipsum aliquyam et rebum sit et stet. Justo gubergren
+                                dolores elitr erat no lorem sit voluptua, et labore vero consetetur vero elitr erat amet
+                                sea. Sanctus gubergren rebum stet ea et clita diam stet, est at vero at labore voluptua
+                                elitr est vero invidunt. Magna ea lorem lorem sed sed vero erat.</p>
+                        </div>
+                    </div>
+                    {% include game/post-interaction.html %}
+                </div>
+
+                <div class="post">
+                    <div class="post-head">
+                        <div class="post-title">
+                            <div class="columns is-flex is-align-center">
+                                <div class="column is-narrow">
+                                    <figure class="image skeleton is-size-4">
+                                        <img src="">
+                                    </figure>
+                                </div>
+                                <div class="column">
+                                    <h4><span class="skeleton is-4"></span></h4>
+                                    <p><span class="skeleton is-3"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-body">
+                        <span class="skeleton"></span>
+                        <span class="skeleton"></span>
+                        <span class="skeleton is-5"></span>
+                        <div style="height: 15rem;"></div>
+                    </div>
+                </div>
 
             </div>
 
@@ -15,9 +80,7 @@
 
             <div class="sidebar is-sticky">
 
-                <div class="sidebar-widget" id="game-widget-user-character">
-                    .
-                </div>
+                {% include global/widget.html source="game-sidebar-cast" title="Thành viên" borderedtitle="yes"  %}
 
             </div>
 

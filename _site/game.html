@@ -105,8 +105,8 @@
                 </div>
                 <div class="tabs game-navigation" id="game-navigation">
                     <ul>
-                        <li class="is-active"><a>Phòng chờ</a></li>
-                        <li><a>Nội dung</a></li>
+                        <li><a>Phòng chờ</a></li>
+                        <li class="is-active"><a>Nội dung</a></li>
                         <li><a>Nhân vật</a></li>
                         <li><a>Thẻ bài</a></li>
                         <li class="is-push-right"><a>Thiết lập</a></li>
@@ -120,7 +120,7 @@
 
 <div id="game-main">
 
-    <div id="game-page-home" class="game-tab is-active">
+    <div id="game-page-home" class="game-tab">
         <div class="container">
 
     <div class="columns">
@@ -215,6 +215,19 @@
 
 </div>
 
+                <div class="box">
+                    <div class="box-title is-bordered">
+                        <h4><span class="skeleton is-4"></span></h4>
+                        <p><span class="skeleton is-3"></span></p>
+                    </div>
+                    <div class="box-content">
+                        <span class="skeleton"></span>
+                        <span class="skeleton"></span>
+                        <span class="skeleton is-5"></span>
+                        <div style="height: 15rem;"></div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
@@ -296,15 +309,119 @@
 </div>
     </div>
 
-    <div id="game-page-main" class="game-tab">
+    <div id="game-page-main" class="game-tab is-active">
         <div class="container">
 
     <div class="columns">
 
         <div class="column is-8">
 
-            <div class="box-wrapper is-spaced">
+            <div class="post-wrapper is-spaced">
 
+                <div class="post">
+                    <div class="post-head">
+                        <div class="post-title">
+                            <div class="columns is-flex is-align-center">
+                                <div class="column is-narrow">
+                                    <figure class="image is-size-4 is-bordered is-radius has-placeholder">
+                                        <img src="">
+                                    </figure>
+                                </div>
+                                <div class="column">
+                                    <h6>characterName</h6>
+                                    <p class="has-text-darkgray is-size-7">@username</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-body">
+                        <div class="post-content">
+                            <p>Aliquyam eirmod nonumy eos dolor et, et ea diam diam amet erat amet, gubergren dolor
+                                magna sit ea ipsum et. Sit sit dolor clita sanctus erat eos gubergren, invidunt sit amet
+                                et dolore ipsum, at diam consetetur ipsum vero sea. Nonumy et kasd rebum eirmod.
+                                Consetetur dolores invidunt clita sit lorem sed. Ipsum elitr ipsum tempor voluptua. Vero
+                                sadipscing aliquyam elitr amet sadipscing lorem eos labore nonumy. Consetetur stet
+                                sanctus lorem amet, magna labore stet tempor sit sed et, kasd est sea sit voluptua
+                                sanctus sanctus eirmod rebum. Invidunt dolore amet sit elitr kasd duo. Gubergren et
+                                clita diam consetetur.</p>
+                            <p>Est erat lorem lorem duo elitr sed duo tempor diam. Invidunt nonumy eos dolor et clita
+                                eos. Eirmod amet gubergren duo lorem sed, aliquyam sanctus at dolores aliquyam et sed
+                                accusam. At lorem amet amet eos, lorem eos dolor magna ea diam et, takimata diam tempor
+                                sanctus sit, est duo.</p>
+                            <p>Dolore at et dolore nonumy labore dolores. Sit dolores et lorem at labore nonumy, dolor
+                                vero justo sit lorem, diam ipsum tempor dolor ipsum dolore nonumy ipsum ut sadipscing,
+                                diam at labore at aliquyam. Justo diam amet takimata sea. Elitr nonumy labore eos
+                                gubergren no elitr sit voluptua, ipsum aliquyam et rebum sit et stet. Justo gubergren
+                                dolores elitr erat no lorem sit voluptua, et labore vero consetetur vero elitr erat amet
+                                sea. Sanctus gubergren rebum stet ea et clita diam stet, est at vero at labore voluptua
+                                elitr est vero invidunt. Magna ea lorem lorem sed sed vero erat.</p>
+                        </div>
+                    </div>
+                    <div class="post-interaction">
+    <div class="post-interaction-item post-vote-up post-interaction-item-vote-up">
+        <span class="icon">
+            <i class="fas fa-thumbs-up"></i>
+        </span>
+        <span>10</span>
+    </div>
+    <div class="post-interaction-item post-vote-down post-interaction-vote-down">
+        <span class="icon">
+            <i class="fas fa-thumbs-down"></i>
+        </span>
+        <span>10</span>
+    </div>
+    <div class="post-interaction-item post-interaction-item-comment">
+        <span>Bình luận</span>
+    </div>
+    <div class="post-interaction-item post-interaction-item-gift">
+        <span>Tặng Tem</span>
+    </div>
+    <div class="post-interaction-item is-push-right post-interaction-item-more">
+        <div class="dropdown is-hoverable is-up is-right">
+            <div class="dropdown-trigger"></div>
+            <div class="dropdown-menu">
+                <div class="dropdown-content">
+                    <a class="dropdown-item post-interaction-item-edit">
+                        <span class="icon"><i class="fas fa-edit"></i></span>
+                        <span>Chỉnh sửa</span>
+                    </a>
+                    <a class="dropdown-item post-interaction-item-mod">
+                        <span class="icon"><i class="fas fa-exclamation-triangle"></i></span>
+                        <span>Yêu cầu chỉnh sửa</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="post-interaction-item post-interaction-item-share">
+        <span class="icon"><i class="fas fa-share-alt"></i></span>
+    </a>
+</div>
+                </div>
+
+                <div class="post">
+                    <div class="post-head">
+                        <div class="post-title">
+                            <div class="columns is-flex is-align-center">
+                                <div class="column is-narrow">
+                                    <figure class="image skeleton is-size-4">
+                                        <img src="">
+                                    </figure>
+                                </div>
+                                <div class="column">
+                                    <h4><span class="skeleton is-4"></span></h4>
+                                    <p><span class="skeleton is-3"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-body">
+                        <span class="skeleton"></span>
+                        <span class="skeleton"></span>
+                        <span class="skeleton is-5"></span>
+                        <div style="height: 15rem;"></div>
+                    </div>
+                </div>
 
             </div>
 
@@ -314,9 +431,69 @@
 
             <div class="sidebar is-sticky">
 
-                <div class="sidebar-widget" id="game-widget-user-character">
-                    .
-                </div>
+                <div class="box">
+    <div class="box-title is-bordered">
+        <h4>Thành viên</h4></div><div class="box-content">
+        <div class="cast-stacks">
+
+    <div class="cast-stack is-narrator">
+
+        <a class="cast-item user-card is-horizontal" href="">
+            <div class="user-card-image">
+                <figure class="image is-size-4 is-cover is-bordered is-radius has-placeholder">
+                    <img src="">
+                </figure>
+            </div>
+            <div class="user-card-meta">
+                <div class="has-text-weight-bold">characterName</div>
+                <div class="has-text-darkgray is-size-7 has-text-underline-on-hover">
+                    @username</div>
+            </div>
+        </a>
+
+    </div>
+
+    <div class="cast-stack is-narrator">
+
+        <a class="cast-item user-card is-horizontal" href="">
+            <div class="user-card-image">
+                <figure class="image is-size-4 is-cover is-bordered is-radius has-placeholder">
+                    <img src="">
+                </figure>
+            </div>
+            <div class="user-card-meta">
+                <div class="has-text-weight-bold">characterName</div>
+                <div class="has-text-darkgray is-size-7 has-text-underline-on-hover">
+                    @username</div>
+            </div>
+        </a>
+
+        <a class="cast-item user-card is-horizontal" href="">
+            <div class="user-card-image">
+                <figure class="image is-size-4 is-cover is-bordered is-radius has-placeholder">
+                    <img src="">
+                </figure>
+            </div>
+            <div class="user-card-meta">
+                <div class="has-text-weight-bold">characterName</div>
+                <div class="has-text-darkgray is-size-7 has-text-underline-on-hover">
+                    @username</div>
+            </div>
+        </a>
+
+    </div>
+
+
+
+
+
+
+    <a href="#" class="has-text-lightblack is-size-7 has-text-underline-on-hover">và 10 nguời chơi khác</a>
+
+</div>
+    </div>
+
+</div>
 
             </div>
 

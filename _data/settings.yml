@@ -8,3 +8,5 @@ menu_settings:
           url: '/browse/'
         - title: 'Documentation'
           url: '/documentation/'
+        - title: 'Game'
+          url: '/game/'

@@ -7,11 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% if page.url == "/" %}
         {{ site.data.settings.basic_settings.site_title }}
-        {% else %}{{ site.data.settings.basic_settings.site_title }}&nbsp;&nbsp;/&nbsp;&nbsp;{{ page.title }}{% endif %}
+        {% else %}{{ site.data.settings.basic_settings.site_title }} / {{ page.title }}{% endif %}
     </title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://git.haiphan.design/harmony/harmony.min.css">
+    <link rel="stylesheet" href="{{ "/assets/addons/fonts/proxima-nova/stylesheet.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/addons/fontawesome/all.min.css" | relative_url }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 
 </head>
 

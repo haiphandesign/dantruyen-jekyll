@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dẫn Truyện&nbsp;&nbsp;/&nbsp;&nbsp;Phòng Chơi
+    <title>Dẫn Truyện / Phòng Chơi
     </title>
 
     <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://git.haiphan.design/harmony/harmony.min.css">
+    <link rel="stylesheet" href="/assets/addons/fonts/proxima-nova/stylesheet.css">
+    <link rel="stylesheet" href="/assets/addons/fontawesome/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
     <link rel="stylesheet" href="/assets/css/style.css">
 
 </head>
@@ -31,6 +35,8 @@
             <a class="navbar-item" href="/browse/"><span>Browse</span></a>
             
             <a class="navbar-item" href="/documentation/"><span>Documentation</span></a>
+            
+            <a class="navbar-item" href="/game/"><span>Game</span></a>
             
             <div class="navbar-menu-close" onclick="navbarMenuClose(this)">
                 <div class="delete"></div>
@@ -77,7 +83,7 @@
                             </figure>
                         </div>
                         <div class="level-item game-meta-basic">
-                            <div class="has-text-weight-bold is-size-4 is-loading">Tên phòng chơi</div>
+                            <div class="has-text-weight-semibold is-size-4 is-loading">Tên phòng chơi</div>
                             <div class="has-text-italic has-text-darkgray is-size-7 is-loading">Cập nhật 18 phút trước
                             </div>
                         </div>
@@ -85,14 +91,14 @@
                     <div class="level-right">
                         <div class="level-item">
                             <div class="game-meta-counter acts">
-                                <div class="has-text-weight-bold is-size-3"><span class="acts-count">0</span>
+                                <div class="has-text-weight-semibold is-size-3"><span class="acts-count">0</span>
                                 </div>
                                 <div class="has-text-smallcaps has-text-darkgray">Màn chơi</div>
                             </div>
                         </div>
                         <div class="level-item">
                             <div class="game-meta-counter players">
-                                <div class="has-text-weight-bold is-size-3">
+                                <div class="has-text-weight-semibold is-size-3">
                                     <span class="players-count">0</span><span class="players-limit">10</span>
                                 </div>
                                 <div class="has-text-smallcaps has-text-darkgray">Người chơi</div>
@@ -105,11 +111,26 @@
                 </div>
                 <div class="tabs game-navigation" id="game-navigation">
                     <ul>
-                        <li><a>Phòng chờ</a></li>
-                        <li class="is-active"><a>Nội dung</a></li>
-                        <li><a>Nhân vật</a></li>
-                        <li><a>Thẻ bài</a></li>
-                        <li class="is-push-right"><a>Thiết lập</a></li>
+                        <li><a>
+                                <span class="icon"><i class="fa fa-hourglass-half"></i></span>
+                                <span class="text">Phòng chờ</span>
+                            </a></li>
+                        <li class="is-active"><a>
+                                <span class="icon"><i class="fas fa-sticky-note"></i></span>
+                                <span class="text">Nội dung</span>
+                            </a></li>
+                        <li><a>
+                                <span class="icon"><i class="fas fa-user-friends"></i></span>
+                                <span class="text">Nhân vật</span>
+                            </a></li>
+                        <li><a>
+                                <span class="icon"><i class="fas fa-clone"></i></span>
+                                <span class="text">Thẻ bài</span>
+                            </a></li>
+                        <li class="is-push-right"><a>
+                                <span class="icon"><i class="fas fa-cog"></i></span>
+                                <span class="text">Thiết lập</span>
+                            </a></li>
                     </ul>
                 </div>
             </div>
@@ -120,7 +141,7 @@
 
 <div id="game-main">
 
-    <div id="game-page-home" class="game-tab">
+    <div id="game-page-waiting-room" class="game-tab">
         <div class="container">
 
     <div class="columns">
@@ -129,9 +150,11 @@
 
             <div class="box-wrapper is-spaced">
 
-                <div class="box">
+                <div class="box" id="game-waiting-room-description">
+
     <div class="box-title is-bordered">
-        <h4>Miêu tả</h4></div><div class="box-content content">
+        <h4>Miêu tả</h4></div><div
+        class="box-content has-paragraphs">
         <p>At dolor duo accusam rebum sadipscing diam tempor dolor eos et, diam erat ipsum labore sit
     erat eirmod amet. Rebum consetetur et invidunt sit sit diam sit, amet sit et vero no
     aliquyam consetetur ut, sea dolor ut dolor ea. Et dolor ipsum diam kasd erat sadipscing at
@@ -198,9 +221,11 @@
     </div>
 </div>
 
-                <div class="box">
+                <div class="box" id="game-waiting-room-scenario">
+
     <div class="box-title is-bordered">
-        <h4>Bối cảnh</h4></div><div class="box-content content">
+        <h4>Bối cảnh</h4></div><div
+        class="box-content has-paragraphs">
         <p>Dolor magna no sit rebum, et amet et voluptua stet. Sit aliquyam tempor
     ipsum rebum est invidunt. Clita sit diam dolore kasd dolor tempor sit sanctus. Dolore lorem duo at stet aliquyam sit
     aliquyam at, sadipscing eos et vero est ut, labore erat erat dolore nonumy, dolore sit accusam lorem duo clita et
@@ -228,17 +253,32 @@
                     </div>
                 </div>
 
+                <div id="game-waiting-room-action">
+                    <div class="buttons">
+                        <a class="button">
+                            <span class="icon"><i class="far fa-plus"></i></span>
+                            <span class="has-text-smallcaps">Thêm</span>
+                        </a>
+                        <a class="button is-push-right">
+                            <span class="icon"><i class="far fa-list"></i></span>
+                            <span class="has-text-smallcaps">Sắp xếp</span>
+                        </a>
+                    </div>
+                </div>
+
             </div>
 
         </div>
 
-        <div class="column">
+        <div class="column is-hidden-xs">
 
             <div class="sidebar is-sticky">
 
-                <div class="box">
+                <div class="box" id="game-sidebar-cast">
+
     <div class="box-title is-bordered">
-        <h4>Thành viên</h4></div><div class="box-content">
+        <h4>Thành viên</h4></div><div
+        class="box-content">
         <div class="cast-stacks">
 
     <div class="cast-stack is-narrator">
@@ -250,7 +290,7 @@
                 </figure>
             </div>
             <div class="user-card-meta">
-                <div class="has-text-weight-bold">characterName</div>
+                <div class="has-text-weight-semibold">characterName</div>
                 <div class="has-text-darkgray is-size-7 has-text-underline-on-hover">
                     @username</div>
             </div>
@@ -267,7 +307,7 @@
                 </figure>
             </div>
             <div class="user-card-meta">
-                <div class="has-text-weight-bold">characterName</div>
+                <div class="has-text-weight-semibold">characterName</div>
                 <div class="has-text-darkgray is-size-7 has-text-underline-on-hover">
                     @username</div>
             </div>
@@ -280,7 +320,7 @@
                 </figure>
             </div>
             <div class="user-card-meta">
-                <div class="has-text-weight-bold">characterName</div>
+                <div class="has-text-weight-semibold">characterName</div>
                 <div class="has-text-darkgray is-size-7 has-text-underline-on-hover">
                     @username</div>
             </div>
@@ -298,6 +338,25 @@
 </div>
     </div>
 
+</div>
+
+                <div id="sidebar-footer">
+    <nav class="sidebar-footer-links">
+        <ul>
+            <li><a href="#">Về chúng tôi</a></li>
+            <li><a href="#">Hỗ trợ</a></li>
+            <li><a href="#">Dịch vụ</a></li>
+            <li><a href="#">Cửa hàng</a></li>
+            <li><a href="#">Tuyển dụng</a></li>
+            <li><a href="#">Điều khoản sử dụng</a></li>
+            <li><a href="#">Ủng hộ</a></li>
+        </ul>
+    </nav>
+
+    <div class="sidebar-footer-copyright">
+        <p>Một sản phẩm của Công ty CP WEEA, JSC.</p>
+        <p class="is-uppercase">© 2019 Dẫn Truyện.</p>
+    </div>
 </div>
 
             </div>
@@ -318,23 +377,47 @@
 
             <div class="post-wrapper is-spaced">
 
-                <div class="post">
+                <!-- POST: IS-NARRATOR IS-FIRST -->
+                <div class="post is-narrator is-first">
                     <div class="post-head">
+                        <div class="post-cover">
+                            <figure class="image is-full is-cover has-placeholder-medium">
+                                <img src="">
+                            </figure>
+                        </div>
                         <div class="post-title">
-                            <div class="columns is-flex is-align-center">
-                                <div class="column is-narrow">
-                                    <figure class="image is-size-4 is-bordered is-radius has-placeholder">
-                                        <img src="">
-                                    </figure>
+                            <div class="has-text-smallcaps act">Chương 1, Cảnh 1</div>
+                            <h4 class="is-capitalized name">Tên cảnh</h4>
+                        </div>
+                        <a href="./game-maps-single.html" class="post-scene-location"></a>
+                    </div>
+                    <div class="post-body">
+
+                        <div class="post-stacks">
+                            <div class="game-card-stack is-obstacle">
+                                <div class="game-card is-character">
+                                    <div class="game-card-icon"></div>
+                                    <div class="game-card-name">challengeName</div>
                                 </div>
-                                <div class="column">
-                                    <h6>characterName</h6>
-                                    <p class="has-text-darkgray is-size-7">@username</p>
+                                <div class="game-card is-obstacle">
+                                    <div class="game-card-icon"></div>
+                                    <div class="game-card-name">challengeName</div>
+                                </div>
+                            </div>
+                            <div class="game-card-stack is-available">
+                                <div class="game-card is-asset">
+                                    <div class="game-card-icon"></div>
+                                    <div class="game-card-name">assetName</div>
+                                    <div class="game-card-amount">7</div>
+                                </div>
+                                <div class="game-card is-asset">
+                                    <div class="game-card-icon"></div>
+                                    <div class="game-card-name">assetName</div>
+                                    <div class="game-card-amount">7</div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="post-body">
+
                         <div class="post-content">
                             <p>Aliquyam eirmod nonumy eos dolor et, et ea diam diam amet erat amet, gubergren dolor
                                 magna sit ea ipsum et. Sit sit dolor clita sanctus erat eos gubergren, invidunt sit amet
@@ -356,19 +439,146 @@
                                 sea. Sanctus gubergren rebum stet ea et clita diam stet, est at vero at labore voluptua
                                 elitr est vero invidunt. Magna ea lorem lorem sed sed vero erat.</p>
                         </div>
+
                     </div>
+
+                    <div class="post-message messages are-small">
+                        <div class="message is-white">
+                            <div class="message-body">
+                                <p>Người dẫn truyện trao 10 thẻ bài <span class="card card-text card-strong">Tên thẻ
+                                        bài
+                                    </span> cho <strong>Người chơi</strong>.</p>
+                            </div>
+                        </div>
+                        <div class="message is-white">
+                            <div class="message-body">
+                                <p>Người dẫn truyện trao 10 thẻ bài <span class="card card-text card-strong">Tên thẻ
+                                        bài
+                                    </span> cho <strong>Người chơi</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="post-interaction">
-    <div class="post-interaction-item post-vote-up post-interaction-item-vote-up">
+    <div class="post-interaction-item post-interaction-item-vote post-interaction-item-vote-up">
         <span class="icon">
             <i class="fas fa-thumbs-up"></i>
         </span>
-        <span>10</span>
+        <span class="counter">10</span>
     </div>
-    <div class="post-interaction-item post-vote-down post-interaction-vote-down">
+    <div class="post-interaction-item post-interaction-item-vote post-interaction-item-vote-down">
         <span class="icon">
             <i class="fas fa-thumbs-down"></i>
         </span>
-        <span>10</span>
+        <span class="counter">10</span>
+    </div>
+    <div class="post-interaction-item post-interaction-item-comment">
+        <span>Bình luận</span>
+    </div>
+    <div class="post-interaction-item post-interaction-item-gift">
+        <span>Tặng Tem</span>
+    </div>
+    <div class="post-interaction-item is-push-right post-interaction-item-more">
+        <div class="dropdown is-hoverable is-up is-right">
+            <div class="dropdown-trigger"></div>
+            <div class="dropdown-menu">
+                <div class="dropdown-content">
+                    <a class="dropdown-item post-interaction-item-edit">
+                        <span class="icon"><i class="fas fa-edit"></i></span>
+                        <span>Chỉnh sửa</span>
+                    </a>
+                    <a class="dropdown-item post-interaction-item-mod">
+                        <span class="icon"><i class="fas fa-exclamation-triangle"></i></span>
+                        <span>Yêu cầu chỉnh sửa</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="post-interaction-item post-interaction-item-share">
+        <span class="icon"><i class="fas fa-share-alt"></i></span>
+    </a>
+</div>
+
+                </div>
+
+                <!-- POST: IS-PLAYER -->
+                <div class="post is-player">
+                    <div class="post-head">
+                        <div class="post-cover">
+                            <figure class="image is-full">
+                                <img src="https://via.placeholder.com/1000x500/f7f7f7/">
+                            </figure>
+                        </div>
+                        <div class="post-title">
+                            <div class="columns is-xs is-flex is-align-center">
+                                <div class="column is-narrow">
+                                    <figure class="image is-size-4 is-bordered is-radius has-placeholder">
+                                        <img src="">
+                                    </figure>
+                                </div>
+                                <div class="column">
+                                    <h6>characterName</h6>
+                                    <p class="has-text-darkgray is-size-7">@username</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-body">
+
+                        <div class="post-content">
+                            <p>Aliquyam eirmod nonumy eos dolor et, et ea diam diam amet erat amet, gubergren dolor
+                                magna sit ea ipsum et. Sit sit dolor clita sanctus erat eos gubergren, invidunt sit amet
+                                et dolore ipsum, at diam consetetur ipsum vero sea. Nonumy et kasd rebum eirmod.
+                                Consetetur dolores invidunt clita sit lorem sed. Ipsum elitr ipsum tempor voluptua. Vero
+                                sadipscing aliquyam elitr amet sadipscing lorem eos labore nonumy. Consetetur stet
+                                sanctus lorem amet, magna labore stet tempor sit sed et, kasd est sea sit voluptua
+                                sanctus sanctus eirmod rebum. Invidunt dolore amet sit elitr kasd duo. Gubergren et
+                                clita diam consetetur.</p>
+                            <p>Est erat lorem lorem duo elitr sed duo tempor diam. Invidunt nonumy eos dolor et clita
+                                eos. Eirmod amet gubergren duo lorem sed, aliquyam sanctus at dolores aliquyam et sed
+                                accusam. At lorem amet amet eos, lorem eos dolor magna ea diam et, takimata diam tempor
+                                sanctus sit, est duo.</p>
+                            <p>Dolore at et dolore nonumy labore dolores. Sit dolores et lorem at labore nonumy, dolor
+                                vero justo sit lorem, diam ipsum tempor dolor ipsum dolore nonumy ipsum ut sadipscing,
+                                diam at labore at aliquyam. Justo diam amet takimata sea. Elitr nonumy labore eos
+                                gubergren no elitr sit voluptua, ipsum aliquyam et rebum sit et stet. Justo gubergren
+                                dolores elitr erat no lorem sit voluptua, et labore vero consetetur vero elitr erat amet
+                                sea. Sanctus gubergren rebum stet ea et clita diam stet, est at vero at labore voluptua
+                                elitr est vero invidunt. Magna ea lorem lorem sed sed vero erat.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="post-message messages are-small">
+                        <div class="message is-white">
+                            <div class="message-body">
+                                <p>Người dẫn truyện trao 10 thẻ bài <span class="card card-text card-strong">Tên thẻ
+                                        bài
+                                    </span> cho <strong>Người chơi</strong>.</p>
+                            </div>
+                        </div>
+                        <div class="message is-white">
+                            <div class="message-body">
+                                <p>Người dẫn truyện trao 10 thẻ bài <span class="card card-text card-strong">Tên thẻ
+                                        bài
+                                    </span> cho <strong>Người chơi</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="post-interaction">
+    <div class="post-interaction-item post-interaction-item-vote post-interaction-item-vote-up">
+        <span class="icon">
+            <i class="fas fa-thumbs-up"></i>
+        </span>
+        <span class="counter">10</span>
+    </div>
+    <div class="post-interaction-item post-interaction-item-vote post-interaction-item-vote-down">
+        <span class="icon">
+            <i class="fas fa-thumbs-down"></i>
+        </span>
+        <span class="counter">10</span>
     </div>
     <div class="post-interaction-item post-interaction-item-comment">
         <span>Bình luận</span>
@@ -399,6 +609,7 @@
 </div>
                 </div>
 
+                <!-- POST: SKELETON -->
                 <div class="post">
                     <div class="post-head">
                         <div class="post-title">
@@ -427,13 +638,53 @@
 
         </div>
 
-        <div class="column">
+        <div class="column is-hidden-xs">
 
             <div class="sidebar is-sticky">
 
-                <div class="box">
+                <div id="game-sidebar-player">
+
+    <div class="user-card is-horizontal">
+        <div class="user-card-image">
+            <figure class="image is-size-5 is-cover is-bordered is-radius has-placeholder">
+                <img src="">
+            </figure>
+        </div>
+        <div class="user-card-meta">
+            <div class="has-text-weight-semibold">characterName</div>
+            <div class="has-text-darkgray is-size-7 has-text-underline-on-hover">
+                @username</div>
+        </div>
+    </div>
+</div>
+
+<div id="game-sidebar-player-action">
+    <div class="buttons">
+        <a href="#" class="button is-fullwidth">
+            <div class="has-text-smallcaps">
+                <span class="icon"><i class="far fa-pen-nib"></i></span><span>Tiếp tục cảnh</span>
+            </div>
+        </a>
+    </div>
+    <div class="buttons is-nowrap are-fullwidth is-visible-narrator-only">
+        <a href="#" class="button">
+            <div class="has-text-smallcaps">
+                <span class="icon"><i class="far fa-pen-nib"></i></span><span>Kết thúc cảnh</span>
+            </div>
+        </a>
+        <a href="#" class="button">
+            <div class="has-text-smallcaps">
+                <span class="icon"><i class="far fa-bullhorn"></i></span><span>Nhắc nhở</span>
+            </div>
+        </a>
+    </div>
+</div>
+
+                <div class="box" id="game-sidebar-cast">
+
     <div class="box-title is-bordered">
-        <h4>Thành viên</h4></div><div class="box-content">
+        <h4>Thành viên</h4></div><div
+        class="box-content">
         <div class="cast-stacks">
 
     <div class="cast-stack is-narrator">
@@ -445,7 +696,7 @@
                 </figure>
             </div>
             <div class="user-card-meta">
-                <div class="has-text-weight-bold">characterName</div>
+                <div class="has-text-weight-semibold">characterName</div>
                 <div class="has-text-darkgray is-size-7 has-text-underline-on-hover">
                     @username</div>
             </div>
@@ -462,7 +713,7 @@
                 </figure>
             </div>
             <div class="user-card-meta">
-                <div class="has-text-weight-bold">characterName</div>
+                <div class="has-text-weight-semibold">characterName</div>
                 <div class="has-text-darkgray is-size-7 has-text-underline-on-hover">
                     @username</div>
             </div>
@@ -475,7 +726,7 @@
                 </figure>
             </div>
             <div class="user-card-meta">
-                <div class="has-text-weight-bold">characterName</div>
+                <div class="has-text-weight-semibold">characterName</div>
                 <div class="has-text-darkgray is-size-7 has-text-underline-on-hover">
                     @username</div>
             </div>
@@ -500,6 +751,265 @@
         </div>
 
     </div>
+
+
+    <div class="columns">
+
+        <div class="column is-8">
+
+            <div class="post-wrapper">
+
+                <div class="post is-editor">
+    <div class="post-header">
+        <div class="post-title">
+            <h4>Tiếp tục câu truyện</h4>
+        </div>
+        <div class="post-cover">
+            <label for="post-cover-image"></label>
+            <input type="file" id="post-cover-image">
+            <figure class="image is-full">
+                <img src="">
+            </figure>
+        </div>
+    </div>
+    <div class="post-body">
+        <div class="wysiwyg is-bordered">
+            <textarea rows="10"></textarea>
+            <div class="word-count">30</div>
+        </div>
+        <p class="help"><i class="far fa-info-circle is-size-7"></i> <a href="#">Huớng dẫn sử dụng Markdown Editor</a>
+        </p>
+    </div>
+</div>
+
+                <div class="box" id="game-post-card-manager">
+
+    <div class="box-title is-bordered">
+        <h4>Quản lý thẻ bài</h4></div><div
+        class="box-content no-padding">
+        <div class="game-card-manager">
+    <div class="tabs is-fullwidth">
+        <ul>
+            <li class="is-active"><a>
+                    <span class="icon"><i class="fas fa-globe"></i></span>
+                    <span class="has-text-smallcaps">Nơi chốn</span>
+                </a></li>
+            <li><a>
+                    <span class="icon"><i class="fas fa-bullseye"></i></span>
+                    <span class="has-text-smallcaps">Thử thách</span>
+                </a></li>
+            <li><a>
+                    <span class="icon"><i class="fas fa-swords"></i></span>
+                    <span class="has-text-smallcaps">Vật phẩm</span>
+                </a></li>
+            <li><a>
+                    <span class="icon"><i class="fas fa-crosshairs"></i></span>
+                    <span class="has-text-smallcaps">Mục đích</span>
+                </a></li>
+        </ul>
+    </div>
+    <div class="game-card-manager-tab">
+        <div class="title">
+            <h5>Nơi chốn</h5>
+            <p class="has-text-darkgray">Nơi chốn là loại thẻ bài thể hiện địa điểm nơi diễn ra phân cảnh hiện tại trong
+                câu chuyện.</p>
+        </div>
+        <div class="content">
+            <div class="columns">
+
+                <div class="column is-4 game-card-manager-left">
+                    <!-- Dùng jQuery để lấy height của .game-card-manager-right .game-card-preview
+                        rồi set làm max-height cho .game-card-manager-left -->
+                    <div class="game-card-list game-card-stack">
+                        <div class="game-card is-character is-selected">
+                            <div class="game-card-icon"></div>
+                            <div class="game-card-name">challengeName</div>
+                        </div>
+                        <div class="game-card is-character">
+                            <div class="game-card-icon"></div>
+                            <div class="game-card-name">challengeName</div>
+                        </div>
+                        <div class="game-card is-character">
+                            <div class="game-card-icon"></div>
+                            <div class="game-card-name">challengeName</div>
+                        </div>
+                        <div class="game-card is-character">
+                            <div class="game-card-icon"></div>
+                            <div class="game-card-name">challengeName</div>
+                        </div>
+                        <div class="game-card is-character">
+                            <div class="game-card-icon"></div>
+                            <div class="game-card-name">challengeName</div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <a class="button is-black is-fullwidth">
+                            <span class="icon"><i class="fas fa-plus is-size-7"></i></span>
+                            <span class="has-text-smallcaps">Tạo thẻ bài mới</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="column game-card-manager-right">
+                    <div class="game-card-preview">
+                        <div class="game-card is-horizontal is-obstacle">
+                            <div class="game-card-image">
+                                <div class="game-card-icon"></div>
+                                <figure class="image is-full is-cover">
+                                    <img src="">
+                                </figure>
+                            </div>
+                            <div class="game-card-info">
+                                <div class="game-card-info-inner">
+                                    <h5 class="game-card-title">Lorem Ipsum Dolor Sit Amet</h5>
+                                    <p class="game-card-description">Accusam ut ea dolores rebum sit ea. Clita sanctus
+                                        lorem dolor gubergren. Duo aliquyam eos takimata elitr ea consetetur magna sit,
+                                        lorem amet et amet consetetur magna no et dolor sanctus. Eos invidunt at amet
+                                        stet ipsum sit consetetur.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buttons are-small">
+                            <a class="button">
+                                <span class="icon"><i class="fas fa-plus"></i></span>
+                                <span class="has-text-smallcaps">Đặt thẻ</span>
+                            </a>
+                            <a class="button">
+                                <span class="icon"><i class="fas fa-user-plus"></i></span>
+                                <span class="has-text-smallcaps">Chỉ định</span>
+                            </a>
+                            <div class="dropdown is-push-right is-hoverable is-up is-right">
+                                <div class="dropdown-trigger">
+                                    <a class="button is-small">
+                                        <span class="icon"><i class="far fa-ellipsis-h"></i></span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-content">
+                                        <a class="dropdown-item post-interaction-item-edit">
+                                            <span class="icon"><i class="fas fa-edit"></i></span>
+                                            <span>Chỉnh sửa</span>
+                                        </a>
+                                        <a class="dropdown-item post-interaction-item-mod">
+                                            <span class="icon"><i class="fas fa-copy"></i></span>
+                                            <span>Sao chép</span>
+                                        </a>
+                                        <a class="dropdown-item post-interaction-item-mod">
+                                            <span class="icon"><i class="fas fa-trash"></i></span>
+                                            <span>Xoá thẻ</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+
+</div>
+
+                <div class="buttons is-hidden-xs">
+                    <a class="button is-info">
+                        <span class="icon"><i class="fas fa-paper-plane is-size-7"></i></span>
+                        <span class="has-text-smallcaps">Đăng tải</span>
+                    </a>
+                    <a class="button is-push-right">
+                        <span class="icon"><i class="fas fa-times"></i></span>
+                        <span class="has-text-smallcaps">Hủy</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="column">
+
+            <div class="sidebar is-sticky">
+
+                <div class="box" id="game-sidebar-post-card">
+
+    <div class="box-title is-bordered">
+        <h4>Thiết lập thẻ bài</h4></div><div
+        class="box-content no-padding">
+        <div class="game-card-stack is-obstacle">
+    <div class="game-card is-character">
+        <div class="game-card-icon"></div>
+        <div class="game-card-name">challengeName</div>
+    </div>
+    <div class="game-card is-obstacle">
+        <div class="game-card-icon"></div>
+        <div class="game-card-name">challengeName</div>
+    </div>
+    <div class="game-card is-create">
+        <div class="game-card-icon"></div>
+        <div class="game-card-name">assetName</div>
+    </div>
+</div>
+<div class="game-card-stack is-available">
+    <div class="game-card is-asset">
+        <div class="game-card-icon"></div>
+        <div class="game-card-name">assetName</div>
+        <div class="game-card-amount">7</div>
+    </div>
+    <div class="game-card is-asset">
+        <div class="game-card-icon"></div>
+        <div class="game-card-name">assetName</div>
+        <div class="game-card-amount">7</div>
+    </div>
+    <div class="game-card is-create">
+        <div class="game-card-icon"></div>
+        <div class="game-card-name">assetName</div>
+    </div>
+</div>
+    </div>
+
+</div>
+
+                <div class="box" id="game-sidebar-post-setting">
+
+    <div class="box-title is-bordered">
+        <h4>Thiết lập thẻ bài</h4></div><div
+        class="box-content">
+        <div class="field is-horizontal">
+    <label>
+        <h5>Kết thúc cảnh</h5>
+        <p class="has-text-darkgray">Đây là kết thúc của phân cảnh hiện tại.</p>
+    </label>
+    <div class="control is-push-right">
+        <label class="toggle-switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
+</div>
+    </div>
+
+</div>
+
+                <div class="buttons is-hidden-sm">
+                    <a class="button is-info">
+                        <span class="icon"><i class="fas fa-paper-plane is-size-7"></i></span>
+                        <span class="has-text-smallcaps">Đăng tải</span>
+                    </a>
+                    <a class="button is-push-right">
+                        <span class="icon"><i class="fas fa-times"></i></span>
+                        <span class="has-text-smallcaps">Hủy</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
 
 </div>
     </div>

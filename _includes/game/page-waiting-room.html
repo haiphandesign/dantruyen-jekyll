@@ -1,0 +1,59 @@
+<div class="container">
+
+    <div class="columns">
+
+        <div class="column is-8">
+
+            <div class="box-wrapper is-spaced">
+
+                {% include global/widget.html source="game-waiting-room-description" title="Miêu tả" borderedtitle="yes" textwrapper="yes" %}
+
+                {% include widget/game-waiting-room-meta.html %}
+
+                {% include global/widget.html source="game-waiting-room-scenario" title="Bối cảnh" borderedtitle="yes" textwrapper="yes" %}
+
+                <div class="box">
+                    <div class="box-title is-bordered">
+                        <h4><span class="skeleton is-4"></span></h4>
+                        <p><span class="skeleton is-3"></span></p>
+                    </div>
+                    <div class="box-content">
+                        <span class="skeleton"></span>
+                        <span class="skeleton"></span>
+                        <span class="skeleton is-5"></span>
+                        <div style="height: 15rem;"></div>
+                    </div>
+                </div>
+
+                <div id="game-waiting-room-action">
+                    <div class="buttons">
+                        <a class="button">
+                            <span class="icon"><i class="far fa-plus"></i></span>
+                            <span class="has-text-smallcaps">Thêm</span>
+                        </a>
+                        <a class="button is-push-right">
+                            <span class="icon"><i class="far fa-list"></i></span>
+                            <span class="has-text-smallcaps">Sắp xếp</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="column is-hidden-xs">
+
+            <div class="sidebar is-sticky">
+
+                {% include global/widget.html source="game-sidebar-cast" title="Thành viên" borderedtitle="yes"  %}
+
+                {% include global/footer-sidebar.html %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,388 @@
+.post-wrapper {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.post {
+    @include box;
+
+    display: grid;
+    grid-auto-rows: minmax(min-content, max-content);
+    grid-gap: 1rem;
+
+    transition: border .2s ease;
+
+    &:hover {
+        border-color: var(--darkgray);
+    }
+
+    &.is-player {
+        @include breakpoint(md) {
+            width: calc(100% - 3.5rem);
+            margin-left: 3.5rem;
+        }
+    }
+}
+
+// POST HEAD
+
+.post-head {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    .post-title {
+        order: 1;
+    }
+
+    .post-cover {
+        order: 2;
+    }
+}
+
+.post-title {
+    width: 100%;
+    padding: 1rem;
+
+    @include border(bottom);
+    border-color: var(--border-color-light);
+}
+
+.post-cover {
+    figure.image {
+        >img {
+            @include border(bottom);
+            border-color: var(--border-color-light);
+
+            &[src=''] {
+                display: none;
+            }
+        }
+    }
+}
+
+
+// POST BODY
+
+.post-body {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.post-content {
+    @include content;
+}
+
+.post-stacks {
+    @include border(bottom);
+
+    position: relative;
+
+    width: calc(100% + 2rem);
+
+    margin-top: -1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    margin-bottom: 1rem;
+
+    background-color: var(--lightgray);
+
+    @include breakpoint(sm) {
+        @include border;
+
+        float: right;
+        right: 0;
+        z-index: 1;
+
+        width: 17rem;
+
+        margin-top: 0;
+        margin-left: 1rem;
+        margin-right: 0;
+        margin-bottom: .5rem;
+
+        background-color: var(--white);
+    }
+}
+
+
+// POST MESSAGES
+
+.post-message {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+// POST INTERACTION
+
+.post-interaction {
+    display: flex;
+
+    width: 100%;
+
+    margin: 0;
+    padding: .5rem 1rem;
+
+    @include border(top);
+    border-color: var(--border-color-light);
+
+    @include breakpoint(sm) {
+        width: calc(100% - 2rem);
+        margin: 0 1rem;
+        padding: .5rem 0;
+    }
+
+    .post-interaction-item-vote.is-active,
+    .post-interaction-item-vote:hover {
+        &.post-interaction-item-vote-up {
+            color: var(--green);
+        }
+
+        &.post-interaction-item-vote-down {
+            color: var(--red);
+        }
+    }
+
+    .post-interaction-item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 1.5rem;
+
+        >span {
+            font-size: var(--font-size-7);
+            font-weight: var(--font-weight-semibold);
+            white-space: nowrap;
+        }
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        &:hover {
+            color: var(--blue);
+            cursor: pointer;
+        }
+    }
+}
+
+// POST TYPE
+
+.post.is-narrator {
+    .post-content-wrapper {
+        .card-stacks {
+            @include breakpoint(xs) {
+                order: 99999;
+                margin: -1rem;
+                margin-top: 1rem;
+                margin-bottom: 0;
+
+                @include border(top);
+            }
+        }
+    }
+
+    &.is-first {
+        .post-cover {
+            width: 100%;
+            height: 20rem;
+
+            img {
+                @include radius;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            +.post-title {
+                position: absolute;
+                bottom: 0;
+                z-index: 2;
+
+                border: 0;
+
+                background-color: var(--black-50);
+                color: var(--white);
+            }
+        }
+    }
+}
+
+// POST EDITOR
+
+.post.is-editor {
+    .post-header {
+        .post-cover {
+            position: relative;
+
+            @include border(bottom);
+
+            &:after {
+                content: '';
+                display: block;
+                width: 100%;
+                padding-bottom: 30%;
+            }
+
+            label {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 10;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                width: 100%;
+                height: 100%;
+
+                background-color: var(--lightgray);
+
+                cursor: pointer;
+
+                &:before {
+                    content: '\f574';
+                    @include fontawesome(solid);
+                    margin-bottom: .5rem;
+                }
+
+                &:after {
+                    content: 'Chọn hình ảnh';
+                    font-size: var(--font-size-7);
+                    font-weight: var(--font-weight-semibold);
+                    text-transform: uppercase;
+                }
+            }
+
+            figure.image {
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .post-body {
+        padding-bottom: .5rem;
+    }
+}
+
+.game-card-manager {
+    .tabs {
+        background-color: var(--lightgray);
+
+        a {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        ul {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        li {
+            border-bottom-width: 3px;
+            border-color: transparent;
+
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+
+            &:hover {
+                border-color: var(--darkgray);
+            }
+
+            &.is-active {
+                border-color: var(--black);
+            }
+
+            @include breakpoint(xs) {
+                span.icon {
+                    margin: 0 !important;
+
+                    +span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .game-card-manager-tab {
+        padding: 1rem;
+
+        .title {
+            margin-bottom: 1rem;
+
+            h5 {
+                @include border(bottom);
+                border-color: var(--border-color-light);
+                margin-bottom: .5rem;
+                padding-bottom: .25rem;
+            }
+        }
+
+        .game-card-manager-left {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: minmax(0, 1fr);
+
+        }
+
+        .game-card-list {
+            @include box;
+            display: flex;
+            flex-direction: column;
+            height: calc(100% - 3.5rem);
+            overflow: scroll;
+            padding: .5rem;
+            scroll-padding: .5rem;
+
+            &.game-card-stack {
+                grid-gap: .5rem;
+            }
+
+            &.is-empty {
+                align-items: center;
+                justify-content: center;
+                background-color: var(--lightgray);
+                border-style: dashed;
+
+                * {
+                    display: none;
+                }
+
+                &:before {
+                    content: 'Chưa có thẻ bài nào';
+                    font-size: var(--font-size-7);
+                    font-weight: var(--font-weight-semibold);
+                    text-transform: uppercase;
+                    color: var(--darkgray);
+
+                    padding: 2rem 0 2.5rem;
+                }
+            }
+        }
+
+        .game-card {
+            @include breakpoint(xs) {
+                grid-template-columns: minmax(0, 1fr);
+                // max-width: 18rem;
+            }
+        }
+    }
+}
+
+.game-card-preview {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 1rem;
+}

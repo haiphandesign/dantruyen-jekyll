@@ -1,0 +1,30 @@
+// CONFIG
+
+:root {
+    --font-family-sans-serif: 'Proxima Nova', sans-serif;
+    --font-size: 15px;
+    --font-size-7: .8rem;
+    --border-radius: 2px;
+}
+
+// IMAGE PLACEHOLDER
+
+.image {
+    &.has-placeholder {
+        background-image: url('/assets/images/placeholder-small.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
+
+    &.has-placeholder-medium {
+        background-image: url('/assets/images/placeholder-medium.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
+
+    &.has-placeholder-big {
+        background-image: url('/assets/images/placeholder-big.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
+}

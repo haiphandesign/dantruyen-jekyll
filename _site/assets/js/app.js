@@ -2,12 +2,20 @@
 window.onload = function () {
     loadingRemove();
     mainMinheight();
+    stickySidebar();
+    gameCardManagerHeightCalc();
 }
 
 
 // ONSCROLL
 window.onscroll = function () {
     navbarScroll();
+    stickySidebar();
+}
+
+// ONRESIZE
+window.onresize = function () {
+    gameCardManagerHeightCalc();
 }
 
 // NAVBAR SCROLL
@@ -34,6 +42,13 @@ function loadingRemove() {
     }, 3000);
 }
 
+// SIDEBAR STICKY
+function stickySidebar() {
+    var navbarHeight = $('#navbar').outerHeight();
+
+    $('.sidebar.is-sticky').css('top', `calc(${navbarHeight}px + 1rem)`)
+}
+
 // GAME PAGE TABS
 $('#game-navigation>ul>li').click(function () {
     var gameTabIndex = $(this).index();
@@ -51,4 +66,32 @@ document.getElementById('game-join-button').addEventListener('click', function (
         e.target.classList.toggle('is-active');
         e.target.classList.toggle('is-info');
     }, 500);
+});
+
+// GAME POST VOTE
+
+$('.post-interaction-item-vote').click(function () {
+    var currentCount = parseInt($(this).children('.counter').html(), 10);
+    if ($(this).hasClass('is-active')) {
+        $(this).children('.counter').html(Math.max(0, currentCount - 1).toString());
+        $(this).removeClass('is-active');
+    } else {
+        $(this).parent().children('.post-interaction-item-vote').removeClass('is-active');
+        $(this).children('.counter').html(Math.max(0, currentCount + 1).toString());
+        $(this).toggleClass('is-active');
+    }
+});
+
+// GAME CARD MANAGER
+
+function gameCardManagerHeightCalc() {
+    var gameCardManagerHeight = $('.game-card-manager-tab .game-card-preview').height();
+    $('.game-card-manager-tab .game-card-manager-left').css('max-height', `${gameCardManagerHeight}px`);
+};
+
+// GAME CARD LIST
+
+$('.game-card-list .game-card').click(function () {
+    $(this).parent().children('.game-card').removeClass('is-selected');
+    $(this).addClass('is-selected');
 });

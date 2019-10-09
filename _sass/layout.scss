@@ -1,0 +1,128 @@
+// BASIC
+
+.column+.column {
+    margin-top: var(--column-gap);
+
+    @include breakpoint(sm) {
+        margin-top: 0;
+    }
+}
+
+.has-text-smallcaps {
+    font-weight: var(--font-weight-semibold);
+}
+
+.has-underline {
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+}
+
+.has-underline-hover {
+    &:hover {
+        border-bottom: 1px solid currentColor;
+        padding-bottom: 1px;
+    }
+}
+
+a.help,
+.help a {
+    border-bottom: 1px dotted currentColor;
+}
+
+
+// TOGGLE SWITCH
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 2.5rem;
+    height: 1.5rem;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        padding: .25rem;
+
+        background-color: var(--border-color);
+        border-radius: .75rem;
+
+        transition: all .5s;
+
+        &:before {
+            content: '';
+            position: relative;
+
+            display: block;
+            height: 1rem;
+            width: 1rem;
+
+            background-color: white;
+            border-radius: 50%;
+        }
+    }
+
+    input:checked+.slider {
+        justify-content: flex-end;
+        background-color: var(--black);
+    }
+}
+
+// WYSIWYG
+
+.wysiwyg {
+    width: 100%;
+    // overflow: hidden;
+
+    &.is-bordered {
+        @include box;
+    }
+
+    &:before {
+        @include border(bottom);
+
+        content: '';
+        display: block;
+
+        background-image: url('/assets/images/wysiwyg.png');
+        background-size: contain;
+        background-position: left center;
+        background-repeat: no-repeat;
+
+
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+
+        height: 3rem;
+    }
+
+    &:hover,
+    &:focus {
+        border-color: var(--darkgray);
+    }
+
+    textarea {
+        width: 100%;
+        border: none;
+        padding: 1rem;
+    }
+}
+
+.word-count {
+    margin-top: .5rem;
+}

@@ -1,4 +1,5 @@
-<div class="box">
+<div class="box" id="{{ include.source }}">
+
     {% assign whitespace = " " %}
     {%- if include.title -%}
     <div class="box-title {%- if include.borderedtitle -%}{{ whitespace }}is-bordered{%- endif -%}">
@@ -9,7 +10,8 @@
     </div>
     {%- endif -%}
 
-    <div class="box-content {%- if include.textwrapper -%}{{ whitespace }}content{%- endif -%}">
+    <div
+        class="box-content {%- if include.textwrapper -%}{{ whitespace }}has-paragraphs{%- endif -%} {%- if include.nopadding -%}{{ whitespace }}no-padding{%- endif -%}">
         {% include widget/{{ include.source }}.html  %}
     </div>
 

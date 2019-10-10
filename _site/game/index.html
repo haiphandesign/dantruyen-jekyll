@@ -34,7 +34,7 @@
             
             <a class="navbar-item" href="/browse/"><span>Browse</span></a>
             
-            <a class="navbar-item" href="/documentation/"><span>Documentation</span></a>
+            <a class="navbar-item" href="/user-profile/"><span>User Profile</span></a>
             
             <a class="navbar-item" href="/game/"><span>Game</span></a>
             
@@ -790,11 +790,11 @@
         <div class="game-card-manager">
     <div class="tabs is-fullwidth">
         <ul>
-            <li class="is-active"><a>
+            <li><a>
                     <span class="icon"><i class="fas fa-globe"></i></span>
                     <span class="has-text-smallcaps">Nơi chốn</span>
                 </a></li>
-            <li><a>
+            <li class="is-active"><a>
                     <span class="icon"><i class="fas fa-bullseye"></i></span>
                     <span class="has-text-smallcaps">Thử thách</span>
                 </a></li>
@@ -808,7 +808,9 @@
                 </a></li>
         </ul>
     </div>
-    <div class="game-card-manager-tab">
+
+    <!-- Game Card Manager: Places -->
+    <div id="game-card-manager-places" class="game-card-manager-tab">
         <div class="title">
             <h5>Nơi chốn</h5>
             <p class="has-text-darkgray">Nơi chốn là loại thẻ bài thể hiện địa điểm nơi diễn ra phân cảnh hiện tại trong
@@ -821,28 +823,111 @@
                     <!-- Dùng jQuery để lấy height của .game-card-manager-right .game-card-preview
                         rồi set làm max-height cho .game-card-manager-left -->
                     <div class="game-card-list game-card-stack">
-                        <div class="game-card is-character is-selected">
+                        <div class="game-card is-place">
                             <div class="game-card-icon"></div>
                             <div class="game-card-name">challengeName</div>
                         </div>
-                        <div class="game-card is-character">
+                        <div class="game-card is-place">
                             <div class="game-card-icon"></div>
                             <div class="game-card-name">challengeName</div>
                         </div>
-                        <div class="game-card is-character">
+                        <div class="game-card is-place">
                             <div class="game-card-icon"></div>
                             <div class="game-card-name">challengeName</div>
                         </div>
-                        <div class="game-card is-character">
+                        <div class="game-card is-place">
                             <div class="game-card-icon"></div>
                             <div class="game-card-name">challengeName</div>
                         </div>
-                        <div class="game-card is-character">
+                        <div class="game-card is-place">
                             <div class="game-card-icon"></div>
                             <div class="game-card-name">challengeName</div>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons are-small">
+                        <a class="button is-black is-fullwidth">
+                            <span class="icon"><i class="fas fa-plus is-size-7"></i></span>
+                            <span class="has-text-smallcaps">Tạo thẻ bài mới</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="column game-card-manager-right">
+                    <div class="game-card-preview">
+                        <div class="game-card is-horizontal is-place">
+                            <div class="game-card-image">
+                                <div class="game-card-icon"></div>
+                                <figure class="image is-full is-cover">
+                                    <img src="">
+                                </figure>
+                            </div>
+                            <div class="game-card-info">
+                                <div class="game-card-info-inner">
+                                    <h5 class="game-card-title">Lorem Ipsum Dolor Sit Amet</h5>
+                                    <p class="game-card-description">Accusam ut ea dolores rebum sit ea. Clita sanctus
+                                        lorem dolor gubergren. Duo aliquyam eos takimata elitr ea consetetur magna sit,
+                                        lorem amet et amet consetetur magna no et dolor sanctus. Eos invidunt at amet
+                                        stet ipsum sit consetetur.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-card-preview-interactions">
+                            <div class="buttons are-small">
+                                <a class="button">
+                                    <span class="icon"><i class="fas fa-plus"></i></span>
+                                    <span class="has-text-smallcaps">Đặt thẻ</span>
+                                </a>
+                                <a class="button">
+                                    <span class="icon"><i class="fas fa-user-plus"></i></span>
+                                    <span class="has-text-smallcaps">Chỉ định</span>
+                                </a>
+                                <div class="dropdown is-push-right is-hoverable is-up is-right">
+                                    <div class="dropdown-trigger">
+                                        <a class="button is-small">
+                                            <span class="icon"><i class="far fa-ellipsis-h"></i></span>
+                                        </a>
+                                    </div>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-content">
+                                            <a class="dropdown-item post-interaction-item-edit">
+                                                <span class="icon"><i class="fas fa-edit"></i></span>
+                                                <span>Chỉnh sửa</span>
+                                            </a>
+                                            <a class="dropdown-item post-interaction-item-mod">
+                                                <span class="icon"><i class="fas fa-copy"></i></span>
+                                                <span>Sao chép</span>
+                                            </a>
+                                            <a class="dropdown-item post-interaction-item-mod">
+                                                <span class="icon"><i class="fas fa-trash"></i></span>
+                                                <span>Xoá thẻ</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Card Manager: Obstacles -->
+    <div id="game-card-manager-obstacles" class="game-card-manager-tab is-active">
+        <div class="title">
+            <h5>Thử thách</h5>
+            <p class="has-text-darkgray">Thử thách được sử dụng để đưa ra những thử thách cho các người chơi vượt qua.
+            </p>
+        </div>
+        <div class="content">
+            <div class="columns">
+
+                <div class="column is-4 game-card-manager-left">
+                    <!-- Dùng jQuery để lấy height của .game-card-manager-right .game-card-preview
+                        rồi set làm max-height cho .game-card-manager-left -->
+                    <div class="game-card-list game-card-stack is-empty"></div>
+                    <div class="buttons are-small">
                         <a class="button is-black is-fullwidth">
                             <span class="icon"><i class="fas fa-plus is-size-7"></i></span>
                             <span class="has-text-smallcaps">Tạo thẻ bài mới</span>
@@ -861,43 +946,9 @@
                             </div>
                             <div class="game-card-info">
                                 <div class="game-card-info-inner">
-                                    <h5 class="game-card-title">Lorem Ipsum Dolor Sit Amet</h5>
-                                    <p class="game-card-description">Accusam ut ea dolores rebum sit ea. Clita sanctus
-                                        lorem dolor gubergren. Duo aliquyam eos takimata elitr ea consetetur magna sit,
-                                        lorem amet et amet consetetur magna no et dolor sanctus. Eos invidunt at amet
-                                        stet ipsum sit consetetur.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="buttons are-small">
-                            <a class="button">
-                                <span class="icon"><i class="fas fa-plus"></i></span>
-                                <span class="has-text-smallcaps">Đặt thẻ</span>
-                            </a>
-                            <a class="button">
-                                <span class="icon"><i class="fas fa-user-plus"></i></span>
-                                <span class="has-text-smallcaps">Chỉ định</span>
-                            </a>
-                            <div class="dropdown is-push-right is-hoverable is-up is-right">
-                                <div class="dropdown-trigger">
-                                    <a class="button is-small">
-                                        <span class="icon"><i class="far fa-ellipsis-h"></i></span>
-                                    </a>
-                                </div>
-                                <div class="dropdown-menu">
-                                    <div class="dropdown-content">
-                                        <a class="dropdown-item post-interaction-item-edit">
-                                            <span class="icon"><i class="fas fa-edit"></i></span>
-                                            <span>Chỉnh sửa</span>
-                                        </a>
-                                        <a class="dropdown-item post-interaction-item-mod">
-                                            <span class="icon"><i class="fas fa-copy"></i></span>
-                                            <span>Sao chép</span>
-                                        </a>
-                                        <a class="dropdown-item post-interaction-item-mod">
-                                            <span class="icon"><i class="fas fa-trash"></i></span>
-                                            <span>Xoá thẻ</span>
-                                        </a>
+                                    <div class="help is-marginless">
+                                        <span class="icon"><i class="far fa-info-circle"></i></span>
+                                        <span>Chọn một thẻ bài từ danh sách</span>
                                     </div>
                                 </div>
                             </div>
@@ -908,6 +959,102 @@
             </div>
         </div>
     </div>
+
+    <!-- Game Card Manager: Assets -->
+    <div id="game-card-manager-assets" class="game-card-manager-tab">
+        <div class="title">
+            <h5>Vật phẩm</h5>
+            <p class="has-text-darkgray">Vật phẩm là những thẻ bài mà người chơi có thể nhặt được và sử dụng để vượt qua
+                các thử thách.</p>
+        </div>
+        <div class="content">
+            <div class="columns">
+
+                <div class="column is-4 game-card-manager-left">
+                    <!-- Dùng jQuery để lấy height của .game-card-manager-right .game-card-preview
+                        rồi set làm max-height cho .game-card-manager-left -->
+                    <div class="game-card-list game-card-stack is-empty"></div>
+                    <div class="buttons are-small">
+                        <a class="button is-black is-fullwidth">
+                            <span class="icon"><i class="fas fa-plus is-size-7"></i></span>
+                            <span class="has-text-smallcaps">Tạo thẻ bài mới</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="column game-card-manager-right">
+                    <div class="game-card-preview">
+                        <div class="game-card is-horizontal is-asset">
+                            <div class="game-card-image">
+                                <div class="game-card-icon"></div>
+                                <figure class="image is-full is-cover">
+                                    <img src="">
+                                </figure>
+                            </div>
+                            <div class="game-card-info">
+                                <div class="game-card-info-inner">
+                                    <div class="help is-marginless">
+                                        <span class="icon"><i class="far fa-info-circle"></i></span>
+                                        <span>Chọn một thẻ bài từ danh sách</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Card Manager: Goals -->
+    <div id="game-card-manager-goals" class="game-card-manager-tab">
+        <div class="title">
+            <h5>Mục đích</h5>
+            <p class="has-text-darkgray">Mục tiêu thể hiện một mục tiêu, một nhiệm vụ nào đó mà nhân vật mong muốn thực
+                hiện.</p>
+        </div>
+        <div class="content">
+            <div class="columns">
+
+                <div class="column is-4 game-card-manager-left">
+                    <!-- Dùng jQuery để lấy height của .game-card-manager-right .game-card-preview
+                        rồi set làm max-height cho .game-card-manager-left -->
+                    <div class="game-card-list game-card-stack is-empty"></div>
+                    <div class="buttons are-small">
+                        <a class="button is-black is-fullwidth">
+                            <span class="icon"><i class="fas fa-plus is-size-7"></i></span>
+                            <span class="has-text-smallcaps">Tạo thẻ bài mới</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="column game-card-manager-right">
+                    <div class="game-card-preview">
+                        <div class="game-card is-horizontal is-goal">
+                            <div class="game-card-image">
+                                <div class="game-card-icon"></div>
+                                <figure class="image is-full is-cover">
+                                    <img src="">
+                                </figure>
+                            </div>
+                            <div class="game-card-info">
+                                <div class="game-card-info-inner">
+                                    <div class="help is-marginless">
+                                        <span class="icon"><i class="far fa-info-circle"></i></span>
+                                        <span>Chọn một thẻ bài từ danh sách</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
 </div>
     </div>
 

@@ -1,0 +1,34 @@
+{% assign whitespace = " " %}
+<a href="/game/" class="game {%- if include.playing -%}{{ whitespace }}is-playing{%- endif -%}" style="
+{%- if include.background -%}
+--gameBg: {{ include.background }}
+{%- endif -%};
+{%- if include.text -%}
+--gameText: {{ include.text }}
+{%- endif -%};
+">
+    <div class="game-cover">
+        <figure class="image is-full is-cover has-placeholder-medium">
+            <img src="{%- if include.cover -%}{{ include.cover }}{%- endif -%}">
+        </figure>
+    </div>
+    <div class="game-meta">
+        <div class="game-meta-image">
+            <figure class="image is-radius is-bordered has-placeholder">
+                <img src="{%- if include.image -%}{{ include.image }}{%- endif -%}">
+            </figure>
+        </div>
+        <div class="game-meta-basic">
+            <div class="game-meta-name">
+                <span>{%- if include.title -%}{{ include.title }}{%- else -%}gameName{%- endif -%}</span>
+            </div>
+            {%- if include.playing -%}
+            <div class="game-meta-play">
+                <span>{{ include.playing }}</span>
+            </div>
+            {%- else -%}
+            <div class="game-meta-act"><span>1 Chương, 1 Cảnh</span></div>
+            {%- endif -%}
+        </div>
+    </div>
+</a>

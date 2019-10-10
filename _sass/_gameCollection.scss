@@ -1,0 +1,179 @@
+.game-collections {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+
+    .game {
+        --gameBg: var(--white);
+        --gameText: var(--black);
+        @include box;
+        padding: 1rem;
+
+        background-color: var(--gameBg);
+        color: var(--gameText);
+
+        .game-cover {
+            position: relative;
+            display: flex;
+
+            margin-top: -1rem;
+            margin-right: -1rem;
+            margin-left: -1rem;
+
+            mask-image: linear-gradient(to bottom, black 40%, transparent 95%);
+
+
+            &:after {
+                content: '';
+                display: block;
+                width: 100%;
+                padding-bottom: 40%;
+            }
+
+            figure.image {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .game-meta {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: minmax(min-content, max-content);
+            grid-gap: 1rem;
+            align-items: center;
+
+            .game-meta-image {
+                figure.image {
+                    position: relative;
+
+                    &:after {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        padding-bottom: 100%;
+                    }
+
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+            }
+
+            .game-meta-basic {
+                display: flex;
+                flex-direction: column;
+
+                text-shadow: 0 0 5px var(--gameBg);
+
+                .game-meta-act {
+                    opacity: .8;
+                }
+
+                .game-meta-play {
+                    order: 1;
+                    font-size: var(--font-size-5);
+                    font-weight: var(--font-weight-semibold);
+                }
+            }
+        }
+
+        &:not(.is-playing) {
+            .game-meta {
+                .game-meta-basic {
+                    .game-meta-name {
+                        font-size: var(--font-size-5);
+                        font-weight: var(--font-weight-semibold);
+                    }
+                }
+            }
+        }
+
+        &.is-playing {
+            .game-meta {
+                .game-meta-basic {
+                    .game-meta-name {
+                        order: 99;
+                        opacity: .8;
+
+                        &:before {
+                            content: 'Trong game'
+                        }
+
+                        span {
+                            font-weight: var(--font-weight-semibold);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.is-small {
+        grid-template-columns: repeat(2, 1fr);
+
+        @include breakpoint(sm) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .game {
+            .game-cover {
+                display: none;
+            }
+
+            .game-meta {
+                grid-auto-flow: row;
+                grid-auto-columns: minmax(0, 1fr);
+            }
+        }
+    }
+
+    &.is-medium {
+        @include breakpoint(sm) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .game {
+            .game-meta {
+                .game-meta-image {
+                    width: 4.5rem;
+                }
+            }
+        }
+    }
+
+    &.is-large {
+        .game {
+            .game-meta {
+                .game-meta-image {
+                    width: 4.5rem;
+                }
+            }
+        }
+
+        @include breakpoint(sm) {
+            grid-template-columns: 1fr;
+
+            .game {
+                .game-cover {
+                    margin-bottom: -7rem;
+
+                    &:after {
+                        padding-bottom: 30%;
+                    }
+                }
+
+                .game-meta {
+                    .game-meta-image {
+                        width: 6rem;
+                    }
+                }
+            }
+        }
+    }
+}

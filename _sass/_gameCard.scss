@@ -33,7 +33,7 @@
                 @include fontawesome(regular);
                 content: '\f0c8';
                 font-size: 15rem;
-                color: var(--white);
+                color: var(--gray);
                 line-height: 1;
 
                 position: absolute;
@@ -135,6 +135,18 @@
         }
     }
 
+    &.is-place {
+
+        .game-card-image figure.image:before,
+        .game-card-icon:before {
+            content: '\f0ac';
+        }
+
+        .game-card-icon:after {
+            content: 'Nơi chốn';
+        }
+    }
+
     &.is-character {
 
         .game-card-image figure.image:before,
@@ -168,6 +180,18 @@
 
         .game-card-icon:after {
             content: 'Đạo cụ';
+        }
+    }
+
+    &.is-goal {
+
+        .game-card-image figure.image:before,
+        .game-card-icon:before {
+            content: '\f05b';
+        }
+
+        .game-card-icon:after {
+            content: 'Mục đích';
         }
     }
 

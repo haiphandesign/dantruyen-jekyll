@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dẫn Truyện / User Profile
+    </title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://git.haiphan.design/harmony/harmony.min.css">
+    <link rel="stylesheet" href="/assets/addons/fonts/proxima-nova/stylesheet.css">
+    <link rel="stylesheet" href="/assets/addons/fontawesome/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+    <div id="navbar" class="navbar is-sticky is-bordered">
+    <div class="container is-wide">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <div class="navbar-logo">
+                    <h3 class="has-text-blue">Dẫn Truyện</h3>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="navbar-menu navbar-main">
+            
+            <a class="navbar-item" href="/browse/"><span>Browse</span></a>
+            
+            <a class="navbar-item" href="/user-profile/"><span>User Profile</span></a>
+            
+            <a class="navbar-item" href="/game/"><span>Game</span></a>
+            
+            <div class="navbar-menu-close" onclick="navbarMenuClose(this)">
+                <div class="delete"></div>
+            </div>
+        </div>
+
+        <div class="navbar-toggle" onclick="navbarToggle(this)"></div>
+
+        <div class="navbar-menu navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-white">Đăng nhập</a>
+                    <a class="button is-info">Đăng ký</a>
+                </div>
+            </div>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+    <div id="main">
+        <div class="user-profile-wrapper">
+
+    <div class="container">
+
+        <div class="columns">
+
+            <div class="column is-8 user-profile-left">
+
+                <div class="user-profile-main">
+
+                    <div class="user-profile-header">
+                        <div class="box">
+
+                            <div class="level user-profile-meta is-flex is-align-center">
+
+                                <div class="level-left">
+                                    <div class="level-item user-profile-meta-image">
+                                        <figure class="image is-size-7 is-radius is-bordered has-placeholder">
+                                            <img src="">
+                                        </figure>
+                                    </div>
+                                    <div class="level-item user-profile-meta-basic">
+                                        <div class="has-text-italic has-text-darkgray is-size-7">@username</div>
+                                        <div class="has-text-weight-semibold is-size-4">displayName</div>
+                                        <div class="user-profile-status is-online is-size-7 is-italic"><span>8 giờ
+                                                truớc</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="level-right">
+
+                                    <div class="counters">
+
+                                        <div class="counter user-profile-counter-games">
+                                            <div class="has-text-weight-semibold is-size-3">0</div>
+                                            <div class="has-text-smallcaps has-text-darkgray">Phòng chơi</div>
+                                        </div>
+
+                                        <div class="counter user-profile-counter-characters">
+                                            <div class="has-text-weight-semibold is-size-3">0</div>
+                                            <div class="has-text-smallcaps has-text-darkgray">Nhân vật</div>
+                                        </div>
+
+                                        <div class="counter user-profile-counter-characters">
+                                            <div class="has-text-weight-semibold is-size-3">0</div>
+                                            <div class="has-text-smallcaps has-text-darkgray">Huy hiệu</div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tabs user-profile-navigation" id="user-profile-navigation">
+                                <ul>
+                                    <li class="is-active"><a>
+                                            <span class="icon"><i class="fa fa-history"></i></span>
+                                            <span class="text">Hoạt động</span>
+                                        </a></li>
+                                    <li><a>
+                                            <span class="icon"><i class="fa fa-user"></i></span>
+                                            <span class="text">Thông tin</span>
+                                        </a></li>
+                                    <li><a>
+                                            <span class="icon"><i class="fas fa-trophy"></i></span>
+                                            <span class="text">Thành tích</span>
+                                        </a></li>
+                                    <li class="is-push-right"><a>
+                                            <span class="icon"><i class="fas fa-cog"></i></span>
+                                            <span class="text">Thiết lập</span>
+                                        </a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="user-profile-body">
+
+                        <div class="user-profile-tab is-active" id="user-profile-activity"><div id="user-profile-playing-activity">
+    <div class="box-title">
+        <h4>Phòng chơi đang dẫn</h4>
+    </div>
+    <div class="game-collections is-large">
+        
+<a href="/game/" class="game" style="--gameBg: #5a9392;--gameText: white;
+">
+    <div class="game-cover">
+        <figure class="image is-full is-cover has-placeholder-medium">
+            <img src="https://git.haiphan.design/dantruyen-ui/img/sample/background/pokemon-01.jpg">
+        </figure>
+    </div>
+    <div class="game-meta">
+        <div class="game-meta-image">
+            <figure class="image is-radius is-bordered has-placeholder">
+                <img src="https://git.haiphan.design/dantruyen-ui/img/sample/avatar/pokemon-pikachu.jpg">
+            </figure>
+        </div>
+        <div class="game-meta-basic">
+            <div class="game-meta-name">
+                <span>Rừng Viridian Diệu Kỳ</span>
+            </div><div class="game-meta-act"><span>1 Chương, 1 Cảnh</span></div></div>
+    </div>
+</a>
+        
+<a href="/game/" class="game" style=";;
+">
+    <div class="game-cover">
+        <figure class="image is-full is-cover has-placeholder-medium">
+            <img src="">
+        </figure>
+    </div>
+    <div class="game-meta">
+        <div class="game-meta-image">
+            <figure class="image is-radius is-bordered has-placeholder">
+                <img src="">
+            </figure>
+        </div>
+        <div class="game-meta-basic">
+            <div class="game-meta-name">
+                <span>gameName</span>
+            </div><div class="game-meta-act"><span>1 Chương, 1 Cảnh</span></div></div>
+    </div>
+</a>
+        
+<a href="/game/" class="game" style=";;
+">
+    <div class="game-cover">
+        <figure class="image is-full is-cover has-placeholder-medium">
+            <img src="">
+        </figure>
+    </div>
+    <div class="game-meta">
+        <div class="game-meta-image">
+            <figure class="image is-radius is-bordered has-placeholder">
+                <img src="">
+            </figure>
+        </div>
+        <div class="game-meta-basic">
+            <div class="game-meta-name">
+                <span>gameName</span>
+            </div><div class="game-meta-act"><span>1 Chương, 1 Cảnh</span></div></div>
+    </div>
+</a>
+        
+<a href="/game/" class="game" style=";;
+">
+    <div class="game-cover">
+        <figure class="image is-full is-cover has-placeholder-medium">
+            <img src="">
+        </figure>
+    </div>
+    <div class="game-meta">
+        <div class="game-meta-image">
+            <figure class="image is-radius is-bordered has-placeholder">
+                <img src="">
+            </figure>
+        </div>
+        <div class="game-meta-basic">
+            <div class="game-meta-name">
+                <span>gameName</span>
+            </div><div class="game-meta-act"><span>1 Chương, 1 Cảnh</span></div></div>
+    </div>
+</a>
+    </div>
+</div>
+
+<div id="user-profile-playing-activity">
+    <div class="box-title">
+        <h4>Phòng chơi đang tham gia</h4>
+    </div>
+    <div class="game-collections is-large">
+        
+<a href="/game/" class="game is-playing" style=";;
+">
+    <div class="game-cover">
+        <figure class="image is-full is-cover has-placeholder-medium">
+            <img src="">
+        </figure>
+    </div>
+    <div class="game-meta">
+        <div class="game-meta-image">
+            <figure class="image is-radius is-bordered has-placeholder">
+                <img src="">
+            </figure>
+        </div>
+        <div class="game-meta-basic">
+            <div class="game-meta-name">
+                <span>gameName</span>
+            </div><div class="game-meta-play">
+                <span>characterName</span>
+            </div></div>
+    </div>
+</a>
+        
+<a href="/game/" class="game is-playing" style=";;
+">
+    <div class="game-cover">
+        <figure class="image is-full is-cover has-placeholder-medium">
+            <img src="">
+        </figure>
+    </div>
+    <div class="game-meta">
+        <div class="game-meta-image">
+            <figure class="image is-radius is-bordered has-placeholder">
+                <img src="">
+            </figure>
+        </div>
+        <div class="game-meta-basic">
+            <div class="game-meta-name">
+                <span>gameName</span>
+            </div><div class="game-meta-play">
+                <span>characterName</span>
+            </div></div>
+    </div>
+</a>
+    </div>
+</div>
+
+<div id="user-profile-playing-activity">
+    <div class="box-title">
+        <h4>Phòng chơi đã hoàn thành</h4>
+    </div>
+    <div class="game-collections is-small">
+        
+<a href="/game/" class="game" style=";;
+">
+    <div class="game-cover">
+        <figure class="image is-full is-cover has-placeholder-medium">
+            <img src="">
+        </figure>
+    </div>
+    <div class="game-meta">
+        <div class="game-meta-image">
+            <figure class="image is-radius is-bordered has-placeholder">
+                <img src="">
+            </figure>
+        </div>
+        <div class="game-meta-basic">
+            <div class="game-meta-name">
+                <span>gameName</span>
+            </div><div class="game-meta-act"><span>1 Chương, 1 Cảnh</span></div></div>
+    </div>
+</a>
+        
+<a href="/game/" class="game" style=";;
+">
+    <div class="game-cover">
+        <figure class="image is-full is-cover has-placeholder-medium">
+            <img src="">
+        </figure>
+    </div>
+    <div class="game-meta">
+        <div class="game-meta-image">
+            <figure class="image is-radius is-bordered has-placeholder">
+                <img src="">
+            </figure>
+        </div>
+        <div class="game-meta-basic">
+            <div class="game-meta-name">
+                <span>gameName</span>
+            </div><div class="game-meta-act"><span>1 Chương, 1 Cảnh</span></div></div>
+    </div>
+</a>
+        
+<a href="/game/" class="game" style=";;
+">
+    <div class="game-cover">
+        <figure class="image is-full is-cover has-placeholder-medium">
+            <img src="">
+        </figure>
+    </div>
+    <div class="game-meta">
+        <div class="game-meta-image">
+            <figure class="image is-radius is-bordered has-placeholder">
+                <img src="">
+            </figure>
+        </div>
+        <div class="game-meta-basic">
+            <div class="game-meta-name">
+                <span>gameName</span>
+            </div><div class="game-meta-act"><span>1 Chương, 1 Cảnh</span></div></div>
+    </div>
+</a>
+        
+<a href="/game/" class="game" style=";;
+">
+    <div class="game-cover">
+        <figure class="image is-full is-cover has-placeholder-medium">
+            <img src="">
+        </figure>
+    </div>
+    <div class="game-meta">
+        <div class="game-meta-image">
+            <figure class="image is-radius is-bordered has-placeholder">
+                <img src="">
+            </figure>
+        </div>
+        <div class="game-meta-basic">
+            <div class="game-meta-name">
+                <span>gameName</span>
+            </div><div class="game-meta-act"><span>1 Chương, 1 Cảnh</span></div></div>
+    </div>
+</a>
+    </div>
+</div>
+
+
+<!-- 
+<div class="box" id="user-profile-playing">
+
+    <div class="box-title is-bordered">
+        <h4>Phòng chơi đang dẫn</h4></div><div
+        class="box-content has-paragraphs">
+        <div class="game-collections is-large">
+    
+<a href="/game/" class="game" style="--gameBg: #5a9392;--gameText: white;
+">
+    <div class="game-cover">
+        <figure class="image is-full is-cover has-placeholder-medium">
+            <img src="https://git.haiphan.design/dantruyen-ui/img/sample/background/pokemon-01.jpg">
+        </figure>
+    </div>
+    <div class="game-meta">
+        <div class="game-meta-image">
+            <figure class="image is-radius is-bordered has-placeholder">
+                <img src="https://git.haiphan.design/dantruyen-ui/img/sample/avatar/pokemon-pikachu.jpg">
+            </figure>
+        </div>
+        <div class="game-meta-basic">
+            <div class="game-meta-name">
+                <span>Rừng Viridian Diệu Kỳ</span>
+            </div><div class="game-meta-act"><span>1 Chương, 1 Cảnh</span></div></div>
+    </div>
+</a>
+    
+<a href="/game/" class="game" style=";;
+">
+    <div class="game-cover">
+        <figure class="image is-full is-cover has-placeholder-medium">
+            <img src="">
+        </figure>
+    </div>
+    <div class="game-meta">
+        <div class="game-meta-image">
+            <figure class="image is-radius is-bordered has-placeholder">
+                <img src="">
+            </figure>
+        </div>
+        <div class="game-meta-basic">
+            <div class="game-meta-name">
+                <span>gameName</span>
+            </div><div class="game-meta-act"><span>1 Chương, 1 Cảnh</span></div></div>
+    </div>
+</a>
+    
+<a href="/game/" class="game" style=";;
+">
+    <div class="game-cover">
+        <figure class="image is-full is-cover has-placeholder-medium">
+            <img src="">
+        </figure>
+    </div>
+    <div class="game-meta">
+        <div class="game-meta-image">
+            <figure class="image is-radius is-bordered has-placeholder">
+                <img src="">
+            </figure>
+        </div>
+        <div class="game-meta-basic">
+            <div class="game-meta-name">
+                <span>gameName</span>
+            </div><div class="game-meta-act"><span>1 Chương, 1 Cảnh</span></div></div>
+    </div>
+</a>
+    
+<a href="/game/" class="game" style=";;
+">
+    <div class="game-cover">
+        <figure class="image is-full is-cover has-placeholder-medium">
+            <img src="">
+        </figure>
+    </div>
+    <div class="game-meta">
+        <div class="game-meta-image">
+            <figure class="image is-radius is-bordered has-placeholder">
+                <img src="">
+            </figure>
+        </div>
+        <div class="game-meta-basic">
+            <div class="game-meta-name">
+                <span>gameName</span>
+            </div><div class="game-meta-act"><span>1 Chương, 1 Cảnh</span></div></div>
+    </div>
+</a>
+</div>
+    </div>
+
+</div>
+<div class="box" id="user-profile-playing">
+
+    <div class="box-title is-bordered">
+        <h4>Phòng chơi đang tham gia</h4></div><div
+        class="box-content has-paragraphs">
+        <div class="game-collections is-large">
+    
+<a href="/game/" class="game" style="--gameBg: #5a9392;--gameText: white;
+">
+    <div class="game-cover">
+        <figure class="image is-full is-cover has-placeholder-medium">
+            <img src="https://git.haiphan.design/dantruyen-ui/img/sample/background/pokemon-01.jpg">
+        </figure>
+    </div>
+    <div class="game-meta">
+        <div class="game-meta-image">
+            <figure class="image is-radius is-bordered has-placeholder">
+                <img src="https://git.haiphan.design/dantruyen-ui/img/sample/avatar/pokemon-pikachu.jpg">
+            </figure>
+        </div>
+        <div class="game-meta-basic">
+            <div class="game-meta-name">
+                <span>Rừng Viridian Diệu Kỳ</span>
+            </div><div class="game-meta-act"><span>1 Chương, 1 Cảnh</span></div></div>
+    </div>
+</a>
+    
+<a href="/game/" class="game" style=";;
+">
+    <div class="game-cover">
+        <figure class="image is-full is-cover has-placeholder-medium">
+            <img src="">
+        </figure>
+    </div>
+    <div class="game-meta">
+        <div class="game-meta-image">
+            <figure class="image is-radius is-bordered has-placeholder">
+                <img src="">
+            </figure>
+        </div>
+        <div class="game-meta-basic">
+            <div class="game-meta-name">
+                <span>gameName</span>
+            </div><div class="game-meta-act"><span>1 Chương, 1 Cảnh</span></div></div>
+    </div>
+</a>
+    
+<a href="/game/" class="game" style=";;
+">
+    <div class="game-cover">
+        <figure class="image is-full is-cover has-placeholder-medium">
+            <img src="">
+        </figure>
+    </div>
+    <div class="game-meta">
+        <div class="game-meta-image">
+            <figure class="image is-radius is-bordered has-placeholder">
+                <img src="">
+            </figure>
+        </div>
+        <div class="game-meta-basic">
+            <div class="game-meta-name">
+                <span>gameName</span>
+            </div><div class="game-meta-act"><span>1 Chương, 1 Cảnh</span></div></div>
+    </div>
+</a>
+    
+<a href="/game/" class="game" style=";;
+">
+    <div class="game-cover">
+        <figure class="image is-full is-cover has-placeholder-medium">
+            <img src="">
+        </figure>
+    </div>
+    <div class="game-meta">
+        <div class="game-meta-image">
+            <figure class="image is-radius is-bordered has-placeholder">
+                <img src="">
+            </figure>
+        </div>
+        <div class="game-meta-basic">
+            <div class="game-meta-name">
+                <span>gameName</span>
+            </div><div class="game-meta-act"><span>1 Chương, 1 Cảnh</span></div></div>
+    </div>
+</a>
+</div>
+    </div>
+
+</div> --></div>
+
+                        <div class="user-profile-tab" id="user-profile-information"></div>
+
+                        <div class="user-profile-tab" id="user-profile-achievements"></div>
+
+                        <div class="user-profile-tab" id="user-profile-settings"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="column user-profile-right is-hidden-xs">
+
+                <div class="sidebar is-sticky">
+
+                    <div class="box" id="game-sidebar-people-also-viewed">
+
+    <div class="box-title is-bordered">
+        <h4>Thành viên khác</h4></div><div
+        class="box-content">
+        <div class="user-stack">
+
+    <a class="user-card is-horizontal" href="">
+        <div class="user-card-image">
+            <figure class="image is-size-4 is-cover is-bordered is-radius has-placeholder">
+                <img src="">
+            </figure>
+        </div>
+        <div class="user-card-meta">
+            <div class="has-text-weight-semibold">characterName</div>
+            <div class="has-text-darkgray is-size-7 has-text-underline-on-hover">
+                @username</div>
+        </div>
+    </a>
+
+    <a class="user-card is-horizontal" href="">
+        <div class="user-card-image">
+            <figure class="image is-size-4 is-cover is-bordered is-radius has-placeholder">
+                <img src="">
+            </figure>
+        </div>
+        <div class="user-card-meta">
+            <div class="has-text-weight-semibold">characterName</div>
+            <div class="has-text-darkgray is-size-7 has-text-underline-on-hover">
+                @username</div>
+        </div>
+    </a>
+
+    <a class="user-card is-horizontal" href="">
+        <div class="user-card-image">
+            <figure class="image is-size-4 is-cover is-bordered is-radius has-placeholder">
+                <img src="">
+            </figure>
+        </div>
+        <div class="user-card-meta">
+            <div class="has-text-weight-semibold">characterName</div>
+            <div class="has-text-darkgray is-size-7 has-text-underline-on-hover">
+                @username</div>
+        </div>
+    </a>
+
+    <a class="user-card is-horizontal" href="">
+        <div class="user-card-image">
+            <figure class="image is-size-4 is-cover is-bordered is-radius has-placeholder">
+                <img src="">
+            </figure>
+        </div>
+        <div class="user-card-meta">
+            <div class="has-text-weight-semibold">characterName</div>
+            <div class="has-text-darkgray is-size-7 has-text-underline-on-hover">
+                @username</div>
+        </div>
+    </a>
+
+    <a class="user-card is-horizontal" href="">
+        <div class="user-card-image">
+            <figure class="image is-size-4 is-cover is-bordered is-radius has-placeholder">
+                <img src="">
+            </figure>
+        </div>
+        <div class="user-card-meta">
+            <div class="has-text-weight-semibold">characterName</div>
+            <div class="has-text-darkgray is-size-7 has-text-underline-on-hover">
+                @username</div>
+        </div>
+    </a>
+
+</div>
+    </div>
+
+</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+    </div>
+
+    <section id="footer" class="footer">
+    <div class="container is-wide">
+        <div class="level is-reversed">
+            <div class="level-left">
+                <div class="level-item">
+                    <nav class="footer-links">
+                        <ul>
+                            <li><a href="#">Về chúng tôi</a></li>
+                            <li><a href="#">Hỗ trợ</a></li>
+                            <li><a href="#">Cửa hàng</a></li>
+                            <li><a href="#">Tuyển dụng</a></li>
+                            <li><a href="#">Điều khoản & Sử dụng</a></li>
+                            <li><a href="#">Ủng hộ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="level-right">
+                <div class="level-item">
+                    <div class="footer-copyright">© 2019 Dẫn Truyện. <span class="footer-version">3.0</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/app.js"></script>
+
+</body>
+
+</html>

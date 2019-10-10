@@ -297,7 +297,7 @@
             }
 
             &:hover {
-                border-color: var(--darkgray);
+                border-color: var(--gray);
             }
 
             &.is-active {
@@ -317,7 +317,12 @@
     }
 
     .game-card-manager-tab {
+        display: none;
         padding: 1rem;
+
+        &.is-active {
+            display: block;
+        }
 
         .title {
             margin-bottom: 1rem;
@@ -334,14 +339,13 @@
             display: grid;
             grid-gap: 1rem;
             grid-template-columns: minmax(0, 1fr);
-
         }
 
         .game-card-list {
             @include box;
             display: flex;
             flex-direction: column;
-            height: calc(100% - 3.5rem);
+            height: 100%;
             overflow: scroll;
             padding: .5rem;
             scroll-padding: .5rem;
@@ -366,8 +370,15 @@
                     font-weight: var(--font-weight-semibold);
                     text-transform: uppercase;
                     color: var(--darkgray);
+                    text-align: center;
+                    width: 100%;
+                    margin: 5rem 0;
+                }
+            }
 
-                    padding: 2rem 0 2.5rem;
+            .game-card {
+                &:last-child {
+                    padding-bottom: .5rem;
                 }
             }
         }
@@ -385,4 +396,12 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     grid-gap: 1rem;
+}
+
+.game-card-preview-interactions {
+    display: none;
+
+    &.is-active {
+        display: flex;
+    }
 }

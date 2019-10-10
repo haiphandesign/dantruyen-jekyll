@@ -1,0 +1,119 @@
+---
+title: User Profile
+layout: default
+permalink: /user-profile/
+---
+
+<div class="user-profile-wrapper">
+
+    <div class="container">
+
+        <div class="columns">
+
+            <div class="column is-8 user-profile-left">
+
+                <div class="user-profile-main">
+
+                    <div class="user-profile-header">
+                        <div class="box">
+
+                            <div class="level user-profile-meta is-flex is-align-center">
+
+                                <div class="level-left">
+                                    <div class="level-item user-profile-meta-image">
+                                        <figure class="image is-size-7 is-radius is-bordered has-placeholder">
+                                            <img src="">
+                                        </figure>
+                                    </div>
+                                    <div class="level-item user-profile-meta-basic">
+                                        <div class="has-text-italic has-text-darkgray is-size-7">@username</div>
+                                        <div class="has-text-weight-semibold is-size-4">displayName</div>
+                                        <div class="user-profile-status is-online is-size-7 is-italic"><span>8 giờ
+                                                truớc</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="level-right">
+
+                                    <div class="counters">
+
+                                        <div class="counter user-profile-counter-games">
+                                            <div class="has-text-weight-semibold is-size-3">0</div>
+                                            <div class="has-text-smallcaps has-text-darkgray">Phòng chơi</div>
+                                        </div>
+
+                                        <div class="counter user-profile-counter-characters">
+                                            <div class="has-text-weight-semibold is-size-3">0</div>
+                                            <div class="has-text-smallcaps has-text-darkgray">Nhân vật</div>
+                                        </div>
+
+                                        <div class="counter user-profile-counter-characters">
+                                            <div class="has-text-weight-semibold is-size-3">0</div>
+                                            <div class="has-text-smallcaps has-text-darkgray">Huy hiệu</div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tabs user-profile-navigation" id="user-profile-navigation">
+                                <ul>
+                                    <li class="is-active"><a>
+                                            <span class="icon"><i class="fa fa-history"></i></span>
+                                            <span class="text">Hoạt động</span>
+                                        </a></li>
+                                    <li><a>
+                                            <span class="icon"><i class="fa fa-user"></i></span>
+                                            <span class="text">Thông tin</span>
+                                        </a></li>
+                                    <li><a>
+                                            <span class="icon"><i class="fas fa-trophy"></i></span>
+                                            <span class="text">Thành tích</span>
+                                        </a></li>
+                                    <li class="is-push-right"><a>
+                                            <span class="icon"><i class="fas fa-cog"></i></span>
+                                            <span class="text">Thiết lập</span>
+                                        </a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="user-profile-body">
+
+                        <div class="user-profile-tab is-active" id="user-profile-activity">
+                            {%- include user-profile/page-activity.html -%}
+                        </div>
+
+                        <div class="user-profile-tab" id="user-profile-information"></div>
+
+                        <div class="user-profile-tab" id="user-profile-achievements"></div>
+
+                        <div class="user-profile-tab" id="user-profile-settings"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="column user-profile-right is-hidden-xs">
+
+                <div class="sidebar is-sticky">
+
+                    {% include global/widget.html source="game-sidebar-people-also-viewed" title="Thành viên khác" borderedtitle="yes"  %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

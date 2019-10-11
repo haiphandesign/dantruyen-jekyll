@@ -1,0 +1,25 @@
+{% assign whitespace = " " %}
+<div class="badge {%- if include.date -%}{{ whitespace }}is-active{%- endif -%}">
+    <div class="badge-image">
+        {%- if include.fa or include.image -%}
+        {%- if include.fa -%}
+        <i class="fas fa-{{ include.fa }}"></i>
+        {%- endif -%}
+        {%- if include.image -%}
+        <figure class="image">
+            <img src="{{ include.image }}">
+        </figure>
+        {%- endif -%}
+        {%- else -%}
+        <i class="fas fa-certificate"></i>
+        {%- endif -%}
+    </div>
+    <div class="badge-meta">
+        <div class="badge-meta-name">
+            <span>{%- if include.title -%}{{ include.title }}{%- else -%}badgeName{%- endif -%}</span>
+        </div>
+        {%- if include.date -%}
+        <div class="badge-meta-date">{{ include.date }}</div>
+        {%- endif -%}
+    </div>
+</div>

@@ -59,7 +59,7 @@ $('#game-navigation>ul>li').click(function () {
 });
 
 // GAME JOIN BUTTONS
-document.getElementById('game-join-button').addEventListener('click', function (e) {
+$('#game-join-button').click(function () {
     e.target.classList.add('is-loading');
     setTimeout(function () {
         e.target.classList.remove('is-loading');
@@ -112,4 +112,13 @@ $('.game-card-list .game-card').click(function () {
         $('.game-card-preview-interactions').addClass('is-active');
     }
     gameCardManagerHeightCalc();
+});
+
+// USER PROFILE
+$('#user-profile-navigation>ul>li').click(function () {
+    var userProfileTabIndex = $(this).index();
+    $('#user-profile-navigation>ul>li').removeClass('is-active');
+    $(this).addClass('is-active');
+    $('.user-profile-body .user-profile-tab').removeClass('is-active');
+    $('.user-profile-body .user-profile-tab').eq(userProfileTabIndex).addClass('is-active');
 });

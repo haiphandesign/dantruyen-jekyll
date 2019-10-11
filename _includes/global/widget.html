@@ -3,7 +3,7 @@
     {% assign whitespace = " " %}
     {%- if include.title -%}
     <div class="box-title {%- if include.borderedtitle -%}{{ whitespace }}is-bordered{%- endif -%}">
-        <h4>{{ include.title }}</h4>
+        <div class="widget-title">{{ include.title }}</div>
         {%- if include.subtitle -%}
         <p class="has-text-darkgray">{{ include.subtitle }}</p>
         {%- endif -%}

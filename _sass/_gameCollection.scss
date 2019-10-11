@@ -1,9 +1,10 @@
-.game-collections {
+.game-collection {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     grid-gap: 1rem;
 
     .game {
+        position: relative;
         --gameBg: var(--white);
         --gameText: var(--black);
         @include box;
@@ -20,6 +21,7 @@
             margin-right: -1rem;
             margin-left: -1rem;
 
+            -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 95%);
             mask-image: linear-gradient(to bottom, black 40%, transparent 95%);
 
 
@@ -175,5 +177,25 @@
                 }
             }
         }
+    }
+}
+
+.game-more-link {
+    width: max-content;
+    border-bottom: 1px dotted currentColor;
+    font-size: var(--font-size-7);
+    color: var(--darkgray);
+    cursor: pointer;
+
+    &:before {
+        content: 'Hiển thị thêm ';
+    }
+
+    &:after {
+        content: ' phòng chơi'
+    }
+
+    &:hover {
+        color: var(--black);
     }
 }

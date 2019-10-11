@@ -62,7 +62,7 @@ permalink: /user-profile/
 
                             <div class="tabs user-profile-navigation" id="user-profile-navigation">
                                 <ul>
-                                    <li class="is-active"><a>
+                                    <li><a>
                                             <span class="icon"><i class="fa fa-history"></i></span>
                                             <span class="text">Hoạt động</span>
                                         </a></li>
@@ -70,7 +70,7 @@ permalink: /user-profile/
                                             <span class="icon"><i class="fa fa-user"></i></span>
                                             <span class="text">Thông tin</span>
                                         </a></li>
-                                    <li><a>
+                                    <li class="is-active"><a>
                                             <span class="icon"><i class="fas fa-trophy"></i></span>
                                             <span class="text">Thành tích</span>
                                         </a></li>
@@ -86,15 +86,21 @@ permalink: /user-profile/
 
                     <div class="user-profile-body">
 
-                        <div class="user-profile-tab is-active" id="user-profile-activity">
+                        <div class="user-profile-tab" id="user-profile-activity">
                             {%- include user-profile/page-activity.html -%}
                         </div>
 
-                        <div class="user-profile-tab" id="user-profile-information"></div>
+                        <div class="user-profile-tab" id="user-profile-information">
+                            {%- include user-profile/page-information.html -%}
+                        </div>
 
-                        <div class="user-profile-tab" id="user-profile-achievements"></div>
+                        <div class="user-profile-tab is-active" id="user-profile-achievements">
+                            {%- include user-profile/page-achievements.html -%}
+                        </div>
 
-                        <div class="user-profile-tab" id="user-profile-settings"></div>
+                        <div class="user-profile-tab" id="user-profile-settings">
+                            {%- include user-profile/page-settings.html -%}
+                        </div>
 
                     </div>
 

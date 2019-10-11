@@ -23,7 +23,6 @@
 
         width: 100%;
 
-
         .level-item {
             display: flex;
             align-items: flex-start;
@@ -40,18 +39,35 @@
 
         width: 100%;
 
-        margin-top: .5rem;
-
         @include breakpoint(sm) {
             width: auto;
         }
     }
 
     .counters {
+        width: max-content;
         text-align: center;
 
         @include breakpoint(sm) {
             text-align: right;
+
+            .counter {
+                >*:first-child {
+                    padding-right: 0.25rem;
+                }
+            }
+        }
+
+        @include breakpoint(xs) {
+            width: auto;
+            grid-gap: 0;
+            margin: 0 -1rem;
+            padding-top: 1rem;
+            @include border(top);
+
+            .counter+.counter {
+                @include border(left);
+            }
         }
     }
 }
@@ -65,11 +81,11 @@
         display: inline-block;
         vertical-align: middle;
 
-        height: .5rem;
-        width: .5rem;
+        height: 0.5rem;
+        width: 0.5rem;
 
-        margin-right: .25rem;
-        margin-bottom: .1rem;
+        margin-right: 0.25rem;
+        margin-bottom: 0.1rem;
 
         border-radius: 50%;
 
@@ -151,7 +167,7 @@
         }
 
         a {
-            padding: .75rem;
+            padding: 0.75rem;
 
             .icon {
                 margin: 0 !important;
@@ -180,4 +196,46 @@
     &.is-active {
         display: grid;
     }
+}
+
+.user-profile-information-wrapper {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: 1.5rem;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    @include breakpoint(sm) {
+        grid-gap: .75rem;
+        margin-top: 1rem;
+    }
+}
+
+.user-profile-information-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: .5rem;
+
+    @include breakpoint(sm) {
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .user-profile-information-title {
+        font-size: var(--font-size-7);
+        font-weight: Var(--font-weight-semibold);
+        text-transform: uppercase;
+    }
+
+    .user-profile-information-content {
+        a {
+            border-bottom: 1px dotted currentColor;
+        }
+    }
+}
+
+.user-profile-information-item-biography .user-profile-information-content {
+    @include content;
 }

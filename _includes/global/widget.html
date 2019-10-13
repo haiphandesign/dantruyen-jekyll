@@ -1,18 +1,49 @@
-<div class="box" id="{{ include.source }}">
-
-    {% assign whitespace = " " %}
+{% assign whitespace = " " %}
+{%- if include.type == "2" -%}
+<div class="widget" id="{{ include.source }}">
     {%- if include.title -%}
-    <div class="box-title {%- if include.borderedtitle -%}{{ whitespace }}is-bordered{%- endif -%}">
-        <div class="widget-title">{{ include.title }}</div>
-        {%- if include.subtitle -%}
-        <p class="has-text-darkgray">{{ include.subtitle }}</p>
+    <div class="widget-title">
+        <div class="widget-title-title">
+            {{ include.title }}
+        </div>
+        {%- if include.description -%}
+        <div class="widget-title-description">
+            {{ include.description }}
+        </div>
         {%- endif -%}
     </div>
     {%- endif -%}
-
-    <div
-        class="box-content {%- if include.textwrapper -%}{{ whitespace }}has-paragraphs{%- endif -%} {%- if include.nopadding -%}{{ whitespace }}no-padding{%- endif -%}">
-        {% include widget/{{ include.source }}.html  %}
+    <div class="box">
+        <div
+            class="box-content {%- if include.textwrapper -%}{{ whitespace }}has-paragraphs{%- endif -%} {%- if include.nopadding -%}{{ whitespace }}no-padding{%- endif -%}">
+            {% include widget/{{ include.source }}.html  %}
+        </div>
     </div>
-
 </div>
+{%- else -%}
+<div class="widget" id="{{ include.source }}">
+    <div class="box">
+        {%- if include.title -%}
+        <div class="box-title {%- if include.borderedtitle -%}{{ whitespace }}is-bordered{%- endif -%}">
+            <div class="widget-title">
+                <div class="widget-title-title">
+                    {{ include.title }}
+                </div>
+                {%- if include.description -%}
+                <div class="widget-title-description">
+                    {{ include.description }}
+                </div>
+                {%- endif -%}
+            </div>
+            {%- if include.subtitle -%}
+            <p class="has-text-darkgray">{{ include.subtitle }}</p>
+            {%- endif -%}
+        </div>
+        {%- endif -%}
+        <div
+            class="box-content {%- if include.textwrapper -%}{{ whitespace }}has-paragraphs{%- endif -%} {%- if include.nopadding -%}{{ whitespace }}no-padding{%- endif -%}">
+            {% include widget/{{ include.source }}.html  %}
+        </div>
+    </div>
+</div>
+{%- endif -%}

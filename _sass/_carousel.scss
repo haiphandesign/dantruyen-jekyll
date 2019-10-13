@@ -1,0 +1,88 @@
+.owl-carousel {
+    .owl-nav {
+        display: inline-grid;
+        grid-auto-flow: column;
+        grid-gap: .25rem;
+
+        margin-top: .5rem;
+
+        button[class*='owl-'] {
+            @include box;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            height: 2rem;
+            width: 2rem;
+
+            line-height: 1;
+
+            &:hover {
+                background-color: var(--lightgray);
+            }
+
+            &:before {
+                @include fontawesome(solid);
+                transform: scale(.5);
+            }
+
+            span {
+                display: none;
+            }
+        }
+
+        .owl-prev:before {
+            content: '\f053';
+        }
+
+        .owl-next:before {
+            content: '\f054';
+        }
+    }
+
+    .owl-dots {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: .3rem;
+
+        .owl-dot {
+            span {
+                @include box;
+
+                display: block;
+
+                height: .85rem;
+                width: .85rem;
+
+                background-color: var(--white);
+
+            }
+
+            &:hover {
+                span {
+                    background-color: var(--lightgray);
+                }
+            }
+
+            &.active {
+                span {
+                    background-color: var(--darkgray);
+                }
+            }
+        }
+    }
+
+    .owl-nav.disabled+.owl-dots {
+        position: relative;
+        margin-top: .5rem;
+        display: inline-grid;
+        grid-template-rows: 1fr;
+        grid-gap: .25rem;
+    }
+}

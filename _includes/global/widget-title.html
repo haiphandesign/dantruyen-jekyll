@@ -1,0 +1,12 @@
+<div class="widget-title">
+    {% assign whitespace = " " %}
+    {%- if include.subtitle -%}
+    <div class="widget-title-subtitle">{{ include.subtitle }}</div>
+    {%- endif -%}
+    {%- if include.title -%}
+    <div class="widget-title-title">{{ include.title }}</div>
+    {%- endif -%}
+    {%- if include.description -%}
+    <div class="widget-title-description">{{ include.description }}</div>
+    {%- endif -%}
+</div>

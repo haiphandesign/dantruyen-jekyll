@@ -346,7 +346,8 @@
             display: flex;
             flex-direction: column;
             height: 100%;
-            overflow: scroll;
+            overflow-x: hidden;
+            overflow-y: scroll;
             padding: .5rem;
             scroll-padding: .5rem;
 

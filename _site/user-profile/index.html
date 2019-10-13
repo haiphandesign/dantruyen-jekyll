@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="/assets/addons/fonts/proxima-nova/stylesheet.css">
     <link rel="stylesheet" href="/assets/addons/fontawesome/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <link rel="stylesheet" href="/assets/addons/owl.carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/addons/owl.carousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="/assets/css/style.css">
 
 </head>
@@ -147,7 +149,10 @@
                     <div class="user-profile-body">
 
                         <div class="user-profile-tab" id="user-profile-activity"><div id="user-profile-playing-activity">
-    <div class="widget-title is-standalone">Phòng chơi đang dẫn</div>
+
+    <div class="widget-title">
+    <div class="widget-title-title">Phòng chơi đang dẫn</div></div>
+
     <div class="game-collection is-large is-expandable">
         
 <a href="/game/" class="game" style="--gameBg: #5a9392;--gameText: white;
@@ -235,7 +240,10 @@
 </div>
 
 <div id="user-profile-playing-activity">
-    <div class="widget-title is-standalone">Phòng chơi đang tham gia</div>
+
+    <div class="widget-title">
+    <div class="widget-title-title">Phòng chơi đang tham gia</div></div>
+
     <div class="game-collection is-large">
         
 <a href="/game/" class="game is-playing" style=";;
@@ -285,7 +293,10 @@
 </div>
 
 <div id="user-profile-playing-activity">
-    <div class="widget-title is-standalone">Phòng chơi đã hoàn thành</div>
+
+    <div class="widget-title">
+    <div class="widget-title-title">Phòng chơi đã hoàn thành</div></div>
+
     <div class="game-collection is-small">
         
 <a href="/game/" class="game" style=";;
@@ -371,7 +382,10 @@
 </div></div>
 
                         <div class="user-profile-tab" id="user-profile-information"><div id="user-profile-playing-activity">
-    <div class="widget-title is-standalone">Thông tin Cơ bản</div>
+
+    <div class="widget-title">
+    <div class="widget-title-title">Thông tin Cơ bản</div></div>
+
     <div class="box">
         <div class="box-content">
             <div class="user-profile-information-wrapper">
@@ -420,7 +434,10 @@
 </div>
 
 <div id="user-profile-playing-activity">
-    <div class="widget-title is-standalone">Thông tin Liên lạc</div>
+
+    <div class="widget-title">
+    <div class="widget-title-title">Thông tin Liên lạc</div></div>
+
     <div class="box">
         <div class="box-content">
             <div class="user-profile-information-wrapper">
@@ -477,7 +494,10 @@
 </div></div>
 
                         <div class="user-profile-tab is-active" id="user-profile-achievements"><div id="user-profile-achievements-system" class="user-profile-badge-collection">
-    <div class="widget-title is-standalone">Huy hiệu Hệ thống</div>
+
+    <div class="widget-title">
+    <div class="widget-title-title">Huy hiệu Hệ thống</div></div>
+
     <div class="box">
         <div class="box-content">
 
@@ -728,7 +748,9 @@
 </div>
 
 <div id="user-profile-achievements-game" class="user-profile-badge-collection">
-    <div class="widget-title is-standalone">Huy hiệu Phòng chơi</div>
+
+    <div class="widget-title">
+    <div class="widget-title-title">Huy hiệu Phòng chơi</div></div>
 
     <div class="box-wrapper">
 
@@ -861,12 +883,14 @@
 
                 <div class="sidebar is-sticky">
 
-                    <div class="box" id="game-sidebar-people-also-viewed">
-
-    <div class="box-title is-bordered">
-        <div class="widget-title">Thành viên khác</div></div><div
-        class="box-content">
-        <div class="user-stack">
+                    <div class="widget" id="user-profile-sidebar-people-also-viewed">
+    <div class="box"><div class="box-title is-bordered">
+            <div class="widget-title">
+                <div class="widget-title-title">
+                    Thành viên khác
+                </div></div></div><div
+            class="box-content">
+            <div class="user-stack">
 
     <a class="user-card is-horizontal" href="">
         <div class="user-card-image">
@@ -934,8 +958,8 @@
     </a>
 
 </div>
+        </div>
     </div>
-
 </div>
 
                 </div>
@@ -976,6 +1000,7 @@
 </section>
 
     <script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/owl.carousel.min.js"></script>
 <script src="/assets/js/app.js"></script>
 
 </body>

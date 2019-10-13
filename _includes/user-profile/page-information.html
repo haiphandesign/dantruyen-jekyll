@@ -1,5 +1,7 @@
 <div id="user-profile-playing-activity">
-    <div class="widget-title is-standalone">Thông tin Cơ bản</div>
+
+    {% include global/widget-title.html title="Thông tin Cơ bản" %}
+
     <div class="box">
         <div class="box-content">
             {% include widget/user-profile-information-basics.html %}
@@ -8,7 +10,9 @@
 </div>
 
 <div id="user-profile-playing-activity">
-    <div class="widget-title is-standalone">Thông tin Liên lạc</div>
+
+    {% include global/widget-title.html title="Thông tin Liên lạc" %}
+
     <div class="box">
         <div class="box-content">
             {% include widget/user-profile-information-socials.html %}

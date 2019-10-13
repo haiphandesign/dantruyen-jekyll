@@ -5,9 +5,14 @@
 
     .game {
         position: relative;
+
         --gameBg: var(--white);
         --gameText: var(--black);
+
         @include box;
+
+        display: block;
+
         padding: 1rem;
 
         background-color: var(--gameBg);

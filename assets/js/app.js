@@ -122,3 +122,31 @@ $('#user-profile-navigation>ul>li').click(function () {
     $('.user-profile-body .user-profile-tab').removeClass('is-active');
     $('.user-profile-body .user-profile-tab').eq(userProfileTabIndex).addClass('is-active');
 });
+
+$(document).ready(function () {
+    $(".browse-carousel").owlCarousel({
+        loop: true,
+        nav: true,
+        items: 1,
+    });
+});
+
+$(document).ready(function () {
+    $(".browse-editors-pick-carousel").owlCarousel({
+        items: 2,
+        loop: true,
+        nav: true,
+        dotsEach: true,
+        margin: 10,
+        responsive: {
+            // breakpoint from 0 up
+            0: {
+                items: 1
+            },
+            // breakpoint from 480 up
+            768: {
+                items: 2
+            }
+        }
+    });
+});

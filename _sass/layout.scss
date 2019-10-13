@@ -130,18 +130,29 @@ a.help,
 // WIDGET
 
 .widget-title {
-    font-size: var(--font-size-5);
-    font-weight: var(--font-weight-semibold);
+    padding: .75rem 1rem;
 
-    @include breakpoint(md) {
+    .widget-title-title {
         font-size: var(--font-size-5);
+        font-weight: var(--font-weight-semibold);
     }
 
-    &.is-standalone {
-        margin: 1rem 0 1.5rem;
-        border-left: 3px solid var(--blue);
-        padding-left: .75rem;
-        line-height: 1;
+    .widget-title-subtitle {
+        color: var(--blue);
+        font-size: var(--font-size-7);
+        font-weight: var(--font-weight-semibold);
+        text-transform: uppercase;
+    }
+
+    .widget-title-description {
+        color: var(--darkgray);
+        font-size: var(--font-size-6);
+    }
+}
+
+.box-title {
+    .widget-title {
+        padding: 0;
     }
 }
 
@@ -164,13 +175,3 @@ a.help,
 }
 
 // CONTENT
-
-.dantruyen-title-01 {
-    margin: 1rem 0 1.5rem;
-    border-left: 3px solid var(--blue);
-    padding-left: .75rem;
-
-    >* {
-        line-height: 1;
-    }
-}

@@ -1,0 +1,180 @@
+---
+title: Trang chủ
+layout: default
+permalink: /browse/
+---
+
+<div class="browse-carousel-wrapper">
+    <div class="container is-wide">
+        <div class="browse-carousel owl-carousel">
+            {% for i in (1..4) %}
+            <a class="browse-carousel-item" href="/game/">
+                <figure class="image is-full is-cover has-placeholder-big">
+                    <img src="">
+                </figure>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="browse-wrapper">
+
+    <div class="container">
+
+        <div class="columns">
+
+            <div class="column is-8 browse-left">
+
+                <div class="browse-main">
+
+                    <div id="browse-editors-pick">
+                        <div class="box-title">
+                            {% include global/widget-title.html title="Phòng chơi nổi bật" subtitle="Editor's Pick" description="Những câu chuyện thú vị, đầy lôi cuốn được lựa chọn bởi đội ngũ quản trị viên của Dẫn Truyện." %}
+                        </div>
+                        <div class="browse-editors-pick-carousel game-collection is-medium owl-carousel">
+                            {% for i in (1..4) %}
+                            {% include widget/game-collection-item.html %}
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div id="browse-game-available">
+                        <div class="box-title">
+                            <div class="columns">
+                                <div class="column is-8">
+                                    {% include global/widget-title.html title="Phòng chơi có sẵn" description="Những phòng chơi mà những thành viên khác đã tạo sẵn." %}
+                                </div>
+                                <div class="column is-flex is-align-center">
+                                    <div id="browse-game-available-filter">
+                                        <div class="select">
+                                            <select>
+                                                <option>Toàn bộ phòng</option>
+                                                <option>Phòng đang chơi</option>
+                                                <option>Phòng chưa chơi</option>
+                                            </select>
+                                        </div>
+                                        <div class="dropdown is-hoverable is-right">
+                                            <div class="dropdown-trigger">
+                                                <a class="button"><i class="fas fa-cog"></i></a>
+                                            </div>
+                                            <div class="dropdown-menu">
+                                                <div class="dropdown-content">
+                                                    <a class="dropdown-item">
+                                                        <div class="field is-horizontal">
+                                                            <div class="field-label">
+                                                                <label class="label is-size-7 is-nowrap"
+                                                                    for="homepage-game-browse-nsfw">
+                                                                    <span class="icon">
+                                                                        <i class="fas fa-eye-slash"></i>
+                                                                    </span>
+                                                                    <span class="is-uppercase">Ẩn phòng chơi 18+</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="field-body">
+                                                                <div class="control">
+                                                                    <input type="checkbox"
+                                                                        id="homepage-game-browse-nsfw">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-wrapper">
+                            <div class="box">
+                                <div class="table-responsive">
+                                    <table
+                                        class="table is-fullwidth is-vertical-align-middle has-dark-head is-hoverable">
+                                        <thead>
+                                            <tr>
+                                                <th>Tên phòng chơi</th>
+                                                <th class="has-text-centered">Số người chơi</th>
+                                                <th class="has-text-centered">Trạng thái</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Tên phòng chơi</th>
+                                                <th class="has-text-centered">Số người chơi</th>
+                                                <th class="has-text-centered">Trạng thái</th>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            {% for i in (1..10) %}
+                                            <tr>
+                                                <td>
+                                                    <div class="is-auto-grid">
+                                                        <a href="/game/">
+                                                            <figure
+                                                                class="image is-game-image is-size-5 is-bordered is-radius has-placeholder">
+                                                                <img src="">
+                                                            </figure>
+                                                        </a>
+                                                        <a href="/game/" class="game-title">
+                                                            <h5>Tên phòng chơi</h5>
+                                                            <div class="has-text-darkgray">
+                                                                Dẫn truyện bởi <strong>Người dẫn</strong> (@host)
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                                <td class="has-text-centered">
+                                                    <p>
+                                                        <span class="players-count">0</span>
+                                                        <span
+                                                            class="players-limit has-text-darkgray is-size-7">/10</span>
+                                                    </p>
+                                                </td>
+                                                <td class="has-text-centered">
+                                                    <div class="tags">
+                                                        <span class="tag is-info has-text-smallcaps">Đang chơi</span>
+                                                    </div>
+                                                    <div class="has-text-darkgray is-size-7">
+                                                        <span>1 Chương, 1 Cảnh</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <nav class="pagination is-small is-right is-arrow">
+                                <a class="pagination-previous">Trang trước</a>
+                                <a class="pagination-next">Trang tiếp theo</a>
+                                <ul class="pagination-list">
+                                    <li><a class="pagination-link is-current">1</a></li>
+                                    <li><a class="pagination-link">2</a></li>
+                                    <li><a class="pagination-link">3</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="column browse-right is-hidden-xs">
+
+                <div class="sidebar">
+
+                    {% include global/widget.html type="2" source="browse-sidebar-categories" title="Thể loại" borderedtitle="yes" nopadding="yes"  %}
+
+                    {% include global/widget.html type="2" source="browse-sidebar-links" title="Liên kết" borderedtitle="yes" nopadding="yes"  %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

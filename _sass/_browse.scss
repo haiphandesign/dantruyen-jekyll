@@ -1,0 +1,64 @@
+.browse-wrapper {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.browse-main {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.browse-carousel-wrapper {
+    padding-top: 1rem;
+
+    @include breakpoint(sm) {
+        padding-top: 0;
+    }
+}
+
+.browse-carousel {
+    @include border;
+
+    position: relative;
+
+    @include breakpoint(sm) {
+        border-top-width: 0;
+    }
+
+    .owl-nav {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+    }
+
+    .owl-dots {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+    }
+}
+
+.browse-carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 50vh;
+}
+
+.browse-sidebar-categories-more {
+    display: block;
+    @include border(top);
+    padding: .5rem;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+
+    &:hover {
+        background-color: var(--lightgray);
+    }
+}

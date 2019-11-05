@@ -1,0 +1,67 @@
+{% assign whitespace = " " %}
+<div class="game {%- if include.playing -%}{{ whitespace }}is-playing{%- endif -%}" style="
+{%- if include.background -%}
+--gameBg: {{ include.background }}
+{%- endif -%};
+{%- if include.text -%}
+--gameText: {{ include.text }}
+{%- endif -%};
+">
+    <div class="game-cover">
+        <figure class="image is-full is-cover has-placeholder-medium">
+            <img src="{%- if include.cover -%}{{ include.cover }}{%- endif -%}">
+        </figure>
+    </div>
+    <div class="game-meta">
+        <div class="game-meta-image">
+            <figure class="image is-radius is-bordered has-placeholder">
+                <img src="{%- if include.image -%}{{ include.image }}{%- endif -%}">
+            </figure>
+        </div>
+        <div class="game-meta-basic">
+            <div class="game-meta-name">
+                <span>{%- if include.title -%}{{ include.title }}{%- else -%}gameName{%- endif -%}</span>
+            </div>
+            {%- if include.playing -%}
+            <div class="game-meta-play">
+                <span>{{ include.playing }}</span>
+            </div>
+            {%- else -%}
+            <div class="game-meta-act"><span>1 Chương, 1 Cảnh</span></div>
+            {%- endif -%}
+        </div>
+    </div>
+    <div class="game-content">
+        <div class="game-description has-paragraphs">
+            <p>Rebum elitr sed nonumy consetetur sea ut est, accusam labore takimata et dolore kasd takimata. Est
+                invidunt duo magna lorem sit est accusam justo. Aliquyam stet gubergren dolor at no dolores, stet lorem
+                sit at invidunt sed ipsum consetetur voluptua amet, consetetur ea et sadipscing voluptua. Et stet
+                sadipscing no.
+            </p>
+        </div>
+        <!-- <div class="game-stats">
+            <p class="game-stats-narrated-by">narratorName</p>
+            <ul class="game-stats-players">
+                <li><a href="#">playerOne</a></li>
+                <li><a href="#">playerTwo</a></li>
+                <li><a href="#">playerThree</a></li>
+                <li><a href="#">playerFour</a></li>
+                <li><a href="#">playerFive</a></li>
+                <li>...</li>
+            </ul>
+        </div> -->
+    </div>
+    <div class="game-interaction">
+        <div class="game-interaction-item">
+            <span class="icon"><i class="far fa-user"></i></span>
+            <span>10</span>
+        </div>
+        <div class="game-interaction-item">
+            <span class="icon"><i class="far fa-eye"></i></span>
+            <span>1000</span>
+        </div>
+        <div class="game-interaction-item is-push-right">
+            <span class="icon"><i class="far fa-bookmark"></i></span>
+        </div>
+    </div>
+</div>

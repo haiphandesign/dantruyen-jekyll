@@ -56,6 +56,8 @@ a.help, .help a { border-bottom: 1px dotted currentColor; }
 
 .box-title .widget-title { padding: 0; }
 
+.box-wrapper > .widget-title { padding-bottom: 0; margin-bottom: -.25rem; }
+
 .user-stack { display: grid; grid-gap: .75rem; grid-template-columns: minmax(0, 1fr); }
 
 .counters { display: grid; grid-auto-flow: column; grid-gap: 1rem; }
@@ -468,6 +470,24 @@ a.help, .help a { border-bottom: 1px dotted currentColor; }
 
 .game-collection .game .game-meta .game-meta-basic .game-meta-play { order: 1; font-size: var(--font-size-5); font-weight: var(--font-weight-semibold); }
 
+.game-collection .game .game-content { display: grid; grid-template-columns: minmax(0, 1fr); grid-gap: 1rem; margin-top: 1rem; }
+
+.game-collection .game .game-content .game-stats-narrated-by { font-weight: var(--font-weight-semibold); }
+
+.game-collection .game .game-content .game-stats-narrated-by:before { content: 'Dẫn truyện bởi '; font-weight: var(--font-weight-normal); }
+
+.game-collection .game .game-content .game-stats-players { list-style: none; }
+
+.game-collection .game .game-content .game-stats-players:before { content: 'Người chơi: '; font-weight: var(--font-weight-normal); }
+
+.game-collection .game .game-content .game-stats-players li { display: inline; font-weight: var(--font-weight-semibold); }
+
+.game-collection .game .game-content .game-stats-players li:not(:last-child):after { content: ', '; }
+
+.game-collection .game .game-interaction { border-color: var(--border-color); border-style: solid; border-top-width: var(--border-width); display: flex; font-size: var(--font-size-7); font-weight: var(--font-weight-semibold); padding-top: .75rem; margin-top: 1rem; margin-bottom: -.25rem; }
+
+.game-collection .game .game-interaction .game-interaction-item:not(:last-child) { margin-right: 1rem; }
+
 .game-collection .game:not(.is-playing) .game-meta .game-meta-basic .game-meta-name { font-size: var(--font-size-5); font-weight: var(--font-weight-semibold); }
 
 .game-collection .game.is-playing .game-meta .game-meta-basic .game-meta-name { order: 99; opacity: .8; }
@@ -480,9 +500,15 @@ a.help, .help a { border-bottom: 1px dotted currentColor; }
 
 @media (min-width: 768px) { .game-collection.is-small { grid-template-columns: repeat(4, 1fr); } }
 
+.game-collection.is-small .game { background-color: var(--white); color: unset; }
+
 .game-collection.is-small .game .game-cover { display: none; }
 
 .game-collection.is-small .game .game-meta { grid-auto-flow: row; grid-auto-columns: minmax(0, 1fr); }
+
+.game-collection.is-small .game .game-meta .game-meta-basic { text-shadow: none; }
+
+.game-collection.is-small .game .game-content { display: none; }
 
 @media (min-width: 768px) { .game-collection.is-medium { grid-template-columns: repeat(2, 1fr); } }
 
@@ -682,5 +708,21 @@ a.help, .help a { border-bottom: 1px dotted currentColor; }
 .browse-sidebar-categories-more { display: block; border-color: var(--border-color); border-style: solid; border-top-width: var(--border-width); padding: .5rem; text-align: center; cursor: pointer; -webkit-user-select: none; user-select: none; -webkit-user-drag: none; }
 
 .browse-sidebar-categories-more:hover { background-color: var(--lightgray); }
+
+.gamesearch-wrapper { padding-top: 1rem; padding-bottom: 1rem; }
+
+.gamesearch-wrapper .game-collection:not(.is-list) { padding: 1rem; }
+
+.gamesearch-filter-action { display: flex; }
+
+.gamesearch-filter-action .tabs { display: inline-flex; width: unset; }
+
+@media (min-width: 1024px) { .gamesearch-filter-action .tabs { margin-left: 1rem; } }
+
+.gamesearch-filters { display: none; grid-template-columns: minmax(0, 1fr); grid-gap: 1rem; padding: 1rem 0 0; }
+
+.gamesearch-filters.is-active { display: grid; }
+
+.gamesearch-filter-item h6 { margin-bottom: var(--font-size-7); }
 
 /*# sourceMappingURL=style.css.map */

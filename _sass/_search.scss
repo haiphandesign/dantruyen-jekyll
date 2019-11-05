@@ -1,0 +1,40 @@
+.gamesearch-wrapper {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    .game-collection {
+        &:not(.is-list) {
+            padding: 1rem;
+        }
+    }
+}
+
+.gamesearch-filter-action {
+    display: flex;
+
+    .tabs {
+        display: inline-flex;
+        width: unset;
+
+        @include breakpoint(md) {
+            margin-left: 1rem;
+        }
+    }
+}
+
+.gamesearch-filters {
+    display: none;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 1rem;
+    padding: 1rem 0 0;
+
+    &.is-active {
+        display: grid;
+    }
+}
+
+.gamesearch-filter-item {
+    h6 {
+        margin-bottom: var(--font-size-7);
+    }
+}

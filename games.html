@@ -1,0 +1,112 @@
+---
+title: Danh sách trò chơi
+layout: default
+permalink: /games/
+---
+
+<div class="gamesearch-wrapper">
+
+    <div class="container">
+
+        <div class="columns">
+
+            <div class="column is-8">
+
+                <div class="box-wrapper">
+
+                    {% include global/widget-title.html title='Kết quả tìm kiếm cho "gái làng chơi"' %}
+
+                    <div class="gamesearch-filter">
+
+                        <div class="gamesearch-filter-action">
+
+                            <div class="button" id="gamesearch-filter-button">
+                                <span class="icon">
+                                    <i class="fas fa-filter"></i>
+                                </span>
+                                <span>Filter</span>
+                            </div>
+
+                            <div class="select is-push-right">
+                                <select>
+                                    <option>Toàn bộ phòng</option>
+                                    <option>Phòng đang chơi</option>
+                                    <option>Phòng chưa chơi</option>
+                                </select>
+                            </div>
+
+                            <div class="tabs is-small is-toggle" id="gamesearch-display-tabs">
+                                <ul>
+                                    <li><a><span class="icon"><i class="fas fa-square"></i></span></a></li>
+                                    <li><a><span class="icon"><i class="fas fa-th-large"></i></span></a></li>
+                                    <li class="is-active"><a><span class="icon"><i class="fas fa-th"></i></span></a>
+                                    </li>
+                                    <li><a><span class="icon"><i class="fas fa-list"></i></span></a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="gamesearch-filters">
+
+                            <div class="gamesearch-filter-item gamesearch-filter-categories">
+                                <h6 class="has-text-smallcaps">Thể loại</h6>
+                                {% for i in (1..20) %}
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                    <span>categoryName</span>
+                                </label>
+                                {% endfor %}
+                            </div>
+
+                            <div class="gamesearch-filter-item gamesearch-filter-categories">
+                                <h6 class="has-text-smallcaps">Hiển thị</h6>
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                    <span>Ẩn phòng chơi 18+</span>
+                                </label>
+                            </div>
+
+                            <div class="buttons has-text-smallcaps">
+                                <div class="button">Xoá</div>
+                                <div class="button is-info">Áp dụng</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="box">
+                        <div class="game-collection is-small" id="gamesearch-table">
+                            {% for i in (1..12) %}
+                            {% include widget/game-collection-item-full.html %}
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <nav class="pagination is-small is-right is-arrow">
+                        <a class="pagination-previous">Trang trước</a>
+                        <a class="pagination-next">Trang tiếp theo</a>
+                        <ul class="pagination-list">
+                            <li><a class="pagination-link is-current">1</a></li>
+                            <li><a class="pagination-link">2</a></li>
+                            <li><a class="pagination-link">3</a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+            </div>
+
+            <div class="column gamesearch-right is-hidden-xs">
+                <div class="sidebar">
+                    {% include global/widget.html type="2" source="gamesearch-sidebar-categories" title="Thể loại" borderedtitle="yes" nopadding="yes"  %}
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -4,10 +4,9 @@
 
     <div class="game-collection is-large is-expandable">
         {% include widget/game-collection-item.html background="#5a9392" text="white" title="Rừng Viridian Diệu Kỳ" cover="https://git.haiphan.design/dantruyen-ui/img/sample/background/pokemon-01.jpg" image="https://git.haiphan.design/dantruyen-ui/img/sample/avatar/pokemon-pikachu.jpg" %}
+        {% for i in (1..3) %}
         {% include widget/game-collection-item.html %}
-        {% include widget/game-collection-item.html %}
-        {% include widget/game-collection-item.html %}
-
+        {% endfor %}
         <a class="game-more-link">10</a>
     </div>
 </div>
@@ -17,8 +16,9 @@
     {% include global/widget-title.html title="Phòng chơi đang tham gia" %}
 
     <div class="game-collection is-large">
+        {% for i in (1..4) %}
         {% include widget/game-collection-item.html playing="characterName" %}
-        {% include widget/game-collection-item.html playing="characterName" %}
+        {% endfor %}
     </div>
 </div>
 
@@ -27,9 +27,8 @@
     {% include global/widget-title.html title="Phòng chơi đã hoàn thành" %}
 
     <div class="game-collection is-small">
+        {% for i in (1..4) %}
         {% include widget/game-collection-item.html %}
-        {% include widget/game-collection-item.html %}
-        {% include widget/game-collection-item.html %}
-        {% include widget/game-collection-item.html %}
+        {% endfor %}
     </div>
 </div>

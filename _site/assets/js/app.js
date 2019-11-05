@@ -60,11 +60,11 @@ $('#game-navigation>ul>li').click(function () {
 
 // GAME JOIN BUTTONS
 $('#game-join-button').click(function () {
-    e.target.classList.add('is-loading');
+    $(this).addClass('is-loading');
     setTimeout(function () {
-        e.target.classList.remove('is-loading');
-        e.target.classList.toggle('is-active');
-        e.target.classList.toggle('is-info');
+        $(this).toggleClass('is-active');
+        $(this).toggleClass('is-info');
+        $(this).removeClass('is-loading');
     }, 500);
 });
 
@@ -150,3 +150,32 @@ $(document).ready(function () {
         }
     });
 });
+
+// SEARCH
+
+$('#gamesearch-filter-button').click(function () {
+    if ($(this).hasClass('is-info')) {
+        $(this).removeClass('is-info');
+        $('.gamesearch-filters').removeClass('is-active');
+    } else {
+        $(this).addClass('is-info');
+        $('.gamesearch-filters').addClass('is-active');
+    }
+});
+
+$('#gamesearch-display-tabs ul li').click(function () {
+    $(this).parent('ul').children('li').removeClass('is-active');
+    $(this).addClass('is-active');
+
+    $('#gamesearch-table').attr('class', 'game-collection');
+
+    if ($(this).index() == "0") {
+        $('#gamesearch-table').addClass('is-large');
+    } else if ($(this).index() == "1") {
+        $('#gamesearch-table').addClass('is-medium');
+    } else if ($(this).index() == "2") {
+        $('#gamesearch-table').addClass('is-small');
+    } else if ($(this).index() == "3") {
+        $('#gamesearch-table').addClass('is-list');
+    }
+})

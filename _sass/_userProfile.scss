@@ -10,39 +10,18 @@
 }
 
 .user-profile-meta {
+    display: flex;
     align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
 
     padding: 1rem;
 
-    .level-left {
-        display: grid;
-        grid-auto-flow: column;
-        grid-gap: 1rem;
+    @include breakpoint(sm) {
         align-items: center;
-        justify-content: flex-start;
-
-        width: 100%;
-
-        .level-item {
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            flex-direction: column;
-        }
+        flex-direction: row;
     }
 
-    .level-right {
-        display: grid;
-        grid-gap: 1rem;
-        grid-auto-flow: column;
-        align-items: center;
-
-        width: 100%;
-
-        @include breakpoint(sm) {
-            width: auto;
-        }
-    }
 
     .counters {
         width: max-content;
@@ -69,6 +48,24 @@
                 @include border(left);
             }
         }
+    }
+}
+
+.user-profile-meta-info {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: minmax(min-content, max-content);
+    grid-gap: 1rem;
+    align-items: center;
+}
+
+.user-profile-meta-counters {
+    width: 100%;
+    margin-top: 1rem;
+
+    @include breakpoint(sm) {
+        width: auto;
+        margin-top: 0;
     }
 }
 

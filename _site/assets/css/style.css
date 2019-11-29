@@ -4,8 +4,6 @@
 
 :root { --font-family-sans-serif: 'Nunito Sans', sans-serif; --font-size: 16px; --font-size-mobile: 16px; --font-size-7: .8rem; --border-radius: 2px; }
 
-body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-
 .image.has-placeholder { background-image: url("/assets/images/placeholder-small.jpg"); background-size: cover; background-position: center center; }
 
 .image.has-placeholder-medium { background-image: url("/assets/images/placeholder-medium.jpg"); background-size: cover; background-position: center center; }

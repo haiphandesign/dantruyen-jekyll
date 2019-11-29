@@ -8,11 +8,18 @@ permalink: /browse/
     <div class="container is-wide">
         <div class="browse-carousel owl-carousel">
             {% for i in (1..4) %}
-            <a class="browse-carousel-item" href="/game/">
-                <figure class="image is-full is-cover has-placeholder-big">
-                    <img src="">
+            <div class="browse-carousel-item">
+                <div class="browse-carousel-item-meta" style="--gameText: white; --gameBg: black;">
+                    <div class="browse-carousel-item-meta-title">My Giant Nerd Boyfriend</div>
+                    <div class="browse-carousel-item-meta-description">Having a boyfriend who's a full foot taller than
+                        you might seem adorable at first, but it usually just ends up causing a whole bunch of minor
+                        inconveniences. Follow Fishball as she navigates the Malaysian life with her 6'5" geeky
+                        boyfriend.</div>
+                </div>
+                <figure class="image is-full is-cover has-placeholder-big browse-carousel-item-image">
+                    <img src="https://cdn-www.bluestacks.com/bs-images/noblesse-m-with-naver-webtoon_banner.jpg">
                 </figure>
-            </a>
+            </div>
             {% endfor %}
         </div>
     </div>
@@ -46,47 +53,107 @@ permalink: /browse/
                                     {% include global/widget-title.html title="Phòng chơi có sẵn" description="Những phòng chơi mà những thành viên khác đã tạo sẵn." %}
                                 </div>
                                 <div class="column is-flex is-align-center is-justify-end">
-                                    <div id="browse-game-available-filter">
-                                        <div class="select">
-                                            <select>
-                                                <option>Toàn bộ phòng</option>
-                                                <option>Phòng đang chơi</option>
-                                                <option>Phòng chưa chơi</option>
-                                            </select>
+                                    <div class="select">
+                                        <select>
+                                            <option>Toàn bộ phòng</option>
+                                            <option>Phòng đang chơi</option>
+                                            <option>Phòng chưa chơi</option>
+                                        </select>
+                                    </div>
+                                    <div class="dropdown is-hoverable is-right">
+                                        <div class="dropdown-trigger">
+                                            <a class="button"><i class="fas fa-cog"></i></a>
                                         </div>
-                                        <div class="dropdown is-hoverable is-right">
-                                            <div class="dropdown-trigger">
-                                                <a class="button"><i class="fas fa-cog"></i></a>
-                                            </div>
-                                            <div class="dropdown-menu">
-                                                <div class="dropdown-content">
-                                                    <a class="dropdown-item">
-                                                        <div class="field is-horizontal">
-                                                            <div class="field-label">
-                                                                <label class="label is-size-7 is-nowrap"
-                                                                    for="homepage-game-browse-nsfw">
-                                                                    <span class="icon">
-                                                                        <i class="fas fa-eye-slash"></i>
-                                                                    </span>
-                                                                    <span class="is-uppercase">Ẩn phòng chơi 18+</span>
-                                                                </label>
-                                                            </div>
-                                                            <div class="field-body">
-                                                                <div class="control">
-                                                                    <input type="checkbox"
-                                                                        id="homepage-game-browse-nsfw">
-                                                                </div>
+                                        <div class="dropdown-menu">
+                                            <div class="dropdown-content">
+                                                <a class="dropdown-item">
+                                                    <div class="field is-horizontal">
+                                                        <div class="field-label">
+                                                            <label class="label is-size-7 is-nowrap"
+                                                                for="homepage-game-browse-nsfw">
+                                                                <span class="icon">
+                                                                    <i class="fas fa-eye-slash"></i>
+                                                                </span>
+                                                                <span class="is-uppercase">Ẩn phòng chơi 18+</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="field-body">
+                                                            <div class="control">
+                                                                <input type="checkbox" id="homepage-game-browse-nsfw">
                                                             </div>
                                                         </div>
-                                                    </a>
-                                                </div>
+                                                    </div>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+
                         <div class="box-wrapper">
+                            <div class="box">
+                                <div class="table-responsive">
+                                    <table
+                                        class="table is-fullwidth is-vertical-align-middle has-dark-head is-hoverable game-table">
+                                        <thead>
+                                            <tr>
+                                                <th class="game-table-col-name">Tên phòng chơi</th>
+                                                <th class="game-table-col-players has-text-centered">Số người chơi</th>
+                                                <th class="game-table-col-status has-text-centered">Trạng thái</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Tên phòng chơi</th>
+                                                <th class="has-text-centered">Số người chơi</th>
+                                                <th class="has-text-centered">Trạng thái</th>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            {% for i in (1..10) %}
+                                            <tr>
+                                                <td>
+                                                    <div class="is-auto-grid">
+                                                        <a href="/game/">
+                                                            <figure
+                                                                class="image is-game-image is-size-5 is-bordered is-radius has-placeholder skeleton">
+                                                                <img src="">
+                                                            </figure>
+                                                        </a>
+                                                        <a href="/game/" class="game-title">
+                                                            <div class="is-block">
+                                                                <div class="skeleton"></div>
+                                                            </div>
+                                                            <div class="has-text-darkgray">
+                                                                <div class="skeleton"></div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                                <td class="has-text-centered">
+                                                    <p class="skeleton is-2">
+                                                        <span class="players-count">0</span>
+                                                        <span
+                                                            class="players-limit has-text-darkgray is-size-7">/10</span>
+                                                    </p>
+                                                </td>
+                                                <td class="has-text-centered">
+                                                    <div class="tags">
+                                                        <span class="tag is-info has-text-smallcaps">Đang chơi</span>
+                                                    </div>
+                                                    <div class="has-text-darkgray is-size-7">
+                                                        <span>1 Chương, 1 Cảnh</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
                             <div class="box">
                                 <div class="table-responsive">
                                     <table

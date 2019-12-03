@@ -92,16 +92,20 @@ permalink: /browse/
                         </div>
 
 
+
                         <div class="box-wrapper">
+
                             <div class="box">
                                 <div class="table-responsive">
                                     <table
-                                        class="table is-fullwidth is-vertical-align-middle has-dark-head is-hoverable game-table">
+                                        class="table is-fullwidth is-vertical-align-middle has-dark-head is-hoverable browse-table">
                                         <thead>
                                             <tr>
-                                                <th class="game-table-col-name">Tên phòng chơi</th>
-                                                <th class="game-table-col-players has-text-centered">Số người chơi</th>
-                                                <th class="game-table-col-status has-text-centered">Trạng thái</th>
+                                                <th class="browse-table-col-name">Tên phòng chơi</th>
+                                                <th class="browse-table-col-players has-text-centered">Số người
+                                                    chơi</th>
+                                                <th class="browse-table-col-status has-text-centered">Trạng thái
+                                                </th>
                                             </tr>
                                         </thead>
                                         <tfoot>
@@ -112,9 +116,8 @@ permalink: /browse/
                                             </tr>
                                         </tfoot>
                                         <tbody>
-                                            {% for i in (1..10) %}
                                             <tr>
-                                                <td>
+                                                <td class="browse-table-td-name">
                                                     <div class="is-auto-grid">
                                                         <a href="/game/">
                                                             <figure
@@ -123,59 +126,33 @@ permalink: /browse/
                                                             </figure>
                                                         </a>
                                                         <a href="/game/" class="game-title">
-                                                            <div class="is-block">
-                                                                <div class="skeleton"></div>
-                                                            </div>
-                                                            <div class="has-text-darkgray">
-                                                                <div class="skeleton"></div>
+                                                            <h5 class="skeleton is-5">Tên phòng chơi</h5>
+                                                            <div class="has-text-darkgray skeleton">
+                                                                Dẫn truyện bởi <strong>Người dẫn</strong> (@host)
                                                             </div>
                                                         </a>
                                                     </div>
                                                 </td>
-                                                <td class="has-text-centered">
-                                                    <p class="skeleton is-2">
+                                                <td class="has-text-centered browse-table-td-status">
+                                                    <p class="skeleton is-4">
                                                         <span class="players-count">0</span>
                                                         <span
                                                             class="players-limit has-text-darkgray is-size-7">/10</span>
                                                     </p>
                                                 </td>
-                                                <td class="has-text-centered">
-                                                    <div class="tags">
-                                                        <span class="tag is-info has-text-smallcaps">Đang chơi</span>
-                                                    </div>
-                                                    <div class="has-text-darkgray is-size-7">
-                                                        <span>1 Chương, 1 Cảnh</span>
+                                                <td class="has-text-centered browse-table-td-status">
+                                                    <div
+                                                        class="has-text-darkgray is-size-7 browse-table-td-status-scenes skeleton is-8">
+                                                        <span><span>1
+                                                                Chương,</span>
+                                                            <span>1
+                                                                Cảnh</span></span>
                                                     </div>
                                                 </td>
                                             </tr>
-                                            {% endfor %}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-                            <div class="box">
-                                <div class="table-responsive">
-                                    <table
-                                        class="table is-fullwidth is-vertical-align-middle has-dark-head is-hoverable">
-                                        <thead>
-                                            <tr>
-                                                <th>Tên phòng chơi</th>
-                                                <th class="has-text-centered">Số người chơi</th>
-                                                <th class="has-text-centered">Trạng thái</th>
-                                            </tr>
-                                        </thead>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Tên phòng chơi</th>
-                                                <th class="has-text-centered">Số người chơi</th>
-                                                <th class="has-text-centered">Trạng thái</th>
-                                            </tr>
-                                        </tfoot>
-                                        <tbody>
                                             {% for i in (1..10) %}
                                             <tr>
-                                                <td>
+                                                <td class="browse-table-td-name">
                                                     <div class="is-auto-grid">
                                                         <a href="/game/">
                                                             <figure
@@ -186,24 +163,26 @@ permalink: /browse/
                                                         <a href="/game/" class="game-title">
                                                             <h5>Tên phòng chơi</h5>
                                                             <div class="has-text-darkgray">
-                                                                Dẫn truyện bởi <strong>Người dẫn</strong> (@host)
+                                                                Dẫn truyện bởi <strong>Người
+                                                                    dẫn</strong> (@host)
                                                             </div>
                                                         </a>
                                                     </div>
                                                 </td>
-                                                <td class="has-text-centered">
+                                                <td class="has-text-centered browse-table-td-status">
                                                     <p>
                                                         <span class="players-count">0</span>
                                                         <span
                                                             class="players-limit has-text-darkgray is-size-7">/10</span>
                                                     </p>
                                                 </td>
-                                                <td class="has-text-centered">
+                                                <td class="has-text-centered browse-table-td-status">
                                                     <div class="tags">
                                                         <span class="tag is-info has-text-smallcaps">Đang chơi</span>
                                                     </div>
-                                                    <div class="has-text-darkgray is-size-7">
-                                                        <span>1 Chương, 1 Cảnh</span>
+                                                    <div
+                                                        class="has-text-darkgray is-size-7 browse-table-td-status-scenes">
+                                                        <span><span>1 Chương,</span> <span>1 Cảnh</span></span>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -212,8 +191,10 @@ permalink: /browse/
                                     </table>
                                 </div>
                             </div>
+
+
                             <nav class="pagination is-small is-right is-arrow">
-                                <a class="pagination-previous">Trang trước</a>
+                                <a class="pagination-previous is-disabled">Trang trước</a>
                                 <a class="pagination-next">Trang tiếp theo</a>
                                 <ul class="pagination-list">
                                     <li><a class="pagination-link is-current">1</a></li>
@@ -221,6 +202,8 @@ permalink: /browse/
                                     <li><a class="pagination-link">3</a></li>
                                 </ul>
                             </nav>
+
+
                         </div>
                     </div>
 

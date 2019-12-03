@@ -715,7 +715,17 @@ a.help, .help a { border-bottom: 1px dotted currentColor; }
 
 .browse-sidebar-categories-more:hover { background-color: var(--lightgray); }
 
-.game-table-col-name { width: 50%; min-width: 20rem; }
+* { white-space: normal; }
+
+.browse-table-col-name { width: 60%; min-width: 25rem; }
+
+.browse-table-col-players { width: 15%; }
+
+.browse-table-col-status { width: 25%; }
+
+.browse-table-td-status .tags { margin-bottom: .25rem; }
+
+.browse-table-td-status span { display: inline-block; }
 
 .gamesearch-wrapper { padding-top: 1rem; padding-bottom: 1rem; }
 

@@ -717,7 +717,9 @@ a.help, .help a { border-bottom: 1px dotted currentColor; }
 
 * { white-space: normal; }
 
-.browse-table-col-name { width: 60%; min-width: 25rem; }
+.browse-table-col-name { width: 60%; min-width: 15rem; }
+
+@media (min-width: 1024px) { .browse-table-col-name { min-width: 25rem; } }
 
 .browse-table-col-players { width: 15%; }
 

@@ -92,7 +92,11 @@
 
 .browse-table-col-name {
     width: 60%;
-    min-width: 25rem;
+    min-width: 15rem;
+
+    @include breakpoint(md) {
+        min-width: 25rem;
+    }
 }
 
 .browse-table-col-players {

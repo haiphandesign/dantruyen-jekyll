@@ -35,6 +35,21 @@ permalink: /browse/
 
                 <div class="browse-main">
 
+                    <div class="browse-your-games">
+                        {% include global/widget-title.html title="Phòng đang chơi" %}
+                        <div class="game-collection is-large is-expandable">
+                            {% include widget/game-collection-item.html title="gameHosting" %}
+                            {% include widget/game-collection-item.html playing="characterName" title="gamePlaying" %}
+                        </div>
+                    </div>
+
+                    <div class="buttons is-hidden-sm">
+                        <div class="button is-fullwidth is-info is-big">
+                            <span class="icon"><i class="far fa-plus"></i></span>
+                            <span class="has-text-smallcaps">Tạo Phòng Chơi Mới</span>
+                        </div>
+                    </div>
+
                     <div id="browse-editors-pick">
                         <div class="box-title">
                             {% include global/widget-title.html title="Phòng chơi nổi bật" subtitle="Editor's Pick" description="Những câu chuyện thú vị, đầy lôi cuốn được lựa chọn bởi đội ngũ quản trị viên của Dẫn Truyện." %}
@@ -90,8 +105,6 @@ permalink: /browse/
                                 </div>
                             </div>
                         </div>
-
-
 
                         <div class="box-wrapper">
 
@@ -214,6 +227,13 @@ permalink: /browse/
             <div class="column browse-right is-hidden-xs">
 
                 <div class="sidebar">
+
+                    <div class="buttons">
+                        <div class="button is-fullwidth is-info is-big">
+                            <span class="icon"><i class="far fa-plus"></i></span>
+                            <span class="has-text-smallcaps">Tạo Phòng Chơi Mới</span>
+                        </div>
+                    </div>
 
                     {% include global/widget.html type="2" source="browse-sidebar-categories" title="Thể loại" borderedtitle="yes" nopadding="yes"  %}
 

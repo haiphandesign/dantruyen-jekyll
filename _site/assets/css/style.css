@@ -277,6 +277,36 @@ a.help, .help a { border-bottom: 1px dotted currentColor; }
 
 .post-interaction .post-interaction-item:hover { color: var(--blue); cursor: pointer; }
 
+.post-comments { margin-top: -1rem; padding: 0; background-color: var(--lightgray); }
+
+.post-comments-item { border-color: var(--border-color); border-style: solid; border-top-width: var(--border-width); padding: .5rem 1rem; font-size: var(--font-size-7); }
+
+.post-comments-item-by { color: var(--darkgray); }
+
+.post-comments-item-by:before { content: '- bởi '; }
+
+.post-comments-item-by a:before { content: '@'; }
+
+.post-comments-item-by a:hover { text-decoration: underline; }
+
+.post-comments-more { border-color: var(--border-color); border-style: solid; border-top-width: var(--border-width); display: block; font-size: var(--font-size-7); font-weight: bold; padding: .325rem 1rem; }
+
+.post-comments-more:hover { background-color: var(--gray); }
+
+.post-comments-more:before { content: 'Hiển thị thêm '; }
+
+.post-comments-more:after { content: ' bình luận'; }
+
+.post-comments-more:before, .post-comments-more:after { font-weight: normal; }
+
+.post-comments-input { border-color: var(--border-color); border-style: solid; border-top-width: var(--border-width); padding: .5rem 1rem; font-size: var(--font-size-7); }
+
+.post-comments-input input[type="text"] { -webkit-appearance: none; border: none; background: none; font-size: var(--font-size-7); width: 100%; }
+
+.post-comments-input-submit { color: var(--darkgray); padding-left: 1rem; }
+
+.post-comments-input-submit:hover { color: var(--blue); }
+
 @media (max-width: 767px) { .post.is-narrator .post-content-wrapper .card-stacks { order: 99999; margin: -1rem; margin-top: 1rem; margin-bottom: 0; border-color: var(--border-color); border-style: solid; border-top-width: var(--border-width); } }
 
 .post.is-narrator.is-first .post-cover { width: 100%; height: 20rem; }

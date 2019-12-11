@@ -169,6 +169,89 @@
     }
 }
 
+
+// POST COMMENTS
+
+.post-comments {
+    margin-top: -1rem;
+    padding: 0;
+
+    background-color: var(--lightgray);
+}
+
+.post-comments-item {
+    @include border(top);
+    padding: .5rem 1rem;
+    font-size: var(--font-size-7);
+
+    &-by {
+        color: var(--darkgray);
+
+        &:before {
+            content: '- bởi ';
+        }
+
+        a {
+            &:before {
+                content: '@';
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.post-comments-more {
+    @include border(top);
+    display: block;
+    font-size: var(--font-size-7);
+    font-weight: bold;
+    padding: .325rem 1rem;
+
+    &:hover {
+        background-color: var(--gray);
+    }
+
+    &:before {
+        content: 'Hiển thị thêm '
+    }
+
+    &:after {
+        content: ' bình luận'
+    }
+
+    &:before,
+    &:after {
+        font-weight: normal;
+    }
+}
+
+.post-comments-input {
+    @include border(top);
+    padding: .5rem 1rem;
+    font-size: var(--font-size-7);
+
+    input[type="text"] {
+        -webkit-appearance: none;
+        border: none;
+        background: none;
+        font-size: var(--font-size-7);
+        width: 100%;
+    }
+
+    &-submit {
+        color: var(--darkgray);
+        padding-left: 1rem;
+
+        &:hover {
+            color: var(--blue);
+        }
+    }
+}
+
+
 // POST TYPE
 
 .post.is-narrator {

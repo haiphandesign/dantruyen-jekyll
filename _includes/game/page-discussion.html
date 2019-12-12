@@ -1,0 +1,78 @@
+<div class="container">
+
+    <div class="columns">
+
+        <div class="column is-8">
+
+            <div class="box-wrapper is-spaced">
+
+                <div class="box">
+                    <div class="box-content">
+
+                        <div class="form">
+
+                            <div class="field has-addons">
+
+                                <div class="control is-fullwidth">
+                                    <input type="text" class="input" placeholder="Tạo thảo luận mới">
+                                </div>
+
+                                <div class="control"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- POST: IS-NARRATOR IS-FIRST -->
+                <div class="post is-discussion is-short">
+                    <div class="post-head">
+                        <div class="post-title">
+                            <div class="columns is-xs is-flex is-align-center">
+                                <div class="column is-narrow">
+                                    <figure class="image is-size-3 is-bordered is-radius has-placeholder">
+                                        <img src="">
+                                    </figure>
+                                </div>
+                                <div class="column">
+                                    <p class="has-text-weight-bold is-size-7">@lukul</p>
+                                    <p class="has-text-darkgray is-size-7">11/12/2019</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-body">
+                        <div class="post-content">
+                            <p>
+                                Giết Yami từ những cảnh đầu sẽ trở thành một vấn đề lớn sau này?
+                            </p>
+                        </div>
+                    </div>
+
+                    {% include game/post-interaction.html %}
+
+                    {% include game/post-comments.html %}
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="column is-hidden-xs">
+
+            <div class="sidebar is-sticky">
+
+                .sidebar
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

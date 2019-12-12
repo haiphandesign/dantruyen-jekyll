@@ -209,10 +209,7 @@
     font-size: var(--font-size-7);
     font-weight: bold;
     padding: .325rem 1rem;
-
-    &:hover {
-        background-color: var(--gray);
-    }
+    cursor: pointer;
 
     &:before {
         content: 'Hiển thị thêm '
@@ -487,5 +484,26 @@
 
     &.is-active {
         display: flex;
+    }
+}
+
+
+
+// GAME DISCUSSION
+
+.post.is-discussion {
+    .post-head {
+        .post-title {
+            border: none;
+            padding-bottom: 0;
+        }
+    }
+
+    &.is-short {
+        .post-content {
+            font-size: var(--font-size-3);
+            font-weight: var(--font-weight-semibold);
+            line-height: 1.25;
+        }
     }
 }

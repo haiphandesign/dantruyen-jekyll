@@ -1,38 +1,91 @@
-<div id="navbar" class="navbar is-sticky is-bordered">
+<div id="navbar" class="navbar is-sticky is-bordered dt-navbar">
     <div class="container is-wide">
         <div class="navbar-brand">
             <a class="navbar-item" href="/">
                 <div class="navbar-logo">
-                    <h3 class="has-text-blue">Dẫn Truyện</h3>
+                    <img src="/assets/images/logo.png" alt="Dẫn Truyện" class="navbar-logo-image">
+                    <img src="/assets/images/logo-text.png" alt="Dẫn Truyện" class="navbar-logo-text">
                 </div>
             </a>
-
         </div>
 
-        <div class="navbar-menu navbar-main">
-            {% for item in site.data.settings.menu_settings.menu_items %}
-            <a class="navbar-item" href="{{ item.url }}"><span>{{ item.title }}</span></a>
-            {% endfor %}
-            <div class="navbar-menu-close" onclick="navbarMenuClose(this)">
+        <div class="navbar-toggle navbar-toggle-menu" onclick="navbarMenuOpen()"></div>
+
+        <div class="navbar-menu navbar-main navbar-menu-main">
+            <div class="navbar-menu-wrapper">
+                <div class="navbar-item navbar-menu-logo">
+                    <img src="/assets/images/logo.png" alt="Dẫn Truyện" class="navbar-menu-logo-image">
+                </div>
+                {% for item in site.data.settings.menu_settings.menu_items %}
+                <a class="navbar-item" href="{{ item.url }}"><span>{{ item.title }}</span></a>
+                {% endfor %}
+            </div>
+            <div class="navbar-menu-close" onclick="navbarMenuClose()">
                 <div class="delete"></div>
             </div>
         </div>
 
-        <div class="navbar-toggle" onclick="navbarToggle(this)"></div>
+        <div class="navbar-toggle navbar-toggle-notifications has-notifications" onclick="navbarNotificationsOpen()">
+        </div>
 
-        <div class="navbar-menu navbar-end">
-            <div class="navbar-item">
-                <div class="buttons">
-                    <a class="button is-white">Đăng nhập</a>
-                    <a class="button is-info">Đăng ký</a>
+        <div class="navbar-notifications">
+            <div class="navbar-notifications-wrapper">
+                {% for i in (1..2) %}
+                <div class="navbar-notification">
+                    <div class="navbar-notification-image">
+                        <i class="fad fa-thumbtack"></i>
+                    </div>
+                    <div class="navbar-notification-content">Nội dung thông báo</div>
+                </div>
+                {% endfor %}
+                <div class="navbar-notification">
+                    <div class="navbar-notification-image">
+                        <figure class="image is-full is-cover has-placeholder">
+                            <img src="" alt="">
+                        </figure>
+                    </div>
+                    <div class="navbar-notification-content">Nội dung thông báo</div>
                 </div>
             </div>
-            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-                data-target="navbarBasicExample">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
+            <div class="navbar-notifications-more">
+                <span>Hiển thị thêm thông báo</span>
+            </div>
+        </div>
+
+        <div class="navbar-toggle navbar-toggle-account" onclick="navbarAccountOpen()"></div>
+
+        <div class="navbar-menu navbar-menu-account">
+            <div class="navbar-menu-wrapper navbar-account-logged-out" style="display: none;">
+                <div class="navbar-item navbar-account-logged-out-buttons">
+                    <div class="buttons">
+                        <a class="button is-white">Đăng nhập</a>
+                        <a class="button is-info">Đăng ký</a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-menu-wrapper navbar-account-logged-in">
+                <div class="navbar-item navbar-account-user">
+                    <figure class="image is-bordered is-radius has-placeholder navbar-account-image">
+                        <img src="">
+                    </figure>
+                    <div class="navbar-account-meta">
+                        <div class="navbar-account-meta-name has-text-weight-bold">userDisplayname</div>
+                        <div class="navbar-account-meta-username has-text-darkgray is-size-7">username</div>
+                    </div>
+                </div>
+                <div class="navbar-item navbar-account-menu">
+                    <a class="navbar-item navbar-button-feedback" href="/feedback/">Trang cá nhân</a>
+                    <a class="navbar-item navbar-button-feedback" href="/feedback/">Thiết lập</a>
+                    <a class="navbar-item navbar-button-feedback" href="/feedback/">Góp ý</a>
+                    <a class="navbar-item navbar-button-feedback" href="/feedback/">Đăng xuất <i
+                            class="far fa-sign-out"></i></a>
+                </div>
+            </div>
+
+            <div class="navbar-menu-close" onclick="navbarAccountClose()">
+                <div class="delete"></div>
+            </div>
+
         </div>
 
     </div>

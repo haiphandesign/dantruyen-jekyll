@@ -27,6 +27,33 @@ function navbarScroll() {
     }
 }
 
+// NAVBAR MENU
+function navbarMenuOpen() {
+    document.querySelector('.navbar-toggle-menu').classList.add('is-active');
+}
+
+function navbarMenuClose() {
+    document.querySelector('.navbar-toggle-menu').classList.remove('is-active');
+}
+
+function navbarAccountOpen() {
+    document.querySelector('.navbar-toggle-account').classList.add('is-active');
+}
+
+function navbarAccountClose() {
+    document.querySelector('.navbar-toggle-account').classList.remove('is-active');
+}
+
+function navbarNotificationsOpen() {
+    document.querySelector('.navbar-toggle-notifications').classList.toggle('is-active');
+    document.querySelector('.navbar-toggle-notifications').classList.remove('has-notifications');
+}
+
+function navbarNotificationsClose() {
+    document.querySelector('.navbar-toggle-notifications').classList.remove('is-active');
+}
+
+
 // #MAIN HEIGHT
 function mainMinheight() {
     var footerHeight = $('#footer').outerHeight();

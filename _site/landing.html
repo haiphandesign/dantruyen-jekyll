@@ -1,4 +1,28 @@
-<div id="navbar" class="navbar is-sticky is-bordered dt-navbar {{ page.customnavbar }}">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+        Dẫn Truyện / 
+    </title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://git.haiphan.design/harmony/harmony.css" />
+    <!-- <link rel="stylesheet" href="/assets/addons/fonts/proxima-nova/stylesheet.css"> -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,600,600i,700,700i&display=swap&subset=latin-ext,vietnamese"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/addons/fontawesome/all.min.css">
+    <link rel="stylesheet" href="/assets/addons/owl.carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/addons/owl.carousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <div id="navbar" class="navbar is-sticky is-bordered dt-navbar is-landing is-fixed is-transparent">
     <div class="container is-wide">
         <div class="navbar-brand">
             <a class="navbar-item" href="/">
@@ -16,9 +40,13 @@
                 <div class="navbar-item navbar-menu-logo">
                     <img src="/assets/images/logo.png" alt="Dẫn Truyện" class="navbar-menu-logo-image">
                 </div>
-                {% for item in site.data.settings.menu_settings.menu_items %}
-                <a class="navbar-item" href="{{ item.url }}"><span>{{ item.title }}</span></a>
-                {% endfor %}
+                
+                <a class="navbar-item" href="/browse/"><span>Browse</span></a>
+                
+                <a class="navbar-item" href="/user-profile/"><span>User Profile</span></a>
+                
+                <a class="navbar-item" href="/game/"><span>Game</span></a>
+                
             </div>
             <div class="navbar-menu-close" onclick="navbarMenuClose()">
                 <div class="delete"></div>
@@ -30,14 +58,21 @@
 
         <div class="navbar-notifications">
             <div class="navbar-notifications-wrapper">
-                {% for i in (1..2) %}
+                
                 <div class="navbar-notification">
                     <div class="navbar-notification-image">
                         <i class="fad fa-thumbtack"></i>
                     </div>
                     <div class="navbar-notification-content">Nội dung thông báo</div>
                 </div>
-                {% endfor %}
+                
+                <div class="navbar-notification">
+                    <div class="navbar-notification-image">
+                        <i class="fad fa-thumbtack"></i>
+                    </div>
+                    <div class="navbar-notification-content">Nội dung thông báo</div>
+                </div>
+                
                 <div class="navbar-notification">
                     <div class="navbar-notification-image">
                         <figure class="image is-full is-cover has-placeholder">
@@ -90,3 +125,38 @@
 
     </div>
 </div>
+
+    <div id="main">
+        <img src="/assets/images/landing.png" alt="">
+    </div>
+
+    <section id="footer" class="footer">
+    <div class="container is-wide">
+        <div class="level is-reversed">
+            <div class="level-left">
+                <div class="level-item">
+                    <nav class="footer-links">
+                        <ul>
+                            <li><a href="#">Về chúng tôi</a></li>
+                            <li><a href="#">Hỗ trợ</a></li>
+                            <li><a href="#">Cửa hàng</a></li>
+                            <li><a href="#">Tuyển dụng</a></li>
+                            <li><a href="#">Điều khoản & Sử dụng</a></li>
+                            <li><a href="#">Ủng hộ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="level-right">
+                <div class="level-item">
+                    <div class="footer-copyright">© 2019 Dẫn Truyện. <span class="footer-version">3.0</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/owl.carousel.min.js"></script>
+<script src="/assets/js/app.js"></script>
+</body>
+
+</html>

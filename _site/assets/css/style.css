@@ -176,6 +176,12 @@ a.help, .help a { border-bottom: 1px dotted currentColor; }
 
 .dt-navbar .navbar-notification-image { display: flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; border-radius: var(--border-radius); background-color: var(--gray); margin-right: 1rem; }
 
+.navbar.is-transparent { background-color: transparent; border-bottom-color: transparent; }
+
+.navbar.is-transparent.is-scroll { background-color: var(--navbar-background); border-color: var(--border-color); }
+
+.navbar.is-fixed { position: fixed; }
+
 .footer { padding-top: 2rem; padding-bottom: 2rem; }
 
 @media (min-width: 768px) { .footer { padding-top: 4rem; } }

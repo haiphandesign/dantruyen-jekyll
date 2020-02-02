@@ -9,7 +9,7 @@
 }
 
 .has-text-smallcaps {
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-bold);
 }
 
 .has-underline {
@@ -133,14 +133,14 @@ a.help,
     padding: .75rem 1rem;
 
     .widget-title-title {
-        font-size: var(--font-size-5);
-        font-weight: var(--font-weight-semibold);
+        font-size: var(--font-size-4);
+        font-weight: var(--font-weight-medium);
     }
 
     .widget-title-subtitle {
         color: var(--blue);
         font-size: var(--font-size-7);
-        font-weight: var(--font-weight-semibold);
+        font-weight: var(--font-weight-medium);
         text-transform: uppercase;
     }
 
@@ -160,6 +160,13 @@ a.help,
     >.widget-title {
         padding-bottom: 0;
         margin-bottom: -.25rem;
+    }
+}
+
+.box {
+    hr {
+        border-color: var(--border-color-light);
+        margin: 1.5rem 0;
     }
 }
 
@@ -183,7 +190,20 @@ a.help,
 
 // CONTENT
 
-
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-weight: var(--font-weight-medium);
+}
 
 
 
@@ -650,4 +670,14 @@ a.help,
     &.is-fixed {
         position: fixed;
     }
+}
+
+
+
+.subtitle {
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-5);
+    border-bottom: 1px solid var(--border-color-light);
+    margin-bottom: 1.5rem;
+    padding-bottom: .5rem;
 }

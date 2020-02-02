@@ -85,7 +85,7 @@
                 .game-meta-play {
                     order: 1;
                     font-size: var(--font-size-5);
-                    font-weight: var(--font-weight-semibold);
+                    font-weight: var(--font-weight-medium);
                 }
             }
         }
@@ -98,7 +98,7 @@
             margin-top: 1rem;
 
             .game-stats-narrated-by {
-                font-weight: var(--font-weight-semibold);
+                font-weight: var(--font-weight-medium);
 
                 &:before {
                     content: 'Dẫn truyện bởi ';
@@ -116,7 +116,7 @@
 
                 li {
                     display: inline;
-                    font-weight: var(--font-weight-semibold);
+                    font-weight: var(--font-weight-medium);
 
                     &:not(:last-child) {
                         &:after {
@@ -131,7 +131,7 @@
             @include border(top);
             display: flex;
             font-size: var(--font-size-7);
-            font-weight: var(--font-weight-semibold);
+            font-weight: var(--font-weight-medium);
             padding-top: .75rem;
             margin-top: 1rem;
             margin-bottom: -.25rem;
@@ -149,7 +149,7 @@
                 .game-meta-basic {
                     .game-meta-name {
                         font-size: var(--font-size-5);
-                        font-weight: var(--font-weight-semibold);
+                        font-weight: var(--font-weight-medium);
                     }
                 }
             }
@@ -167,7 +167,7 @@
                         }
 
                         span {
-                            font-weight: var(--font-weight-semibold);
+                            font-weight: var(--font-weight-medium);
                         }
                     }
                 }

@@ -71,7 +71,7 @@
         &:after {
             content: 'Thẻ bài';
             white-space: nowrap;
-            font-weight: var(--font-weight-semibold);
+            font-weight: var(--font-weight-medium);
             font-size: var(--font-size-7);
             text-transform: uppercase;
 
@@ -295,7 +295,7 @@
         &:before {
             display: block;
             content: 'Thẻ bài';
-            font-weight: var(--font-weight-semibold);
+            font-weight: var(--font-weight-medium);
             font-size: var(--font-size-7);
             text-transform: uppercase;
         }

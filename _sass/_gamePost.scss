@@ -154,7 +154,7 @@
 
         >span {
             font-size: var(--font-size-7);
-            font-weight: var(--font-weight-semibold);
+            font-weight: var(--font-weight-medium);
             white-space: nowrap;
         }
 
@@ -333,7 +333,7 @@
                 &:after {
                     content: 'Chọn hình ảnh';
                     font-size: var(--font-size-7);
-                    font-weight: var(--font-weight-semibold);
+                    font-weight: var(--font-weight-medium);
                     text-transform: uppercase;
                 }
             }
@@ -448,7 +448,7 @@
                 &:before {
                     content: 'Chưa có thẻ bài nào';
                     font-size: var(--font-size-7);
-                    font-weight: var(--font-weight-semibold);
+                    font-weight: var(--font-weight-medium);
                     text-transform: uppercase;
                     color: var(--darkgray);
                     text-align: center;
@@ -502,7 +502,7 @@
     &.is-short {
         .post-content {
             font-size: var(--font-size-3);
-            font-weight: var(--font-weight-semibold);
+            font-weight: var(--font-weight-medium);
             line-height: 1.25;
         }
     }

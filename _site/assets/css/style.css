@@ -109,6 +109,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 
 .dt-navbar .navbar-menu-close .delete:after { opacity: 1; }
 
+.dt-navbar .navbar-menu-main { margin-right: auto; }
+
 .dt-navbar .navbar-menu-main .navbar-menu-close { top: 1.25rem; left: 1rem; right: unset; }
 
 .dt-navbar .navbar-menu-logo { border-color: var(--border-color); border-style: solid; border-bottom-width: var(--border-width); display: flex; align-items: center; justify-content: center; padding: 1.5rem !important; margin-bottom: var(--font-size-7); }
@@ -151,7 +153,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 
 .dt-navbar .navbar-account-menu .navbar-item:hover { background-color: var(--background); }
 
-.dt-navbar .navbar-toggle-notifications { position: relative; margin-right: .75rem; }
+.dt-navbar .navbar-toggle-notifications { position: relative; margin-right: .75rem; margin-left: 0; }
 
 @media (min-width: 1024px) { .dt-navbar .navbar-toggle-notifications { display: flex; } }
 

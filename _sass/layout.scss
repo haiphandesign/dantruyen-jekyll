@@ -390,6 +390,8 @@ h6,
     }
 
     .navbar-menu-main {
+        margin-right: auto;
+
         .navbar-menu-close {
             top: 1.25rem;
             left: 1rem;
@@ -530,6 +532,7 @@ h6,
     .navbar-toggle-notifications {
         position: relative;
         margin-right: .75rem;
+        margin-left: 0;
 
         @include breakpoint(md) {
             display: flex;

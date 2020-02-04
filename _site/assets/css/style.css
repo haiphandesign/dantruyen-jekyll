@@ -153,9 +153,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 
 .dt-navbar .navbar-account-menu .navbar-item:hover { background-color: var(--background); }
 
-.dt-navbar .navbar-toggle-notifications { position: relative; margin-right: .75rem; margin-left: 0; }
+.dt-navbar .navbar-toggle-notifications { position: relative; margin-right: .75rem; margin-left: auto; }
 
-@media (min-width: 1024px) { .dt-navbar .navbar-toggle-notifications { display: flex; } }
+@media (min-width: 1024px) { .dt-navbar .navbar-toggle-notifications { display: flex; margin-left: 0; } }
 
 .dt-navbar .navbar-toggle-notifications:before { content: '\f0f3'; }
 

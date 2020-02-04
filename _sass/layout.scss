@@ -534,10 +534,11 @@ h6,
     .navbar-toggle-notifications {
         position: relative;
         margin-right: .75rem;
-        margin-left: 0;
+        margin-left: auto;
 
         @include breakpoint(md) {
             display: flex;
+            margin-left: 0;
         }
 
         &:before {

@@ -157,13 +157,15 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 
 @media (min-width: 1024px) { .dt-navbar .navbar-toggle-notifications { display: flex; margin-left: 0; } }
 
-.dt-navbar .navbar-toggle-notifications:before { content: '\f0f3'; }
+.dt-navbar .navbar-toggle-notifications:before { content: '\f0f3'; font-size: 1.1rem; }
 
 .dt-navbar .navbar-toggle-notifications.has-notifications:before { font-weight: 900; color: var(--blue); content: '\f848'; }
 
 .dt-navbar .navbar-toggle-notifications.is-active { color: var(--blue); }
 
-.dt-navbar .navbar-toggle-notifications.is-active + .navbar-notifications { display: flex; }
+.dt-navbar .navbar-toggle-notifications.is-active:before { font-weight: 600; }
+
+.dt-navbar .navbar-toggle-notifications.is-active + .navbar-notifications { display: flex; overflow-x: hidden; }
 
 .dt-navbar .navbar-notifications { position: absolute; top: calc(100% + 1px); right: 7.5vw; bottom: 0; display: none; flex-direction: column; width: 25rem; height: 25rem; background-color: var(--background); box-shadow: 0 0 0 1px var(--border-color); overflow: scroll; }
 

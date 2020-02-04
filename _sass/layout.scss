@@ -543,6 +543,7 @@ h6,
 
         &:before {
             content: '\f0f3';
+            font-size: 1.1rem;
         }
 
         &.has-notifications {
@@ -566,8 +567,14 @@ h6,
         &.is-active {
             color: var(--blue);
 
+            &:before {
+                font-weight: 600;
+
+            }
+
             +.navbar-notifications {
                 display: flex;
+                overflow-x: hidden;
             }
         }
     }

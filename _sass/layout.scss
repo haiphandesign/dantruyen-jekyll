@@ -543,14 +543,22 @@ h6,
 
         &:before {
             content: '\f0f3';
-            font-size: 1.1rem;
+            font-size: 1.2rem;
         }
 
         &.has-notifications {
             &:before {
                 font-weight: 900;
-                color: var(--blue);
-                content: '\f848';
+                color: var(--red);
+                // content: '\f848';
+            }
+
+            &:after {
+                content: attr(data-notifications);
+                position: absolute;
+                top: 5px;
+                font-size: .5rem;
+                color: white;
             }
 
             // &:after {

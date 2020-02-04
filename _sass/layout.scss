@@ -220,6 +220,8 @@ h6,
 .navbar-menu {
     display: none;
     align-items: center;
+    margin-left: 0;
+    margin-right: 0;
 
     @include breakpoint(md) {
         display: flex;

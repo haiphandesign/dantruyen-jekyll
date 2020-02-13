@@ -124,7 +124,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 .dt-navbar .navbar-toggle-account:before { content: '\f007'; }
 
 @media (min-width: 1024px) { .dt-navbar .navbar-menu-wrapper.navbar-account-logged-in { height: var(--navbar-height); }
-  .dt-navbar .navbar-menu-wrapper.navbar-account-logged-in:hover .navbar-account-menu { display: flex; } }
+  .dt-navbar .navbar-menu-wrapper.navbar-account-logged-in.is-active .navbar-account-menu, .dt-navbar .navbar-menu-wrapper.navbar-account-logged-in:hover .navbar-account-menu { display: flex; } }
 
 .dt-navbar .navbar-menu-account .navbar-menu-close { top: 1.25rem; right: 1rem; }
 
@@ -146,12 +146,22 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 
 @media (min-width: 1024px) { .dt-navbar .navbar-account-menu { position: absolute; top: calc(100% + 1px); display: none; flex-direction: column; width: 15rem; background-color: var(--white); border-radius: 0 0 var(--border-radius) var(--border-radius); border-color: var(--border-color); border-style: solid; border-width: var(--border-width); border-top: none; } }
 
-.dt-navbar .navbar-account-menu .navbar-item { width: 100%; }
+.dt-navbar .navbar-account-menu .navbar-item { font-size: var(--font-size-7); text-transform: uppercase; width: 100%; }
 
 @media (min-width: 1024px) { .dt-navbar .navbar-account-menu .navbar-item { padding: .5rem 1rem; }
   .dt-navbar .navbar-account-menu .navbar-item:not(:last-child) { border-color: var(--border-color); border-style: solid; border-bottom-width: var(--border-width); } }
 
 .dt-navbar .navbar-account-menu .navbar-item:hover { background-color: var(--background); }
+
+.dt-navbar .navbar-account-menu .navbar-item.navbar-item-tem { display: flex; align-items: center; justify-content: center; border-color: var(--border-color); border-style: solid; border-bottom-width: var(--border-width); margin-top: -.75rem; margin-bottom: .75rem; }
+
+@media (min-width: 1024px) { .dt-navbar .navbar-account-menu .navbar-item.navbar-item-tem { margin-top: 0; margin-bottom: 0; } }
+
+.dt-navbar .navbar-account-menu .navbar-item.navbar-item-tem .navbar-item-item-title { text-transform: uppercase; }
+
+.dt-navbar .navbar-account-menu .navbar-item.navbar-item-tem .navbar-item-item-title:after { content: ':\00a0'; }
+
+.dt-navbar .navbar-account-menu .navbar-item.navbar-item-tem .button { margin-left: auto; }
 
 .dt-navbar .navbar-toggle-notifications { position: relative; margin-right: .75rem; margin-left: auto; }
 

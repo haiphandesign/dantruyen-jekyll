@@ -430,6 +430,7 @@ h6,
         @include breakpoint(md) {
             height: var(--navbar-height);
 
+            &.is-active,
             &:hover {
                 .navbar-account-menu {
                     display: flex;
@@ -515,6 +516,8 @@ h6,
         }
 
         .navbar-item {
+            font-size: var(--font-size-7);
+            text-transform: uppercase;
             width: 100%;
 
             @include breakpoint(md) {
@@ -527,6 +530,32 @@ h6,
 
             &:hover {
                 background-color: var(--background);
+            }
+
+            &.navbar-item-tem {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include border(bottom);
+                margin-top: -.75rem;
+                margin-bottom: .75rem;
+
+                @include breakpoint(md) {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+
+                .navbar-item-item-title {
+                    text-transform: uppercase;
+
+                    &:after {
+                        content: ':\00a0';
+                    }
+                }
+
+                .button {
+                    margin-left: auto;
+                }
             }
         }
     }

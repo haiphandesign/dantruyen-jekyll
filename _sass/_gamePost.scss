@@ -23,6 +23,18 @@
             margin-left: 3.5rem;
         }
     }
+
+    &.is-empty {
+
+        background-color: transparent;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        border-style: dashed;
+
+        .post-body {
+            text-align: center;
+        }
+    }
 }
 
 // POST HEAD
@@ -69,10 +81,6 @@
 .post-body {
     padding-left: 1rem;
     padding-right: 1rem;
-
-    .no-interaction {
-        padding-bottom: 1rem;
-    }
 }
 
 .post-content {
@@ -175,6 +183,10 @@
 
 
 // POST COMMENTS
+
+.post-body+.post-comments {
+    margin-top: 0;
+}
 
 .post-comments {
     margin-top: -1rem;

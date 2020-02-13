@@ -359,6 +359,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 
 @media (min-width: 1024px) { .post.is-player { width: calc(100% - 3.5rem); margin-left: 3.5rem; } }
 
+.post.is-empty { background-color: transparent; padding-top: 5rem; padding-bottom: 5rem; border-style: dashed; }
+
+.post.is-empty .post-body { text-align: center; }
+
 .post-head { position: relative; display: flex; flex-direction: column; }
 
 .post-head .post-title { order: 1; }
@@ -372,8 +376,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 .post-cover figure.image > img[src=''] { display: none; }
 
 .post-body { padding-left: 1rem; padding-right: 1rem; }
-
-.post-body .no-interaction { padding-bottom: 1rem; }
 
 .post-content { position: relative; word-break: break-word; hyphens: auto; }
 
@@ -410,6 +412,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 .post-interaction .post-interaction-item:not(:last-child) { margin-right: 1rem; }
 
 .post-interaction .post-interaction-item:hover { color: var(--blue); cursor: pointer; }
+
+.post-body + .post-comments { margin-top: 0; }
 
 .post-comments { margin-top: -1rem; padding: 0; background-color: var(--lightgray); }
 

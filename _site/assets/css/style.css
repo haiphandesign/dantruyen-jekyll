@@ -159,9 +159,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 
 .dt-navbar .navbar-toggle-notifications:before { content: '\f0f3'; font-size: 1.2rem; }
 
-.dt-navbar .navbar-toggle-notifications.has-notifications:before { font-weight: 900; color: var(--red); }
+.dt-navbar .navbar-toggle-notifications.has-notifications:before { font-weight: 900; color: var(--primary-color); }
 
-.dt-navbar .navbar-toggle-notifications.has-notifications:after { content: attr(data-notifications); position: absolute; top: 5px; font-size: .5rem; color: white; }
+.dt-navbar .navbar-toggle-notifications.has-notifications:after { content: attr(data-notifications); position: absolute; top: -5px; right: -5px; display: flex; align-items: center; justify-content: center; width: 1rem; height: 1rem; text-align: center; border-radius: 50%; font-size: .5rem; background-color: var(--red); color: white; }
 
 .dt-navbar .navbar-toggle-notifications.is-active { color: var(--blue); }
 

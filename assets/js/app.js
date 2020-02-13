@@ -206,3 +206,14 @@ $('#gamesearch-display-tabs ul li').click(function () {
         $('#gamesearch-table').addClass('is-list');
     }
 })
+
+
+
+
+
+
+$('.post-discussion-form').click(function () {
+    if ($(this).hasClass('is-active')) {} else {
+        $(this).addClass('is-active');
+    }
+});

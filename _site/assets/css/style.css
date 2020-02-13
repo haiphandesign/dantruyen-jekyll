@@ -518,6 +518,28 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 
 .post.is-discussion.is-short .post-content { font-size: var(--font-size-3); font-weight: var(--font-weight-medium); line-height: 1.25; }
 
+.post-discussion-form { display: flex; }
+
+.post-discussion-form .field { margin-bottom: 0; }
+
+.post-discussion-form .post-discussion-form--textarea { width: 100%; }
+
+.post-discussion-form .post-discussion-form--button { width: auto; margin-left: .75rem; }
+
+.post-discussion-form :not(.is-active) .button span:not(.icon) { display: none; }
+
+.post-discussion-form.is-active { display: block; }
+
+.post-discussion-form.is-active .post-discussion-form--textarea { margin-bottom: 1rem; }
+
+.post-discussion-form.is-active .post-discussion-form--button { margin-left: 0; }
+
+.post-discussion-form.is-active textarea { height: 9rem; }
+
+.post-discussion-form.is-active .button { width: 100%; }
+
+.post-discussion-form.is-active .button span:not(.icon) { display: block; }
+
 .game-card { position: relative; background-color: var(--white); border-color: var(--border-color); border-style: solid; border-width: var(--border-width); border-radius: var(--border-radius); display: grid; grid-template-columns: minmax(0, 1fr); width: 100%; max-width: 20rem; cursor: pointer; }
 
 .game-card .box-title { margin-bottom: 0; }

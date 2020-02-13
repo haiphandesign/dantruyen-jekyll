@@ -523,3 +523,54 @@
         }
     }
 }
+
+
+
+.post-discussion-form {
+    display: flex;
+
+    .field {
+        margin-bottom: 0;
+    }
+
+    .post-discussion-form--textarea {
+        width: 100%;
+    }
+
+    .post-discussion-form--button {
+        width: auto;
+        margin-left: .75rem;
+    }
+
+    :not(.is-active) {
+        .button {
+            span:not(.icon) {
+                display: none;
+            }
+        }
+    }
+
+    &.is-active {
+        display: block;
+
+        .post-discussion-form--textarea {
+            margin-bottom: 1rem;
+        }
+
+        .post-discussion-form--button {
+            margin-left: 0;
+        }
+
+        textarea {
+            height: 9rem;
+        }
+
+        .button {
+            width: 100%;
+
+            span:not(.icon) {
+                display: block;
+            }
+        }
+    }
+}

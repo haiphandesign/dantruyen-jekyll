@@ -54,7 +54,6 @@
                                             <i class="fas fa-paper-plane"></i>
                                         </span>
                                         <span class="has-text-smallcaps">Gửi thảo luận mới</span>
-
                                     </a>
                                 </div>
                             </div>
@@ -110,17 +109,17 @@
                         </div>
                         <div class="post-comments-input">
                             <form action="">
-                                <div class="field has-addons">
-                                    <div class="control is-fullwidth">
-                                        <input type="text" placeholder="Trả lời bài viết">
-                                    </div>
-                                    <div class="control">
-                                        <a class="has-text-smallcaps is-nowrap post-comments-input-submit">
-                                            <span class="icon">
-                                                <i class="fas fa-paper-plane"></i>
-                                            </span>
-                                        </a>
-                                    </div>
+                                <div class="post-comments-input-author">
+                                    <figure class="image is-size-2 is-bordered is-radius has-placeholder skeleton">
+                                    </figure>
+                                </div>
+                                <div class="post-comments-input-area">
+                                    <input type="text" class="input">
+                                </div>
+                                <div class="post-comments-input-submit">
+                                    <button class="button is-info">
+                                        <span class="icon"><i class="fas fa-paper-plane"></i></span>
+                                    </button>
                                 </div>
                             </form>
                         </div>
@@ -134,21 +133,45 @@
 
 
                 <!-- POST: IS-NARRATOR IS-FIRST -->
-                <div class="post is-discussion is-short">
+                <div class="post is-discussion">
                     <div class="post-head">
+
                         <div class="post-title">
-                            <div class="columns is-xs is-flex is-align-center">
-                                <div class="column is-narrow">
-                                    <figure class="image is-size-3 is-bordered is-radius has-placeholder">
+                            <a class="user-card is-horizontal" href="#">
+                                <div class="user-card-image">
+                                    <figure class="image is-size-4 is-cover is-bordered is-radius has-placeholder">
                                         <img src="">
                                     </figure>
                                 </div>
-                                <div class="column">
-                                    <p class="has-text-weight-bold is-size-7">@lukul</p>
-                                    <p class="has-text-darkgray is-size-7">11/12/2019</p>
+                                <div class="user-card-meta">
+                                    <div class="has-text-weight-semibold">@username</div>
+                                    <div class="has-text-darkgray is-size-7 has-text-underline-on-hover">
+                                        11/12/2019</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- CHỈNH SỬA COMMENT THREAD: OPTION 1 -->
+                        <div class="post-head-interaction">
+                            <div class="post-head-interaction-item">
+                                <div class="dropdown is-hoverable is-up is-right">
+                                    <div class="dropdown-trigger"></div>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-content">
+                                            <a class="dropdown-item post-interaction-item-edit">
+                                                <span class="icon"><i class="fas fa-edit"></i></span>
+                                                <span>Chỉnh sửa</span>
+                                            </a>
+                                            <a class="dropdown-item post-interaction-item-mod">
+                                                <span class="icon"><i class="fas fa-exclamation-triangle"></i></span>
+                                                <span>Yêu cầu chỉnh sửa</span>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                     <div class="post-body">
                         <div class="post-content">
@@ -157,11 +180,23 @@
                             </p>
                         </div>
                     </div>
+
+                    <!-- CHỈNH SỬA COMMENT THREAD: OPTION 2 -->
+                    <div class="post-interaction">
+                        <div class="post-interaction-item post-interaction-item-edit">
+                            <span>Chỉnh xửa</span>
+                        </div>
+                        <div class="post-interaction-item post-interaction-item-delete">
+                            <span>Xoá</span>
+                        </div>
+                    </div>
+
                     {% include game/post-comments.html %}
+
                 </div>
 
                 <!-- POST: IS-NARRATOR IS-FIRST -->
-                <div class="post is-discussion is-short">
+                <div class="post is-discussion">
                     <div class="post-head">
                         <div class="post-title">
                             <div class="columns is-xs is-flex is-align-center">
@@ -176,6 +211,27 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="post-head-interaction">
+                            <div class="post-head-interaction-item">
+                                <div class="dropdown is-hoverable is-up is-right">
+                                    <div class="dropdown-trigger"></div>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-content">
+                                            <a class="dropdown-item post-interaction-item-edit">
+                                                <span class="icon"><i class="fas fa-edit"></i></span>
+                                                <span>Chỉnh sửa</span>
+                                            </a>
+                                            <a class="dropdown-item post-interaction-item-mod">
+                                                <span class="icon"><i class="fas fa-exclamation-triangle"></i></span>
+                                                <span>Yêu cầu chỉnh sửa</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="post-body">
                         <div class="post-content">
@@ -189,7 +245,7 @@
                 </div>
 
                 <!-- POST: IS-NARRATOR IS-FIRST -->
-                <div class="post is-discussion is-short">
+                <div class="post is-discussion">
                     <div class="post-head">
                         <div class="post-title">
                             <div class="columns is-xs is-flex is-align-center">

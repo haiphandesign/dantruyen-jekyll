@@ -196,7 +196,7 @@
                 </div>
 
                 <!-- POST: IS-NARRATOR IS-FIRST -->
-                <div class="post is-discussion">
+                <div class="post is-discussion is-editing">
                     <div class="post-head">
                         <div class="post-title">
                             <div class="columns is-xs is-flex is-align-center">
@@ -235,9 +235,26 @@
                     </div>
                     <div class="post-body">
                         <div class="post-content">
-                            <p>
-                                Giết Yami từ những cảnh đầu sẽ trở thành một vấn đề lớn sau này?
-                            </p>
+
+                            <div class="form post-discussion-form is-active">
+
+                                <div class="field post-discussion-form--textarea">
+                                    <div class="control">
+                                        <textarea type="text" class="input" rows="5">
+Giết Yami từ những cảnh đầu sẽ trở thành một vấn đề lớn sau này?
+                                        </textarea>
+                                    </div>
+                                </div>
+
+                                <div class="field post-discussion-form--button">
+                                    <div class="control">
+                                        <a class="button is-info">
+                                            <span class="has-text-smallcaps">Lưu</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                     {% include game/post-interaction.html %}

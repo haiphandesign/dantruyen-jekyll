@@ -10,3 +10,5 @@ menu_settings:
           url: '/user-profile/'
         - title: 'Game'
           url: '/game/'
+        - title: 'Nạp Tem'
+          url: '/tem/'

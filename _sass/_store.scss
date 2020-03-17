@@ -1,0 +1,85 @@
+.tem-store-cover {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 50vh;
+    margin: 0 auto;
+    padding-bottom: 4.5rem;
+    background-color: #0984e3;
+    @include border;
+    border-top: 0;
+    @include radius;
+    border-top-left-radius: 0;
+    border-top: 0;
+
+    @include breakpoint(md) {
+        max-width: 90vw;
+    }
+
+    .tem-store-cover-inner {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        color: white;
+
+        @include breakpoint(md) {
+            max-width: 40rem;
+        }
+    }
+}
+
+
+.tem-store-content {
+    margin-top: -4.5rem;
+}
+
+.tem-store-wrapper {
+    @include box;
+    padding: 1.5rem;
+
+    @include breakpoint(md) {
+        padding: 3rem 1.5rem;
+    }
+}
+
+.tem-store-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    grid-row-gap: 2rem;
+
+    @include breakpoint(md) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.tem-store-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &--image {
+        width: 6rem;
+        height: 6rem;
+
+        @include breakpoint(md) {
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+
+    &--info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: .75rem;
+    }
+
+    &--price {
+        margin-top: .25rem;
+        margin-bottom: .75rem;
+        font-size: .75rem;
+    }
+}

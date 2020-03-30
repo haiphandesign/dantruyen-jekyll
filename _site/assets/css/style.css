@@ -945,13 +945,15 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 
 .browse-table-td-status span { display: inline-block; }
 
-.tem-store-cover { position: relative; display: flex; align-items: center; width: 100%; min-height: 50vh; margin: 0 auto; padding-bottom: 4.5rem; background-color: #0984e3; border-color: var(--border-color); border-style: solid; border-width: var(--border-width); border-top: 0; border-radius: var(--border-radius); border-top-left-radius: 0; border-top: 0; }
+.tem-store { margin: 0 auto; }
 
-@media (min-width: 1024px) { .tem-store-cover { max-width: 90vw; } }
+@media (min-width: 1024px) { .tem-store { max-width: 2000px; padding-left: 2.5 vw; padding-right: 2.5 vw; } }
+
+.tem-store-cover { position: relative; display: flex; align-items: center; width: 100%; margin: 0 auto; padding-bottom: 4.5rem; background-image: url("/assets/images/tem-store-cover.png"), linear-gradient(to top, #0984E3, #10A7E8); background-size: contain, cover; background-repeat: no-repeat; background-position: center bottom 5rem, center; border-color: var(--border-color); border-style: solid; border-width: var(--border-width); border-top: 0; border-radius: var(--border-radius); border-top-left-radius: 0; border-top: 0; }
 
 .tem-store-cover .tem-store-cover-inner { padding-top: 3rem; padding-bottom: 3rem; color: white; }
 
-@media (min-width: 1024px) { .tem-store-cover .tem-store-cover-inner { max-width: 40rem; } }
+@media (min-width: 1024px) { .tem-store-cover .tem-store-cover-inner { max-width: 25rem; padding-top: 7.5rem; padding-bottom: 7.5rem; } }
 
 .tem-store-content { margin-top: -4.5rem; }
 

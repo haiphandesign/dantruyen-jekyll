@@ -1,21 +1,30 @@
+.tem-store {
+    margin: 0 auto;
+
+    @include breakpoint(md) {
+        max-width: 2000px;
+        padding-left: 2.5 vw;
+        padding-right: 2.5 vw;
+    }
+}
+
 .tem-store-cover {
     position: relative;
     display: flex;
     align-items: center;
     width: 100%;
-    min-height: 50vh;
     margin: 0 auto;
     padding-bottom: 4.5rem;
-    background-color: #0984e3;
+    background-image: url('/assets/images/tem-store-cover.png'),
+        linear-gradient(to top, #0984E3, #10A7E8);
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+    background-position: center bottom 5rem, center;
     @include border;
     border-top: 0;
     @include radius;
     border-top-left-radius: 0;
     border-top: 0;
-
-    @include breakpoint(md) {
-        max-width: 90vw;
-    }
 
     .tem-store-cover-inner {
         padding-top: 3rem;
@@ -23,7 +32,9 @@
         color: white;
 
         @include breakpoint(md) {
-            max-width: 40rem;
+            max-width: 25rem;
+            padding-top: 7.5rem;
+            padding-bottom: 7.5rem;
         }
     }
 }

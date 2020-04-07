@@ -58,6 +58,14 @@
         right: 1rem;
         top: .5rem;
     }
+
+    .post-info-username {
+        +.post-info-date {
+            &:before {
+                content: ' - ';
+            }
+        }
+    }
 }
 
 .post-title {

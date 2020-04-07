@@ -284,4 +284,15 @@
             }
         }
     }
+
+    &.is-error {
+        opacity: .75;
+        filter: grayscale(1);
+        user-select: none;
+        cursor: pointer;
+
+        * {
+            pointer-events: not-allowed;
+        }
+    }
 }

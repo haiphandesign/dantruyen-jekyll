@@ -1,96 +1,106 @@
 .tem-store {
-    margin: 0 auto;
+	margin: 0 auto;
 
-    @include breakpoint(md) {
-        max-width: 2000px;
-        padding-left: 2.5 vw;
-        padding-right: 2.5 vw;
-    }
+	@include breakpoint(md) {
+		max-width: 2000px;
+		padding-left: 2.5 vw;
+		padding-right: 2.5 vw;
+	}
 }
 
 .tem-store-cover {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
-    padding-bottom: 4.5rem;
-    background-image: url('/assets/images/tem-store-cover.png'),
-        linear-gradient(to top, #0984E3, #10A7E8);
-    background-size: contain, cover;
-    background-repeat: no-repeat;
-    background-position: center bottom 5rem, center;
-    @include border;
-    border-top: 0;
-    @include radius;
-    border-top-left-radius: 0;
-    border-top: 0;
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 4.5rem;
+	background-image: url('/assets/images/tem-store-cover.png'),
+		linear-gradient(to top, #0984e3, #10a7e8);
+	background-size: contain, cover;
+	background-repeat: no-repeat;
+	background-position: center bottom 5rem, center;
+	@include border;
+	border-top: 0;
+	@include radius;
+	border-top-left-radius: 0;
+	border-top: 0;
 
-    .tem-store-cover-inner {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-        color: white;
+	.tem-store-cover-inner {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+		color: white;
 
-        @include breakpoint(md) {
-            max-width: 25rem;
-            padding-top: 7.5rem;
-            padding-bottom: 7.5rem;
-        }
-    }
+		@include breakpoint(md) {
+			max-width: 25rem;
+			padding-top: 7.5rem;
+			padding-bottom: 7.5rem;
+		}
+	}
 }
 
-
 .tem-store-content {
-    margin-top: -4.5rem;
+	margin-top: -4.5rem;
 }
 
 .tem-store-wrapper {
-    @include box;
-    padding: 1.5rem;
+	@include box;
+	padding: 1.5rem;
 
-    @include breakpoint(md) {
-        padding: 3rem 1.5rem;
-    }
+	@include breakpoint(md) {
+		padding: 3rem 1.5rem;
+	}
 }
 
 .tem-store-items {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
-    grid-row-gap: 2rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 1rem;
+	grid-row-gap: 2rem;
 
-    @include breakpoint(md) {
-        grid-template-columns: repeat(4, 1fr);
-    }
+	@include breakpoint(md) {
+		grid-template-columns: repeat(4, 1fr);
+	}
 }
 
 .tem-store-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 
-    &--image {
-        width: 6rem;
-        height: 6rem;
+	&--image {
+		width: 6rem;
+		height: 6rem;
 
-        @include breakpoint(md) {
-            width: 10rem;
-            height: 10rem;
-        }
-    }
+		@include breakpoint(md) {
+			width: 10rem;
+			height: 10rem;
+		}
+	}
 
-    &--info {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        margin-top: .75rem;
-    }
+	&--title {
+		margin-bottom: 0.25rem;
+	}
 
-    &--price {
-        margin-top: .25rem;
-        margin-bottom: .75rem;
-        font-size: .75rem;
-    }
+	&--info {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		margin-top: 0.75rem;
+	}
+
+	&--price {
+		font-size: 0.75rem;
+
+		&.old {
+			text-decoration: line-through;
+			opacity: 0.5;
+		}
+	}
+
+	&--button {
+		margin-top: 0.75rem;
+	}
 }

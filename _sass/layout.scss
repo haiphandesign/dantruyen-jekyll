@@ -8,6 +8,12 @@
     }
 }
 
+.columns.is-flex {
+    .column+.column {
+        margin-top: 0;
+    }
+}
+
 .has-text-smallcaps {
     font-weight: var(--font-weight-bold);
 }
@@ -567,7 +573,9 @@ h6,
 
         @include breakpoint(md) {
             display: flex;
-            margin-left: 0;
+            margin-right: 0;
+            margin-left: .75rem;
+            order: 99;
         }
 
         &:before {
@@ -628,7 +636,7 @@ h6,
     .navbar-notifications {
         position: absolute;
         top: calc(100% + 1px);
-        right: 7.5vw;
+        right: 2.5vw;
         bottom: 0;
 
         display: none;
@@ -711,6 +719,17 @@ h6,
             background-color: var(--gray);
 
             margin-right: 1rem;
+        }
+    }
+
+    .navbar-new {
+        display: none;
+        position: relative;
+        border-radius: 50%;
+
+        @include breakpoint(md) {
+            display: flex;
+            margin-right: .75rem;
         }
     }
 }

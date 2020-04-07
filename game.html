@@ -12,7 +12,7 @@ permalink: /game/
         {% include game/page-waiting-room.html %}
     </div>
 
-    <div id="game-page-main" class="game-tab">
+    <div id="game-page-main" class="game-tab is-active">
         {% include game/page-content.html %}
     </div>
 
@@ -24,7 +24,7 @@ permalink: /game/
         {% include game/page-cards.html %}
     </div>
 
-    <div id="game-page-discussion" class="game-tab is-active">
+    <div id="game-page-discussion" class="game-tab">
         {% include game/page-discussion.html %}
     </div>
 
@@ -34,4 +34,59 @@ permalink: /game/
 
 </div>
 
+
 <!-- <div style="height: 200vh;"></div> -->
+
+<div class="game-nav">
+    <div class="game-nav-scenes">
+        <div class="game-nav-scenes-toggle is-active">
+            <i class="fa far fas fa-list"></i>
+        </div>
+        <div class="game-nav-scenes-wrapper">
+            <div class="game-nav-scenes-item scene"><a href="#">
+                    <span class="number">Chương 1:</span>
+                    <span class="title">Lorem Ipsum</span>
+                </a></div>
+            <div class="game-nav-scenes-item act"><a href="#">
+                    <span class="number">1.1</span>
+                    <span class="title">Vero lorem aliquyam eos</span>
+                </a></div>
+            <div class="game-nav-scenes-item act"><a href="#">
+                    <span class="number">1.2</span>
+                    <span class="title">Rebum sed gubergren erat</span>
+                </a></div>
+            <div class="game-nav-scenes-item act"><a href="#">
+                    <span class="number">1.3</span>
+                    <span class="title">Lorem sit et magna</span>
+                </a></div>
+            <div class="game-nav-scenes-item scene"><a href="#">
+                    <span class="number">Chương 2:</span>
+                    <span class="title">Lorem Ipsum</span>
+                </a></div>
+            <div class="game-nav-scenes-item act"><a href="#">
+                    <span class="number">2.1</span>
+                    <span class="title">Et diam et dolor</span>
+                </a></div>
+            <div class="game-nav-scenes-item act"><a href="#">
+                    <span class="number">2.2</span>
+                    <span class="title">Ut ut nonumy dolor</span>
+                </a></div>
+            <div class="game-nav-scenes-item act"><a href="#">
+                    <span class="number">2.3</span>
+                    <span class="title">Ut ut nonumy dolor</span>
+                </a></div>
+            <div class="game-nav-scenes-item act"><a href="#">
+                    <span class="number">2.4</span>
+                    <span class="title">Ut ut nonumy dolor</span>
+                </a></div>
+        </div>
+    </div>
+    <div class="game-nav-scroll">
+        <a class="game-nav-scroll-nav left">
+            <i class="fa far fa-angle-up"></i>
+        </a>
+        <a class="game-nav-scroll-nav right">
+            <i class="fa far fa-angle-down"></i>
+        </a>
+    </div>
+</div>

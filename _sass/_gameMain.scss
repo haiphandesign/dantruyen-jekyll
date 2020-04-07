@@ -18,6 +18,7 @@
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: minmax(0, 1fr);
+    min-width: 0;
 }
 
 .cast-stack {
@@ -52,6 +53,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
+    min-width: 0;
 
     @include breakpoint(sm) {
         grid-template-columns: repeat(4, 1fr);
@@ -100,5 +102,133 @@
         height: calc(100% - 3rem);
 
         padding-bottom: .25rem;
+    }
+}
+
+
+.game-nav {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 10000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100vw;
+
+    padding: .5rem;
+    padding-top: 0;
+
+    @include breakpoint(md) {
+        padding: 1rem;
+        padding-top: 0;
+        width: unset;
+    }
+}
+
+.game-nav-scenes {
+    position: relative;
+
+    &-toggle {
+        @include box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+
+        &:hover {
+            background-color: var(--lightgray);
+        }
+
+        &.is-active {
+            ~.game-nav-scenes-wrapper {
+                display: block;
+            }
+        }
+    }
+
+    &-wrapper {
+        @include box;
+
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        display: none;
+
+        width: calc(100vw - 1rem);
+        max-height: 60vh;
+        margin-bottom: .75rem;
+
+        overflow: auto;
+
+        @include breakpoint(sm) {
+            max-width: 20rem;
+            max-height: 20rem;
+        }
+
+
+        @include breakpoint(md) {
+            right: 0;
+            left: unset;
+        }
+    }
+
+    &-item {
+        &:not(:last-child) {
+            @include border(bottom);
+        }
+
+        display: block;
+        width: 100%;
+        padding: .5rem .75rem;
+
+        &.scene {
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: var(--lightgray);
+            font-weight: var(--font-weight-medium);
+            font-size: var(--font-size-7);
+            text-transform: uppercase;
+        }
+
+        .number {
+            font-weight: var(--font-weight-medium);
+            font-size: var(--font-size-7);
+        }
+
+        &:hover {
+            background-color: var(--lightgray);
+        }
+    }
+
+    +.game-nav-scroll {
+        margin-left: .75rem;
+    }
+}
+
+.game-nav-scroll {
+    @include box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+
+        &.right {
+            @include border(left);
+        }
+
+        &:hover {
+            background-color: var(--lightgray);
+        }
     }
 }

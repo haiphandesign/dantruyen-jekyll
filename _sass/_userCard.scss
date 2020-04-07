@@ -1,4 +1,5 @@
 .user-card {
+    position: relative;
     display: flex;
 
     &.is-horizontal {
@@ -7,5 +8,11 @@
         .user-card-image {
             margin-right: .5rem;
         }
+    }
+
+    .user-card-dropdown {
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 }

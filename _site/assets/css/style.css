@@ -399,7 +399,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 
 @media (min-width: 1024px) { .game-nav-scenes-toggle { display: none; } }
 
-.game-nav-scenes-wrapper { position: relative; background-color: var(--white); border-color: var(--border-color); border-style: solid; border-width: var(--border-width); border-radius: var(--border-radius); position: absolute; bottom: 100%; left: 0; display: none; width: calc(100vw - 1rem); max-height: 60vh; margin-bottom: .75rem; overflow: auto; }
+.game-nav-scenes-wrapper { position: relative; background-color: var(--white); border-color: var(--border-color); border-style: solid; border-width: var(--border-width); border-radius: var(--border-radius); position: absolute; bottom: 100%; left: 0; display: none; width: calc(100vw - 1rem); max-height: 60vh; margin-bottom: .75rem; box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.1); overflow: auto; }
 
 .game-nav-scenes-wrapper .box-title { margin-bottom: 0; }
 

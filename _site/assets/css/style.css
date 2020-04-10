@@ -377,11 +377,13 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 
 .game-nav-scenes { position: relative; }
 
-.game-nav-scenes-toggle { position: relative; background-color: var(--white); border-color: var(--border-color); border-style: solid; border-width: var(--border-width); border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; }
+.game-nav-scenes-toggle { position: relative; background-color: var(--white); border-color: var(--border-color); border-style: solid; border-width: var(--border-width); border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; background-color: var(--blue); color: white; }
 
 .game-nav-scenes-toggle .box-title { margin-bottom: 0; }
 
-.game-nav-scenes-toggle:hover { background-color: var(--lightgray); }
+.game-nav-scenes-toggle:hover { background-color: var(--darkblue); }
+
+.game-nav-scenes-toggle.is-active { background-color: var(--darkblue); }
 
 .game-nav-scenes-toggle.is-active ~ .game-nav-scenes-wrapper { display: block; }
 
@@ -405,15 +407,17 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 
 .game-nav-scenes + .game-nav-scroll { margin-left: .75rem; }
 
-.game-nav-scroll { position: relative; background-color: var(--white); border-color: var(--border-color); border-style: solid; border-width: var(--border-width); border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center; }
+.game-nav-scroll { position: relative; background-color: var(--white); border-color: var(--border-color); border-style: solid; border-width: var(--border-width); border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center; background-color: var(--blue); }
 
 .game-nav-scroll .box-title { margin-bottom: 0; }
 
-.game-nav-scroll-nav { display: flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; }
+.game-nav-scroll-nav { display: flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; background-color: transparent; color: white; }
 
-.game-nav-scroll-nav.right { border-color: var(--border-color); border-style: solid; border-left-width: var(--border-width); }
+.game-nav-scroll-nav.right { border-color: var(--border-color); border-style: solid; border-left-width: var(--border-width); border-width: .5px; border-color: rgba(0, 0, 0, 0.1); }
 
-.game-nav-scroll-nav:hover { background-color: var(--lightgray); }
+.game-nav-scroll-nav.left { border-color: var(--border-color); border-style: solid; border-right-width: var(--border-width); border-width: .5px; border-color: rgba(0, 0, 0, 0.1); }
+
+.game-nav-scroll-nav:hover { background-color: var(--darkblue); }
 
 .post-wrapper { display: grid; grid-gap: 1rem; grid-template-columns: minmax(0, 1fr); }
 
@@ -439,13 +443,25 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 
 .post-head .post-info-username + .post-info-date:before { content: ' - '; }
 
-.post-title { width: 100%; padding: 1rem; border-color: var(--border-color); border-style: solid; border-bottom-width: var(--border-width); border-color: var(--border-color-light); }
+.post-title { display: flex; align-items: center; justify-content: flex-start; width: 100%; padding: 1rem; border-color: var(--border-color); border-style: solid; border-bottom-width: var(--border-width); border-color: var(--border-color-light); }
+
+.post-title .avatar { margin-right: 1rem; }
 
 .post-cover figure.image > img { border-color: var(--border-color); border-style: solid; border-bottom-width: var(--border-width); border-color: var(--border-color-light); }
 
 .post-cover figure.image > img[src=''] { display: none; }
 
 .post-body { padding-left: 1rem; padding-right: 1rem; }
+
+.post-body.is-shrink { max-height: 25rem; overflow: hidden; -webkit-mask-image: linear-gradient(180deg, black, transparent); mask-image: linear-gradient(180deg, black, transparent); user-select: none; opacity: .75; }
+
+.post-body.is-shrink * { pointer-events: none; }
+
+.post-body.is-shrink ~ .post-unshrink { display: block; }
+
+.post-unshrink { display: none; width: 100%; margin-top: -3rem; }
+
+.post-unshrink a { display: flex; margin: 0 auto; width: max-content; }
 
 .post-content { position: relative; word-break: break-word; hyphens: auto; }
 
@@ -535,6 +551,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 
 .post.is-narrator.is-first .post-cover + .post-title { position: absolute; bottom: 0; z-index: 2; border: 0; background-color: var(--black-50); color: var(--white); }
 
+.post.is-narrator.is-first .post-title { flex-direction: column; align-items: flex-start; }
+
 .post.is-editor .post-header .post-cover { position: relative; border-color: var(--border-color); border-style: solid; border-bottom-width: var(--border-width); }
 
 .post.is-editor .post-header .post-cover:after { content: ''; display: block; width: 100%; padding-bottom: 30%; }
@@ -623,6 +641,22 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 .post-discussion-form.is-active .button { width: 100%; }
 
 .post-discussion-form.is-active .button span:not(.icon) { display: block; }
+
+.npc { display: flex; align-items: center; justify-content: center; padding: 1rem; background-color: var(--lightgray); border-radius: var(--border-radius); border-left: 4px solid var(--border-color); }
+
+@media (min-width: 1024px) { .npc { width: 90%; margin-left: 5%; } }
+
+.npc .info { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; margin-right: 1rem; }
+
+.npc .info .avatar { display: block; max-width: 4rem; }
+
+@media (min-width: 1024px) { .npc .info .avatar { max-width: 6rem; } }
+
+.npc .info .name { display: block; margin-top: .5rem; font-weight: bold; }
+
+.npc.npc\:right .info { order: 2; margin-right: 0; margin-left: 1rem; }
+
+.npc.npc\:flip .info .avatar { transform: scaleX(-1); }
 
 .game-card { position: relative; background-color: var(--white); border-color: var(--border-color); border-style: solid; border-width: var(--border-width); border-radius: var(--border-radius); display: grid; grid-template-columns: minmax(0, 1fr); width: 100%; max-width: 20rem; cursor: pointer; }
 

@@ -217,3 +217,26 @@ $('.post-discussion-form').click(function () {
         $(this).addClass('is-active');
     }
 });
+
+
+
+// TOGGLE
+
+$('.toggle').click(function (e) {
+    e.preventDefault();
+    if ($(this).hasClass('is-active')) {
+        $(this).removeClass('is-active');
+    } else {
+        $('.navbar-toggle').removeClass('is-active');
+        $(this).addClass('is-active');
+    }
+});
+
+
+
+// POST UNSHRINK
+
+$('.post-unshrink a').click(function (e) {
+    console.log('ok');
+    $(this).parent().siblings('.post-body').removeClass('.is-shrink');
+});

@@ -138,12 +138,16 @@
         justify-content: center;
         width: 2.5rem;
         height: 2.5rem;
+        background-color: var(--blue);
+        color: white;
 
         &:hover {
-            background-color: var(--lightgray);
+            background-color: var(--darkblue);
         }
 
         &.is-active {
+            background-color: var(--darkblue);
+
             ~.game-nav-scenes-wrapper {
                 display: block;
             }
@@ -215,6 +219,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--blue);
 
     &-nav {
         display: flex;
@@ -222,13 +227,23 @@
         justify-content: center;
         width: 2.5rem;
         height: 2.5rem;
+        background-color: transparent;
+        color: white;
 
         &.right {
             @include border(left);
+            border-width: .5px;
+            border-color: rgba(#000, .1);
+        }
+
+        &.left {
+            @include border(right);
+            border-width: .5px;
+            border-color: rgba(#000, .1);
         }
 
         &:hover {
-            background-color: var(--lightgray);
+            background-color: var(--darkblue);
         }
     }
 }

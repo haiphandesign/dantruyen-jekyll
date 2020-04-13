@@ -131,6 +131,11 @@
 .game-nav-scenes {
     position: relative;
 
+    @include breakpoint(md) {
+        order: 2;
+        margin-left: .5rem;
+    }
+
     &-toggle {
         @include box;
         display: flex;
@@ -140,6 +145,7 @@
         height: 2.5rem;
         background-color: var(--blue);
         color: white;
+        border-width: 0;
 
         &:hover {
             background-color: var(--darkblue);
@@ -153,9 +159,6 @@
             }
         }
 
-        @include breakpoint(md) {
-            display: none;
-        }
     }
 
     &-wrapper {
@@ -164,12 +167,12 @@
         position: absolute;
         bottom: 100%;
         left: 0;
-        display: none;
+        display: block;
 
         width: calc(100vw - 1rem);
         max-height: 60vh;
         margin-bottom: .75rem;
-        box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 10px 10px rgba(#0984E3, 0.05);
         overflow: auto;
 
         @include breakpoint(sm) {
@@ -184,6 +187,8 @@
         }
     }
 
+
+
     &-item {
         &:not(:last-child) {
             @include border(bottom);
@@ -197,7 +202,8 @@
             position: sticky;
             top: 0;
             left: 0;
-            background-color: var(--lightgray);
+            padding: .75rem .75rem;
+            background-color: var(--gray);
             font-weight: var(--font-weight-medium);
             font-size: var(--font-size-7);
             text-transform: uppercase;
@@ -206,10 +212,19 @@
         .number {
             font-weight: var(--font-weight-medium);
             font-size: var(--font-size-7);
+            margin-right: .325rem;
         }
 
-        &:hover {
-            background-color: var(--lightgray);
+        &.act {
+
+            &:hover {
+                background-color: var(--lightgray);
+            }
+
+            &.is-active {
+                font-weight: 600;
+                background-color: var(--lightgray);
+            }
         }
     }
 
@@ -224,6 +239,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--blue);
+    border-width: 0;
 
     &-nav {
         display: flex;

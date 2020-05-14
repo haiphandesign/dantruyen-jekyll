@@ -672,6 +672,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 
 .npc.npc\:flip .info .avatar { transform: scaleX(-1); }
 
+.post.is-in-revision .post-cover, .post.is-in-revision .post-body, .post.is-in-revision .post-message { opacity: .5; }
+
+.post-alert { border-color: var(--border-color); border-style: solid; border-bottom-width: var(--border-width); margin-bottom: -1rem; padding: .75rem 1rem; }
+
+.post-alert.alert\:edit { background-color: var(--yellow); color: var(--lightblack); }
+
 .game-card { position: relative; background-color: var(--white); border-color: var(--border-color); border-style: solid; border-width: var(--border-width); border-radius: var(--border-radius); display: grid; grid-template-columns: minmax(0, 1fr); width: 100%; max-width: 20rem; cursor: pointer; }
 
 .game-card .box-title { margin-bottom: 0; }

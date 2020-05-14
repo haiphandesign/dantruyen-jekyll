@@ -737,3 +737,28 @@
         }
     }
 }
+
+
+
+
+
+.post.is-in-revision {
+
+    .post-cover,
+    .post-body,
+    .post-message {
+        opacity: .5;
+    }
+}
+
+
+.post-alert {
+    @include border(bottom);
+    margin-bottom: -1rem;
+    padding: .75rem 1rem;
+
+    &.alert\:edit {
+        background-color: var(--yellow);
+        color: var(--lightblack);
+    }
+}

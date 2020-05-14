@@ -226,6 +226,22 @@
                 background-color: var(--lightgray);
             }
         }
+
+        .title {
+            display: inline;
+        }
+
+        .actions {
+            display: inline-flex;
+
+            span.icon {
+                font-size: .75em;
+
+                &:hover {
+                    color: var(--blue);
+                }
+            }
+        }
     }
 
     +.game-nav-scroll {

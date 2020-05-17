@@ -20,7 +20,7 @@ window.onresize = function () {
 
 // NAVBAR SCROLL
 function navbarScroll() {
-    if (document.documentElement.scrollTop > 0) {
+    if (document.documentElement.scrollTop > 200) {
         document.getElementById("navbar").classList.add('is-scroll');
     } else {
         document.getElementById("navbar").classList.remove('is-scroll');

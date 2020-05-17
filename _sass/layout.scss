@@ -752,6 +752,12 @@ h6,
     &.is-fixed {
         position: fixed;
     }
+
+    &-placeholder {
+        display: block;
+        width: 100%;
+        height: var(--navbar-height);
+    }
 }
 
 

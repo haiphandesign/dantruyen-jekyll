@@ -756,7 +756,11 @@ h6,
     &-placeholder {
         display: block;
         width: 100%;
-        height: var(--navbar-height);
+        height: var(--navbar-height-mobile);
+
+        @include breakpoint(md) {
+            height: var(--navbar-height);
+        }
     }
 }
 

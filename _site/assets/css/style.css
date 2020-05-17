@@ -210,7 +210,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 
 .navbar.is-fixed { position: fixed; }
 
-.navbar-placeholder { display: block; width: 100%; height: var(--navbar-height); }
+.navbar-placeholder { display: block; width: 100%; height: var(--navbar-height-mobile); }
+
+@media (min-width: 1024px) { .navbar-placeholder { height: var(--navbar-height); } }
 
 .subtitle { font-weight: var(--font-weight-medium); font-size: var(--font-size-5); border-bottom: 1px solid var(--border-color-light); margin-bottom: 1.5rem; padding-bottom: .5rem; }
 
@@ -385,6 +387,18 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 
 .game-meta-item .content { position: absolute; right: 0; bottom: 0; left: 0; display: flex; align-items: center; justify-content: center; height: calc(100% - 3rem); padding-bottom: .25rem; }
 
+.game-meta-image { position: relative; width: max-content; margin-left: auto; margin-right: auto; }
+
+.game-meta-image span.icon.game\:premium { position: absolute; bottom: .325rem; right: .325rem; margin-top: 0; }
+
+span.icon.game\:premium { position: relative; z-index: 10; display: flex; align-items: center; justify-content: center; width: 1.5rem; height: 1.5rem; border-radius: 50%; background-color: var(--blue); color: white; margin-top: -.75rem; }
+
+span.icon.game\:premium i { font-size: .75em; }
+
+.game-header .game-meta-image span.icon.game\:premium { position: relative; bottom: unset; right: unset; margin-top: -.75rem; }
+
+@media (min-width: 1024px) { .game-header .game-meta-image span.icon.game\:premium { position: absolute; bottom: .5rem; right: .5rem; margin-top: 0; } }
+
 .game-nav { position: fixed; bottom: 0; right: 0; z-index: 10000; display: flex; align-items: center; justify-content: space-between; width: 100vw; padding: .5rem; padding-top: 0; }
 
 @media (min-width: 1024px) { .game-nav { padding: 1rem; padding-top: 0; width: unset; } }
@@ -403,7 +417,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 
 .game-nav-scenes-toggle.is-active ~ .game-nav-scenes-wrapper { display: block; }
 
-.game-nav-scenes-wrapper { position: relative; background-color: var(--white); border-color: var(--border-color); border-style: solid; border-width: var(--border-width); border-radius: var(--border-radius); position: absolute; bottom: 100%; left: 0; display: block; width: calc(100vw - 1rem); max-height: 60vh; margin-bottom: .75rem; box-shadow: 0 0 10px 10px rgba(9, 132, 227, 0.05); overflow: auto; }
+.game-nav-scenes-wrapper { position: relative; background-color: var(--white); border-color: var(--border-color); border-style: solid; border-width: var(--border-width); border-radius: var(--border-radius); position: absolute; bottom: 100%; left: 0; display: none; width: calc(100vw - 1rem); max-height: 60vh; margin-bottom: .75rem; box-shadow: 0 0 10px 10px rgba(9, 132, 227, 0.05); overflow: auto; }
 
 .game-nav-scenes-wrapper .box-title { margin-bottom: 0; }
 

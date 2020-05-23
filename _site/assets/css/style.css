@@ -226,6 +226,38 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 
 .image-update:hover { opacity: 1; }
 
+.single-page .single-page-cover .content { border-radius: 0 0 var(--border-radius) var(--border-radius); background-color: var(--blue); color: var(--white); padding: 10rem 1rem; text-align: center; }
+
+.single-page .single-page-cover .content h1 { text-transform: uppercase; font-weight: bold; }
+
+.single-page .single-page-content { margin-top: 1.5rem; }
+
+@media (min-width: 1024px) { .single-page .single-page-content { margin-top: 2rem; } }
+
+.helpdesk .single-page-cover .content { background-image: url("/assets/images/helpdesk-cover.png"); background-size: contain; background-repeat: no-repeat; background-position: center center; }
+
+.helpdesk-items { display: grid; grid-template-columns: 1fr; grid-gap: 1rem; }
+
+@media (min-width: 1024px) { .helpdesk-items { grid-template-columns: repeat(3, 1fr); } }
+
+.helpdesk-items .item { display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; background-color: var(--white); border-color: var(--border-color); border-style: solid; border-width: var(--border-width); border-radius: var(--border-radius); padding: 3rem 1rem; text-transform: uppercase; font-weight: bold; }
+
+.helpdesk-items .item .icon { margin-bottom: 1.5rem; font-size: 2rem; }
+
+.helpdesk-items .item:hover { background-color: var(--blue); border-color: var(--dark-blue); color: var(--white); }
+
+.helpdesk-links { margin: 1.5rem auto 0; }
+
+@media (min-width: 1024px) { .helpdesk-links { margin-top: 2rem; } }
+
+.helpdesk-links ul { margin-top: .5rem; margin-left: .5rem; }
+
+.helpdesk-links ul li:not(:first-child) { margin-top: .25rem; }
+
+.helpdesk-links ul li a { text-decoration: underline; }
+
+.helpdesk-links ul li:before { content: '\00BB'; margin-right: .5rem; }
+
 .footer { padding-top: 2rem; padding-bottom: 2rem; }
 
 @media (min-width: 768px) { .footer { padding-top: 4rem; } }

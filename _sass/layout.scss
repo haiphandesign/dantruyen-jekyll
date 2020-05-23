@@ -816,3 +816,108 @@ h6,
         opacity: 1;
     }
 }
+
+
+.single-page {
+    .single-page-cover {
+        .content {
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            background-color: var(--blue);
+            color: var(--white);
+            padding: 10rem 1rem;
+            text-align: center;
+
+            h1 {
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .single-page-content {
+        margin-top: 1.5rem;
+
+        @include breakpoint(md) {
+            margin-top: 2rem;
+        }
+    }
+}
+
+.helpdesk {
+    .single-page-cover {
+        .content {
+            background-image: url('/assets/images/helpdesk-cover.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+}
+
+.helpdesk-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+
+    @include breakpoint(md) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+        background-color: var(--white);
+        border-color: var(--border-color);
+        border-style: solid;
+        border-width: var(--border-width);
+        border-radius: var(--border-radius);
+
+        padding: 3rem 1rem;
+
+        text-transform: uppercase;
+        font-weight: bold;
+
+        .icon {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        &:hover {
+            background-color: var(--blue);
+            border-color: var(--dark-blue);
+            color: var(--white);
+        }
+    }
+}
+
+.helpdesk-links {
+    margin: 1.5rem auto 0;
+
+    @include breakpoint(md) {
+        margin-top: 2rem;
+    }
+
+    ul {
+        margin-top: .5rem;
+        margin-left: .5rem;
+
+        li {
+            &:not(:first-child) {
+                margin-top: .25rem;
+            }
+
+            a {
+                text-decoration: underline;
+            }
+
+            &:before {
+                content: '\00BB';
+                margin-right: .5rem;
+            }
+        }
+    }
+}

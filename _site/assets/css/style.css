@@ -258,6 +258,39 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 
 .helpdesk-links ul li:before { content: '\00BB'; margin-right: .5rem; }
 
+.blocker { z-index: 10000; background-color: rgba(0, 0, 0, 0.75); }
+
+.modal { max-width: unset; width: unset; padding: 0; border: 1px solid var(--lightgray); border-radius: .25rem; box-shadow: none; }
+
+.modal a.close-modal { position: fixed; top: 0; right: 0; width: 2rem; height: 2rem; background-image: url("/assets/addons/jquery.modal/close.png"); background-size: 50%; }
+
+.modal a.close-modal:before { content: 'x'; }
+
+.modal-content { width: 90vw; }
+
+.modal-new-game .tabs { background-color: var(--lightgray); }
+
+.modal-new-game .tabs a { padding-top: 1rem; padding-bottom: 1rem; }
+
+.modal-new-game .tabs ul { padding-left: 0; padding-right: 0; }
+
+.modal-new-game .tabs li { border-bottom-width: 3px; border-color: transparent; }
+
+.modal-new-game .tabs li:not(:last-child) { margin-right: 0; }
+
+.modal-new-game .tabs li:hover { border-color: var(--gray); }
+
+.modal-new-game .tabs li.is-active { border-color: var(--black); }
+
+@media (max-width: 767px) { .modal-new-game .tabs li span.icon { margin: 0 !important; }
+  .modal-new-game .tabs li span.icon + span { display: none; } }
+
+.modal-new-game .tab-content { display: none; padding: 1rem; }
+
+.modal-new-game .tab-content.is-active { display: block; }
+
+.modal-new-game .tab-content .button { margin-top: 1rem; }
+
 .footer { padding-top: 2rem; padding-bottom: 2rem; }
 
 @media (min-width: 768px) { .footer { padding-top: 4rem; } }
@@ -1150,6 +1183,8 @@ span.icon.game\:premium i { font-size: .75em; }
 .tem-store-item--price.old { text-decoration: line-through; opacity: 0.5; }
 
 .tem-store-item--button { margin-top: 0.75rem; }
+
+.tem-success { width: 100%; max-width: 30rem; margin: 0 auto; padding-left: 2rem; padding-right: 2rem; padding-top: 5rem; padding-bottom: 10rem; background-image: url("/assets/images/tem-store-cover.png"); background-size: contain; background-repeat: no-repeat; background-position: bottom right; }
 
 .gamesearch-wrapper { padding-top: 1rem; padding-bottom: 1rem; }
 

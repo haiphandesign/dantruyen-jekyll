@@ -921,3 +921,103 @@ h6,
         }
     }
 }
+
+
+
+
+
+// MODAL 
+
+.blocker {
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, .75);
+}
+
+.modal {
+    max-width: unset;
+    width: unset;
+    padding: 0;
+    border: 1px solid var(--lightgray);
+    border-radius: .25rem;
+    box-shadow: none;
+}
+
+.modal a.close-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: 2rem;
+    height: 2rem;
+
+    background-image: url('/assets/addons/jquery.modal/close.png');
+    background-size: 50%;
+
+    &:before {
+        content: 'x';
+    }
+}
+
+.modal-content {
+    width: 90vw;
+}
+
+
+
+// MODAL TAB
+
+.modal-new-game {
+    .tabs {
+        background-color: var(--lightgray);
+
+        a {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        ul {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        li {
+            border-bottom-width: 3px;
+            border-color: transparent;
+
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+
+            &:hover {
+                border-color: var(--gray);
+            }
+
+            &.is-active {
+                border-color: var(--black);
+            }
+
+            @include breakpoint(xs) {
+                span.icon {
+                    margin: 0 !important;
+
+                    +span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .tab-content {
+        display: none;
+        padding: 1rem;
+
+        &.is-active {
+            display: block;
+        }
+
+        .button {
+            margin-top: 1rem;
+        }
+    }
+}

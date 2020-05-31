@@ -57,6 +57,8 @@
         align-items: center;
         justify-content: flex-start;
 
+        min-width: 2.5rem;
+
         padding: .25rem .75rem;
         margin-right: .5rem;
 
@@ -175,7 +177,14 @@
 
         .game-card-image figure.image:before,
         .game-card-icon:before {
-            content: '\f71d';
+            content: '\00a0';
+            width: 18px;
+            height: 18px;
+            background-image: url('/assets/images/icon-asset.svg');
+            background-size: 1rem 1rem;
+            background-repeat: no-repeat;
+            background-position: center;
+            flex-shrink: 0;
         }
 
         .game-card-icon:after {

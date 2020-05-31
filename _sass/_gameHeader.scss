@@ -84,7 +84,7 @@
     }
 
     .game-meta {
-        align-items: center;
+        align-items: flex-start;
 
         padding: 1rem;
 
@@ -93,9 +93,11 @@
             grid-gap: 1rem;
             align-items: center;
             justify-content: center;
+            width: 100%;
 
             @include breakpoint(sm) {
                 grid-auto-flow: column;
+                width: max-content;
             }
 
             .level-item {
@@ -115,6 +117,11 @@
             grid-gap: 1rem;
             grid-auto-flow: column;
             align-items: center;
+            width: 100%;
+
+            @include breakpoint(sm) {
+                width: max-content;
+            }
         }
     }
 
@@ -164,8 +171,9 @@
 
         @include breakpoint(sm) {
             position: absolute;
-            top: calc(-2.25em - 2px - .5rem);
-            right: 0;
+            bottom: calc(3.5em + 2px);
+            right: .875rem;
+            width: max-content;
 
             justify-content: flex-end;
 

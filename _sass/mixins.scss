@@ -137,6 +137,10 @@ $viewport-xl: 1440px;
                 opacity: .5;
                 line-height: 0;
             }
+
+            p {
+                display: inline;
+            }
         }
     }
 

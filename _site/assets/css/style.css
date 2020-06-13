@@ -592,6 +592,8 @@ span.icon.game\:premium i { font-size: .75em; }
 
 .post-content ul li:before { content: '•'; font-weight: bold; display: inline; width: 1.5em; margin-left: -.5em; opacity: .5; line-height: 0; }
 
+.post-content ul li p { display: inline; }
+
 .post-content .fa, .post-content .fas, .post-content .far, .post-content .fal, .post-content .fab { line-height: inherit; }
 
 .post-stacks { border-color: var(--border-color); border-style: solid; border-bottom-width: var(--border-width); position: relative; width: calc(100% + 2rem); margin-top: -1rem; margin-left: -1rem; margin-right: -1rem; margin-bottom: 1rem; background-color: var(--lightgray); }
@@ -1113,6 +1115,8 @@ span.icon.game\:premium i { font-size: .75em; }
 .user-profile-information-item-biography .user-profile-information-content ul { padding-left: 1.5em; }
 
 .user-profile-information-item-biography .user-profile-information-content ul li:before { content: '•'; font-weight: bold; display: inline; width: 1.5em; margin-left: -.5em; opacity: .5; line-height: 0; }
+
+.user-profile-information-item-biography .user-profile-information-content ul li p { display: inline; }
 
 .user-profile-information-item-biography .user-profile-information-content .fa, .user-profile-information-item-biography .user-profile-information-content .fas, .user-profile-information-item-biography .user-profile-information-content .far, .user-profile-information-item-biography .user-profile-information-content .fal, .user-profile-information-item-biography .user-profile-information-content .fab { line-height: inherit; }
 

@@ -131,7 +131,7 @@ $viewport-xl: 1440px;
             &:before {
                 content: '•';
                 font-weight: bold;
-                display: inline-block;
+                display: inline;
                 width: 1.5em;
                 margin-left: -.5em;
                 opacity: .5;

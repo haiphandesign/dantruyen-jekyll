@@ -590,7 +590,7 @@ span.icon.game\:premium i { font-size: .75em; }
 
 .post-content ul { padding-left: 1.5em; }
 
-.post-content ul li:before { content: '•'; font-weight: bold; display: inline-block; width: 1.5em; margin-left: -.5em; opacity: .5; line-height: 0; }
+.post-content ul li:before { content: '•'; font-weight: bold; display: inline; width: 1.5em; margin-left: -.5em; opacity: .5; line-height: 0; }
 
 .post-content .fa, .post-content .fas, .post-content .far, .post-content .fal, .post-content .fab { line-height: inherit; }
 
@@ -1112,7 +1112,7 @@ span.icon.game\:premium i { font-size: .75em; }
 
 .user-profile-information-item-biography .user-profile-information-content ul { padding-left: 1.5em; }
 
-.user-profile-information-item-biography .user-profile-information-content ul li:before { content: '•'; font-weight: bold; display: inline-block; width: 1.5em; margin-left: -.5em; opacity: .5; line-height: 0; }
+.user-profile-information-item-biography .user-profile-information-content ul li:before { content: '•'; font-weight: bold; display: inline; width: 1.5em; margin-left: -.5em; opacity: .5; line-height: 0; }
 
 .user-profile-information-item-biography .user-profile-information-content .fa, .user-profile-information-item-biography .user-profile-information-content .fas, .user-profile-information-item-biography .user-profile-information-content .far, .user-profile-information-item-biography .user-profile-information-content .fal, .user-profile-information-item-biography .user-profile-information-content .fab { line-height: inherit; }
 

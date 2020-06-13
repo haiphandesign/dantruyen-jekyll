@@ -282,7 +282,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 
 .modal-new-game .tabs a { padding-top: 1rem; padding-bottom: 1rem; }
 
-.modal-new-game .tabs ul { padding-left: 0; padding-right: 0; }
+.modal-new-game .tabs ul.description { padding-left: 1.5em; }
+
+.modal-new-game .tabs ul.description li:before { content: '•'; font-weight: bold; display: inline; width: 1.5em; margin-left: -.5em; opacity: .5; line-height: 0; }
+
+.modal-new-game .tabs ul.description li p { display: inline; }
 
 .modal-new-game .tabs li { border-bottom-width: 3px; border-color: transparent; }
 

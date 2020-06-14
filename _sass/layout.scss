@@ -1,3 +1,28 @@
+// TEM
+.icon,
+.text {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.dti {
+    display: inline-flex;
+    align-self: center;
+    vertical-align: middle;
+
+    svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    &.dti-base {
+        svg {
+            top: -.125em;
+            position: relative;
+        }
+    }
+}
+
 // BASIC
 
 .column+.column {
@@ -727,13 +752,36 @@ h6,
     }
 
     .navbar-new {
-        display: none;
+        display: flex;
         position: relative;
         border-radius: 50%;
 
         @include breakpoint(md) {
             display: flex;
             margin-right: .75rem;
+        }
+
+        .button {
+            border: none;
+            padding: 0 1rem;
+
+            span {
+                &.icon {}
+
+                &:not(.icon) {
+                    display: none;
+
+                    @include breakpoint(md) {
+                        display: flex;
+                    }
+                }
+            }
+
+            @include breakpoint(md) {
+                background-color: var(--blue);
+                border-color: var(--blue);
+                color: var(--white);
+            }
         }
     }
 }
@@ -1015,25 +1063,8 @@ h6,
         }
 
         ul {
-            &.description {
-                padding-left: 1.5em;
-
-                li {
-                    &:before {
-                        content: '•';
-                        font-weight: bold;
-                        display: inline;
-                        width: 1.5em;
-                        margin-left: -.5em;
-                        opacity: .5;
-                        line-height: 0;
-                    }
-
-                    p {
-                        display: inline;
-                    }
-                }
-            }
+            padding-left: 0;
+            padding-right: 0;
         }
 
         li {
@@ -1064,6 +1095,26 @@ h6,
         }
     }
 
+    .description {
+        padding-left: 1rem;
+
+        li {
+            &:before {
+                content: '•';
+                font-weight: bold;
+                display: inline;
+                margin-left: -.5em;
+                opacity: .5;
+                line-height: 0;
+                margin-right: .25rem;
+            }
+
+            p {
+                display: inline;
+            }
+        }
+    }
+
     .tab-content {
         display: none;
         padding: 1rem;
@@ -1075,5 +1126,7 @@ h6,
         .button {
             margin-top: 1rem;
         }
+
+
     }
 }

@@ -766,7 +766,15 @@ h6,
             padding: 0 1rem;
 
             span {
-                &.icon {}
+                &.icon {
+                    .fal {
+                        font-weight: 300;
+
+                        @include breakpoint(md) {
+                            font-weight: 500;
+                        }
+                    }
+                }
 
                 &:not(.icon) {
                     display: none;

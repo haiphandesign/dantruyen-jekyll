@@ -214,6 +214,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 
 .dt-navbar .navbar-new .button { border: none; padding: 0 1rem; }
 
+.dt-navbar .navbar-new .button span.icon .fal { font-weight: 300; }
+
+@media (min-width: 1024px) { .dt-navbar .navbar-new .button span.icon .fal { font-weight: 500; } }
+
 .dt-navbar .navbar-new .button span:not(.icon) { display: none; }
 
 @media (min-width: 1024px) { .dt-navbar .navbar-new .button span:not(.icon) { display: flex; } }

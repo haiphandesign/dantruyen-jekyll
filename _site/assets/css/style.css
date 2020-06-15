@@ -212,7 +212,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 
 @media (min-width: 1024px) { .dt-navbar .navbar-new { display: flex; margin-right: .75rem; } }
 
-.dt-navbar .navbar-new .button { border: none; padding: 0 1rem; }
+.dt-navbar .navbar-new .button { border: none; padding: 0 .75rem; }
+
+@media (min-width: 1024px) { .dt-navbar .navbar-new .button { padding: 0 1.25rem; } }
 
 .dt-navbar .navbar-new .button span.icon .fal { font-weight: 300; }
 

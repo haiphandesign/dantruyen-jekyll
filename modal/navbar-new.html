@@ -1,12 +1,12 @@
 <div class="modal-content modal-new-game" id="modal-navbar-new" style="max-width: 30rem;">
     <div class="tabs-wrapper" id="newpost-tabs">
         <ul class="tabs is-fullwidth is-large">
-            <li class="tab is-active">
+            <li class="tab">
                 <a href="#newpost-free" class="has-text-smallcaps">
                     <span class="icon"><i class="fas fa-puzzle-piece"></i></span>
                     <span class="text">Phòng miễn phí</span>
                 </a></li>
-            <li class="tab">
+            <li class="tab is-active">
                 <a href="#newpost-paid" class="has-text-smallcaps">
                     <span class="icon"><i class="fas fa-sparkles"></i></span>
                     <span class="text">Phòng trả phí</span>
@@ -15,7 +15,7 @@
         <div class="tab-content is-active" id="newpost-free">
             <p>Sadipscing no eirmod elitr est erat eirmod erat stet et, dolor stet amet accusam consetetur, eos takimata
                 labore clita clita.</p>
-            <ul class="description">
+            <ul class="description" style="margin-top: .5rem;">
                 <li>
                     <p>Dolor ea tempor sed sed sit accusam.</p>
                 </li>
@@ -26,7 +26,10 @@
                     <p>Dolor ea tempor sed sed sit accusam.</p>
                 </li>
             </ul>
-            <a href="/game-new" class="button is-fullwidth is-info is-big">
+            <p style="font-weight: bold; color: var(--red);margin-top: .5rem;">Lưu ý: Phí Tem tạo phòng sẽ chỉ được tính
+                khi bạn nhấn nút
+                Đăng tải cho Phòng chơi trả phí của mình.</p>
+            <a href="/game-new" class="button is-fullwidth is-danger is-big">
                 <span class="icon"><i class="far fa-plus"></i></span>
                 <span class="text">Tạo phòng miễn phí ngay</span>
             </a>

@@ -763,7 +763,11 @@ h6,
 
         .button {
             border: none;
-            padding: 0 1rem;
+            padding: 0 .75rem;
+
+            @include breakpoint(md) {
+                padding: 0 1.25rem;
+            }
 
             span {
                 &.icon {

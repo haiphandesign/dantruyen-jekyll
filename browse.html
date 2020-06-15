@@ -48,11 +48,12 @@ permalink: /browse/
                             <span class="icon"><i class="far fa-plus"></i></span>
                             <span class="has-text-smallcaps">Tạo Phòng Miễn Phí</span>
                         </div>
-                        <div class="button is-fullwidth is-danger is-big">
+                        <a class="button is-fullwidth is-danger is-big" href="/modal/game-premium-confirm.html"
+                            rel="modal:open">
                             <span class="icon"><i class="far fa-sparkles"></i></span>
                             <span class="has-text-smallcaps">Tạo Phòng Trả Phí (90 <div class="dti dti-base">
                                     {%- include tem.svg -%}</div>)</span>
-                        </div>
+                        </a>
                     </div>
 
                     <div id="browse-editors-pick">
@@ -288,11 +289,12 @@ permalink: /browse/
                             <span class="icon"><i class="far fa-plus"></i></span>
                             <span class="has-text-smallcaps">Tạo Phòng Miễn Phí</span>
                         </div>
-                        <div class="button is-fullwidth is-danger is-big">
+                        <a class="button is-fullwidth is-danger is-big" href="/modal/game-premium-insufficient.html"
+                            rel="modal:open">
                             <span class="icon"><i class="far fa-sparkles"></i></span>
                             <span class="has-text-smallcaps">Tạo Phòng Trả Phí (90 <div class="dti dti-base">
                                     {%- include tem.svg -%}</div> )</span>
-                        </div>
+                        </a>
                     </div>
 
                     {% include global/widget.html type="2" source="browse-sidebar-categories" title="Thể loại" borderedtitle="yes" nopadding="yes"  %}

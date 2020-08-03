@@ -1142,3 +1142,20 @@ h6,
 
     }
 }
+
+
+
+
+#game-sidebar-contacts {
+    .game-sidebar-contacts--note {
+        +.game-sidebar-contacts--lists {
+            margin-top: .5rem;
+        }
+    }
+
+    .game-sidebar-contacts--lists {
+        a {
+            text-decoration: underline;
+        }
+    }
+}

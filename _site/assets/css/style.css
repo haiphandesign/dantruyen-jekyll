@@ -1,8 +1,32 @@
 @charset "UTF-8";
+/* noto-sans-regular */
+@font-face { font-family: 'Noto Sans'; font-style: normal; font-weight: 400; src: local("Noto Sans"), local("NotoSans"), url("/assets/fonts/noto-sans-v9-vietnamese_latin-ext_latin-regular.woff2") format("woff2"), url("/assets/fonts/noto-sans-v9-vietnamese_latin-ext_latin-regular.woff") format("woff"); }
+
+/* noto-sans-italic */
+@font-face { font-family: 'Noto Sans'; font-style: italic; font-weight: 400; src: local("Noto Sans Italic"), local("NotoSans-Italic"), url("/assets/fonts/noto-sans-v9-vietnamese_latin-ext_latin-italic.woff2") format("woff2"), url("/assets/fonts/noto-sans-v9-vietnamese_latin-ext_latin-italic.woff") format("woff"); }
+
+/* noto-sans-700 */
+@font-face { font-family: 'Noto Sans'; font-style: normal; font-weight: 700; src: local("Noto Sans Bold"), local("NotoSans-Bold"), url("/assets/fonts/noto-sans-v9-vietnamese_latin-ext_latin-700.woff2") format("woff2"), url("/assets/fonts/noto-sans-v9-vietnamese_latin-ext_latin-700.woff") format("woff"); }
+
+/* noto-sans-700italic */
+@font-face { font-family: 'Noto Sans'; font-style: italic; font-weight: 700; src: local("Noto Sans Bold Italic"), local("NotoSans-BoldItalic"), url("/assets/fonts/noto-sans-v9-vietnamese_latin-ext_latin-700italic.woff2") format("woff2"), url("/assets/fonts/noto-sans-v9-vietnamese_latin-ext_latin-700italic.woff") format("woff"); }
+
+/* noto-serif-regular */
+@font-face { font-family: 'Noto Serif'; font-style: normal; font-weight: 400; src: local("Noto Serif"), local("NotoSerif"), url("/assets/fonts/noto-serif-v8-vietnamese_latin-ext_latin-regular.woff2") format("woff2"), url("/assets/fonts/noto-serif-v8-vietnamese_latin-ext_latin-regular.woff") format("woff"); }
+
+/* noto-serif-italic */
+@font-face { font-family: 'Noto Serif'; font-style: italic; font-weight: 400; src: local("Noto Serif Italic"), local("NotoSerif-Italic"), url("/assets/fonts/noto-serif-v8-vietnamese_latin-ext_latin-italic.woff2") format("woff2"), url("/assets/fonts/noto-serif-v8-vietnamese_latin-ext_latin-italic.woff") format("woff"); }
+
+/* noto-serif-700 */
+@font-face { font-family: 'Noto Serif'; font-style: normal; font-weight: 700; src: local("Noto Serif Bold"), local("NotoSerif-Bold"), url("/assets/fonts/noto-serif-v8-vietnamese_latin-ext_latin-700.woff2") format("woff2"), url("/assets/fonts/noto-serif-v8-vietnamese_latin-ext_latin-700.woff") format("woff"); }
+
+/* noto-serif-700italic */
+@font-face { font-family: 'Noto Serif'; font-style: italic; font-weight: 700; src: local("Noto Serif Bold Italic"), local("NotoSerif-BoldItalic"), url("/assets/fonts/noto-serif-v8-vietnamese_latin-ext_latin-700italic.woff2") format("woff2"), url("/assets/fonts/noto-serif-v8-vietnamese_latin-ext_latin-700italic.woff") format("woff"); }
+
 @keyframes placeHolderShimmer { 0% { background-position: 0px 0; }
   100% { background-position: 100vw 0; } }
 
-:root { --background: #f9f9f9; --font-family-sans-serif: 'IBM Plex Sans', sans-serif; --font-size: 16px; --font-size-mobile: 16px; --font-size-7: .8rem; --border-radius: 2px; --gray: #e7e7e7; }
+:root { --background: #f9f9f9; --font-family-sans-serif: 'Noto Sans', sans-serif; --font-family-serif: 'Noto Serif', serif; --font-size: 16px; --font-size-mobile: 16px; --font-size-7: .8rem; --border-radius: 2px; --gray: #e7e7e7; }
 
 .image.has-placeholder { background-image: url("/assets/images/placeholder-small.jpg"); background-size: cover; background-position: center center; }
 
@@ -328,6 +352,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: var(--font-w
 .modal-new-game .tab-content.is-active { display: block; }
 
 .modal-new-game .tab-content .button { margin-top: 1rem; }
+
+#game-sidebar-contacts .game-sidebar-contacts--note + .game-sidebar-contacts--lists { margin-top: .5rem; }
+
+#game-sidebar-contacts .game-sidebar-contacts--lists a { text-decoration: underline; }
 
 .footer { padding-top: 2rem; padding-bottom: 2rem; }
 
@@ -810,6 +838,58 @@ span.icon.game\:premium i { font-size: .75em; }
 .post-alert { border-color: var(--border-color); border-style: solid; border-bottom-width: var(--border-width); margin-bottom: -1rem; padding: .75rem 1rem; }
 
 .post-alert.alert\:edit { background-color: var(--yellow); color: var(--lightblack); }
+
+.content-customizer { position: fixed; left: -15rem; top: 50%; z-index: 9999; transform: translateY(-50%); transition: left .25s ease; }
+
+.content-customizer.is-active { left: 0; }
+
+.content-customizer .toggle { position: absolute; top: 1rem; right: calc(-3rem + 1px); display: flex; align-items: center; justify-content: center; width: calc(3rem + 1px); height: 3rem; border-color: var(--border-color); border-style: solid; border-width: var(--border-width); border-left-color: var(--white); background-color: var(--white); cursor: pointer; }
+
+.content-customizer .customizer { border-color: var(--border-color); border-style: solid; border-width: var(--border-width); background-color: var(--white); border-radius: var(--border-radius); border-top-left-radius: 0; border-bottom-left-radius: 0; display: flex; flex-direction: column; width: 15rem; }
+
+.content-customizer .row { padding: .75rem 1rem; }
+
+.content-customizer .row + .row { border-color: var(--border-color); border-style: solid; border-top-width: var(--border-width); }
+
+.content-customizer .row .title { font-weight: bold; font-size: .8rem; text-transform: uppercase; }
+
+.content-customizer .row .title + .content { margin-top: .5rem; }
+
+.content-customizer .tuner { display: flex; align-items: center; justify-content: flex-start; }
+
+.content-customizer .tuner > div { display: flex; align-items: center; justify-content: center; width: 100%; height: 2rem; cursor: pointer; border-color: var(--border-color); border-style: solid; border-width: var(--border-width); }
+
+.content-customizer .tuner > div + div { border-left: none; }
+
+.content-customizer .tuner > div:hover { background-color: var(--lightgray); }
+
+.content-customizer .tuner > div[disabled], .content-customizer .tuner > div:disabled, .content-customizer .tuner > div .disabled { cursor: no-drop; }
+
+.content-customizer .tuner > div.is-active { background-color: var(--blue); color: var(--white); }
+
+.content-customizer .tuner > div:first-child { border-top-left-radius: .25rem; border-bottom-left-radius: .25rem; }
+
+.content-customizer .tuner > div:last-child { border-top-right-radius: .25rem; border-bottom-right-radius: .25rem; }
+
+.content-customizer .tuner > div.font-family-serif { font-family: var(--font-family-serif); }
+
+.content-customizer .tuner > div.font-family-sans-serif { font-family: var(--font-family-sans-serif); }
+
+.content-customizer .tuner > div.font-size { font-size: .875rem; }
+
+.post-content.font\:serif { font-family: var(--font-family-serif); }
+
+.post-content.font\:sans { font-family: var(--font-family-sans-serif); }
+
+.post-content.font\:xs { font-size: .75em; }
+
+.post-content.font\:sm { font-size: .875em; }
+
+.post-content.font\:md { font-size: 1em; }
+
+.post-content.font\:lg { font-size: 1.5em; }
+
+.post-content.font\:xl { font-size: 2em; }
 
 .game-card { position: relative; background-color: var(--white); border-color: var(--border-color); border-style: solid; border-width: var(--border-width); border-radius: var(--border-radius); display: grid; grid-template-columns: minmax(0, 1fr); width: 100%; max-width: 20rem; cursor: pointer; }
 

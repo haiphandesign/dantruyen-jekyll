@@ -238,5 +238,15 @@ $('.toggle').click(function (e) {
 
 $('.post-unshrink a').click(function (e) {
     console.log('ok');
-    $(this).parent().siblings('.post-body').removeClass('.is-shrink');
+    $(this).parent().siblings('.post-body').removeClass('is-shrink');
+});
+
+
+
+
+// CONTENT CUSTOMIZER 
+
+$('.content-customizer .toggle').click(function (e) {
+    console.log('content customizer activate');
+    $('.content-customizer').toggleClass('is-active');
 });

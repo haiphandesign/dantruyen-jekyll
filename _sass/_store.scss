@@ -12,6 +12,7 @@
 	position: relative;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	width: 100%;
 	margin: 0 auto;
 	padding-bottom: 4.5rem;
@@ -46,21 +47,13 @@
 .tem-store-wrapper {
 	@include box;
 	padding: 1.5rem;
-
-	@include breakpoint(md) {
-		padding: 3rem 1.5rem;
-	}
 }
 
 .tem-store-items {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 1rem;
-	grid-row-gap: 2rem;
-
-	@include breakpoint(md) {
-		grid-template-columns: repeat(4, 1fr);
-	}
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
 }
 
 .tem-store-item {
@@ -68,6 +61,13 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	padding: 0 1rem;
+	width: 50%;
+	flex-shrink: 0;
+
+	@include breakpoint(md) {
+		width: 20%;
+	}
 
 	&--image {
 		width: 6rem;
@@ -102,6 +102,7 @@
 
 	&--button {
 		margin-top: 0.75rem;
+		white-space: nowrap;
 	}
 }
 

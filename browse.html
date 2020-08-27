@@ -11,13 +11,16 @@ permalink: /browse/
             <div class="browse-carousel-item">
                 <div class="browse-carousel-item-meta">
                     <div class="browse-carousel-item-meta-title">gameName</div>
-                    <div class="browse-carousel-item-meta-description">Having a boyfriend who's a full foot taller than
-                        you might seem adorable at first, but it usually just ends up causing a whole bunch of minor
-                        inconveniences. Follow Fishball as she navigates the Malaysian life with her 6'5" geeky
-                        boyfriend.</div>
+                    <div class="browse-carousel-item-meta-description">
+                        Having a boyfriend who's a full foot taller than you
+                        might seem adorable at first, but it usually just ends
+                        up causing a whole bunch of minor inconveniences. Follow
+                        Fishball as she navigates the Malaysian life with her
+                        6'5" geeky boyfriend.
+                    </div>
                 </div>
                 <figure class="image is-full is-cover has-placeholder-big browse-carousel-item-image">
-                    <img src="">
+                    <img src="" />
                 </figure>
             </div>
             {% endfor %}
@@ -26,20 +29,18 @@ permalink: /browse/
 </div>
 
 <div class="browse-wrapper">
-
     <div class="container">
-
         <div class="columns">
-
             <div class="column is-8 browse-left">
-
                 <div class="browse-main">
-
                     <div class="browse-your-games">
-                        {% include global/widget-title.html title="Phòng đang chơi" %}
+                        {% include global/widget-title.html title="Phòng đang
+						chơi" %}
                         <div class="game-collection is-large is-expandable">
-                            {% include widget/game-collection-item.html title="gameHosting" %}
-                            {% include widget/game-collection-item.html playing="characterName" title="gamePlaying" %}
+                            {% include widget/game-collection-item.html
+							title="gameHosting" %} {% include
+							widget/game-collection-item.html
+							playing="characterName" title="gamePlaying" %}
                         </div>
                     </div>
 
@@ -51,19 +52,25 @@ permalink: /browse/
                         <a class="button is-fullwidth is-danger is-big" href="/modal/game-premium-confirm.html"
                             rel="modal:open">
                             <span class="icon"><i class="far fa-sparkles"></i></span>
-                            <span class="has-text-smallcaps">Tạo Phòng Trả Phí (90 <div class="dti dti-base">
-                                    {%- include tem.svg -%}</div>)</span>
+                            <span class="has-text-smallcaps">Tạo Phòng Trả Phí (90
+                                <div class="dti dti-base">
+                                    {%- include tem.svg -%}
+                                </div>
+                                )</span>
                         </a>
                     </div>
 
                     <div id="browse-editors-pick">
                         <div class="box-title">
-                            {% include global/widget-title.html title="Phòng chơi nổi bật" subtitle="Editor's Pick" description="Những câu chuyện thú vị, đầy lôi cuốn được lựa chọn bởi đội ngũ quản trị viên của Dẫn Truyện." %}
+                            {% include global/widget-title.html title="Phòng
+							chơi nổi bật" subtitle="Editor's Pick"
+							description="Những câu chuyện thú vị, đầy lôi cuốn
+							được lựa chọn bởi đội ngũ quản trị viên của Dẫn
+							Truyện." %}
                         </div>
                         <div class="browse-editors-pick-carousel game-collection is-medium owl-carousel">
-                            {% for i in (1..4) %}
-                            {% include widget/game-collection-item.html %}
-                            {% endfor %}
+                            {% for i in (1..4) %} {% include
+							widget/game-collection-item.html %} {% endfor %}
                         </div>
                     </div>
 
@@ -71,7 +78,10 @@ permalink: /browse/
                         <div class="box-title">
                             <div class="columns">
                                 <div class="column is-8">
-                                    {% include global/widget-title.html title="Phòng chơi có sẵn" description="Những phòng chơi mà những thành viên khác đã tạo sẵn." %}
+                                    {% include global/widget-title.html
+									title="Phòng chơi có sẵn" description="Những
+									phòng chơi mà những thành viên khác đã tạo
+									sẵn." %}
                                 </div>
                                 <div class="column is-flex is-align-center is-justify-end">
                                     <div class="select">
@@ -95,12 +105,14 @@ permalink: /browse/
                                                                 <span class="icon">
                                                                     <i class="fas fa-eye-slash"></i>
                                                                 </span>
-                                                                <span class="is-uppercase">Ẩn phòng chơi 18+</span>
+                                                                <span class="is-uppercase">Ẩn phòng
+                                                                    chơi
+                                                                    18+</span>
                                                             </label>
                                                         </div>
                                                         <div class="field-body">
                                                             <div class="control">
-                                                                <input type="checkbox" id="homepage-game-browse-nsfw">
+                                                                <input type="checkbox" id="homepage-game-browse-nsfw" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -113,25 +125,32 @@ permalink: /browse/
                         </div>
 
                         <div class="box-wrapper">
-
                             <div class="box">
                                 <div class="table-responsive">
                                     <table
                                         class="table is-fullwidth is-vertical-align-middle has-dark-head is-hoverable browse-table">
                                         <thead>
                                             <tr>
-                                                <th class="browse-table-col-name">Tên phòng chơi</th>
-                                                <th class="browse-table-col-players has-text-centered">Số người
-                                                    chơi</th>
-                                                <th class="browse-table-col-status has-text-centered">Trạng thái
+                                                <th class="browse-table-col-name">
+                                                    Tên phòng chơi
+                                                </th>
+                                                <th class="browse-table-col-players has-text-centered">
+                                                    Số người chơi
+                                                </th>
+                                                <th class="browse-table-col-status has-text-centered">
+                                                    Trạng thái
                                                 </th>
                                             </tr>
                                         </thead>
                                         <tfoot>
                                             <tr>
                                                 <th>Tên phòng chơi</th>
-                                                <th class="has-text-centered">Số người chơi</th>
-                                                <th class="has-text-centered">Trạng thái</th>
+                                                <th class="has-text-centered">
+                                                    Số người chơi
+                                                </th>
+                                                <th class="has-text-centered">
+                                                    Trạng thái
+                                                </th>
                                             </tr>
                                         </tfoot>
                                         <tbody>
@@ -141,13 +160,18 @@ permalink: /browse/
                                                         <a href="/game/">
                                                             <figure
                                                                 class="image is-game-image is-size-5 is-bordered is-radius has-placeholder skeleton">
-                                                                <img src="">
+                                                                <img src="" />
                                                             </figure>
                                                         </a>
                                                         <a href="/game/" class="game-title">
-                                                            <h5 class="skeleton is-5">Tên phòng chơi</h5>
+                                                            <h5 class="skeleton is-5">
+                                                                Tên phòng chơi
+                                                            </h5>
                                                             <div class="has-text-darkgray skeleton">
-                                                                Dẫn truyện bởi <strong>Người dẫn</strong> (@host)
+                                                                Dẫn truyện bởi
+                                                                <strong>Người
+                                                                    dẫn</strong>
+                                                                (@host)
                                                             </div>
                                                         </a>
                                                     </div>
@@ -162,10 +186,8 @@ permalink: /browse/
                                                 <td class="has-text-centered browse-table-td-status">
                                                     <div
                                                         class="has-text-darkgray is-size-7 browse-table-td-status-scenes skeleton is-8">
-                                                        <span><span>1
-                                                                Chương,</span>
-                                                            <span>1
-                                                                Cảnh</span></span>
+                                                        <span><span>1 Chương,</span>
+                                                            <span>1 Cảnh</span></span>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -176,64 +198,23 @@ permalink: /browse/
                                                             <div class="game-meta-image">
                                                                 <figure
                                                                     class="image is-game-image is-size-5 is-bordered is-radius has-placeholder">
-                                                                    <img src="">
+                                                                    <img src="" />
                                                                 </figure>
-                                                                <span class="icon game:premium"><i
-                                                                        class="fas fa-star"></i></span>
+                                                                <!-- <span class="icon game:premium"><i
+                                                                        class="fas fa-star"></i></span> -->
+                                                                <div class="premium-ribbon">
+                                                                    <i class="fas fa-star"></i>
+                                                                </div>
                                                             </div>
                                                         </a>
                                                         <a href="/modal/game-adult-confirm.html" rel="modal:open"
                                                             class="game-title">
                                                             <h5>Phòng 18+</h5>
                                                             <div class="has-text-darkgray">
-                                                                Dẫn truyện
-                                                                bởi <strong>Người
+                                                                Dẫn truyện bởi
+                                                                <strong>Người
                                                                     dẫn</strong>
                                                                 (@host)
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                                <td class="has-text-centered browse-table-td-status">
-                                                    <p>
-                                                        <span class="players-count">0</span>
-                                                        <span
-                                                            class="players-limit has-text-darkgray is-size-7">/10</span>
-                                                    </p>
-                                                </td>
-                                                <td class="has-text-centered browse-table-td-status">
-                                                    <div class="tags">
-                                                        <span class="tag is-info has-text-smallcaps">Đang
-                                                            chơi</span>
-                                                    </div>
-                                                    <div
-                                                        class="has-text-darkgray is-size-7 browse-table-td-status-scenes">
-                                                        <span><span>1
-                                                                Chương,</span>
-                                                            <span>1
-                                                                Cảnh</span></span>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            {% for i in (1..10) %}
-                                            <tr>
-                                                <td class="browse-table-td-name">
-                                                    <div class="is-auto-grid">
-                                                        <a href="/game/">
-                                                            <div class="game-meta-image">
-                                                                <figure
-                                                                    class="image is-game-image is-size-5 is-bordered is-radius has-placeholder">
-                                                                    <img src="">
-                                                                </figure>
-                                                                <span class="icon game:premium"><i
-                                                                        class="fas fa-star"></i></span>
-                                                            </div>
-                                                        </a>
-                                                        <a href="/game/" class="game-title">
-                                                            <h5>Tên phòng chơi</h5>
-                                                            <div class="has-text-darkgray">
-                                                                Dẫn truyện bởi <strong>Người
-                                                                    dẫn</strong> (@host)
                                                             </div>
                                                         </a>
                                                     </div>
@@ -251,7 +232,51 @@ permalink: /browse/
                                                     </div>
                                                     <div
                                                         class="has-text-darkgray is-size-7 browse-table-td-status-scenes">
-                                                        <span><span>1 Chương,</span> <span>1 Cảnh</span></span>
+                                                        <span><span>1 Chương,</span>
+                                                            <span>1 Cảnh</span></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            {% for i in (1..10) %}
+                                            <tr>
+                                                <td class="browse-table-td-name">
+                                                    <div class="is-auto-grid">
+                                                        <a href="/game/">
+                                                            <div class="game-meta-image">
+                                                                <figure
+                                                                    class="image is-game-image is-size-5 is-bordered is-radius has-placeholder">
+                                                                    <img src="" />
+                                                                </figure>
+                                                            </div>
+                                                        </a>
+                                                        <a href="/game/" class="game-title">
+                                                            <h5>
+                                                                Tên phòng chơi
+                                                            </h5>
+                                                            <div class="has-text-darkgray">
+                                                                Dẫn truyện bởi
+                                                                <strong>Người
+                                                                    dẫn</strong>
+                                                                (@host)
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                                <td class="has-text-centered browse-table-td-status">
+                                                    <p>
+                                                        <span class="players-count">0</span>
+                                                        <span
+                                                            class="players-limit has-text-darkgray is-size-7">/10</span>
+                                                    </p>
+                                                </td>
+                                                <td class="has-text-centered browse-table-td-status">
+                                                    <div class="tags">
+                                                        <span class="tag is-info has-text-smallcaps">Đang chơi</span>
+                                                    </div>
+                                                    <div
+                                                        class="has-text-darkgray is-size-7 browse-table-td-status-scenes">
+                                                        <span><span>1 Chương,</span>
+                                                            <span>1 Cảnh</span></span>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -261,29 +286,24 @@ permalink: /browse/
                                 </div>
                             </div>
 
-
                             <nav class="pagination is-small is-right is-arrow">
                                 <a class="pagination-previous is-disabled">Trang trước</a>
                                 <a class="pagination-next">Trang tiếp theo</a>
                                 <ul class="pagination-list">
-                                    <li><a class="pagination-link is-current">1</a></li>
+                                    <li>
+                                        <a class="pagination-link is-current">1</a>
+                                    </li>
                                     <li><a class="pagination-link">2</a></li>
                                     <li><a class="pagination-link">3</a></li>
                                 </ul>
                             </nav>
-
-
                         </div>
                     </div>
-
                 </div>
-
             </div>
 
             <div class="column browse-right is-hidden-xs">
-
                 <div class="sidebar">
-
                     <div class="buttons">
                         <div class="button is-fullwidth is-info is-big">
                             <span class="icon"><i class="far fa-plus"></i></span>
@@ -292,21 +312,21 @@ permalink: /browse/
                         <a class="button is-fullwidth is-danger is-big" href="/modal/game-premium-insufficient.html"
                             rel="modal:open">
                             <span class="icon"><i class="far fa-sparkles"></i></span>
-                            <span class="has-text-smallcaps">Tạo Phòng Trả Phí (90 <div class="dti dti-base">
-                                    {%- include tem.svg -%}</div> )</span>
+                            <span class="has-text-smallcaps">Tạo Phòng Trả Phí (90
+                                <div class="dti dti-base">
+                                    {%- include tem.svg -%}
+                                </div>
+                                )</span>
                         </a>
                     </div>
 
-                    {% include global/widget.html type="2" source="browse-sidebar-categories" title="Thể loại" borderedtitle="yes" nopadding="yes"  %}
-
-                    {% include global/widget.html type="2" source="browse-sidebar-links" title="Liên kết" borderedtitle="yes" nopadding="yes"  %}
-
+                    {% include global/widget.html type="2"
+					source="browse-sidebar-categories" title="Thể loại"
+					borderedtitle="yes" nopadding="yes" %} {% include
+					global/widget.html type="2" source="browse-sidebar-links"
+					title="Liên kết" borderedtitle="yes" nopadding="yes" %}
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
 </div>
